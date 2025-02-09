@@ -55,8 +55,10 @@ class FileTradeLogger:
         if os.path.exists(filename):
             os.remove(filename)
         self.logger = logging.getLogger("TradingLog")
+        self.logger.propagate = False
         self.logger.setLevel(logging.DEBUG if debug else logging.INFO)
         fh = logging.FileHandler(filename)
+        fh.setLevel(logging.DEBUG if debug else logging.INFO)
         fh.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
         self.logger.addHandler(fh)
         self.logger.info("=== New Trading Session Started ===")
@@ -76,11 +78,15 @@ class DefaultTradeTracker:
         self.trades: List[Tuple[str, float, datetime.date]] = []
         self.buy_signals: List[Tuple[datetime.date, float]] = []
         self.sell_signals: List[Tuple[datetime.date, float]] = []
+        self._current_trade = False  # Track if we're in a trade
 
     def add_trade(self, action: str, price: float, date: datetime.date) -> None:
         self.trades.append((action, price, date))
         if action == "BUY":
-            self._trade_count += 1
+            self._current_trade = True
+        elif action == "SELL" and self._current_trade:
+            self._trade_count += 1  # Increment counter when a trade is completed
+            self._current_trade = False
 
     def add_signal(self, signal_type: str, date: datetime.date, price: float) -> None:
         if signal_type == "BUY":
@@ -124,12 +130,24 @@ class BaseStrategy(bt.Strategy):
                     f"Cost: {order.executed.value:.2f}, "
                     f"Comm: {order.executed.comm:.2f}"
                 )
+                self.tracker.add_trade(
+                    "BUY", order.executed.price, self.data.datetime.date(0)
+                )
+                self.tracker.add_signal(
+                    "BUY", self.data.datetime.date(0), order.executed.price
+                )
             elif order.issell():
                 self.logger.log_trade(
                     f"SELL EXECUTED - Price: {order.executed.price:.2f}, "
                     f"Size: {abs(order.executed.size):.0f} shares, "
                     f"Cost: {order.executed.value:.2f}, "
                     f"Comm: {order.executed.comm:.2f}"
+                )
+                self.tracker.add_trade(
+                    "SELL", order.executed.price, self.data.datetime.date(0)
+                )
+                self.tracker.add_signal(
+                    "SELL", self.data.datetime.date(0), order.executed.price
                 )
 
         elif order.status in [order.Canceled, order.Margin, order.Rejected]:
@@ -163,7 +181,14 @@ class BaseStrategy(bt.Strategy):
 
 
 class EnhancedStrategy(BaseStrategy):
-    """Your actual trading strategy"""
+    """
+    An enhanced strategy designed to beat buy-and-hold by combining:
+      - Dual SMA trend confirmation with a minimum spread requirement
+      - MACD and RSI momentum confirmation
+      - A Stochastic oversold filter
+      - ATR-based position sizing
+      - A dynamic trailing stop and profit target exit
+    """
 
     params = (
         ("sma_fast", 20),
@@ -171,7 +196,8 @@ class EnhancedStrategy(BaseStrategy):
         ("atr_period", 14),
         ("risk_pct", 0.02),
         ("trail_percent", 0.02),
-        ("debug", False),
+        ("profit_target", 2.0),  # 2x risk as profit target
+        ("debug", True),
     )
 
     def init_strategy(self):
@@ -179,15 +205,18 @@ class EnhancedStrategy(BaseStrategy):
         self.sma_fast = bt.indicators.SMA(period=self.p.sma_fast)
         self.sma_slow = bt.indicators.SMA(period=self.p.sma_slow)
         self.atr = bt.indicators.ATR(period=self.p.atr_period)
-        self.macd = bt.indicators.MACD()
+        self.macd = bt.indicators.MACD()  # default periods (12,26,9)
         self.rsi = bt.indicators.RSI()
         self.crossover = bt.indicators.CrossOver(self.sma_fast, self.sma_slow)
+        # Additional momentum filter
+        self.stoch = bt.indicators.Stochastic()  # default parameters
 
     def next(self):
+        # Do not issue a new order if one is already pending.
         if self.order:
             return
 
-        # Only trade if we have all indicators warmed up
+        # Ensure indicators are warmed up.
         if not all(
             [
                 self.sma_fast[0],
@@ -195,61 +224,231 @@ class EnhancedStrategy(BaseStrategy):
                 self.atr[0],
                 self.macd.macd[0],
                 self.rsi[0],
+                self.stoch.percD[0],
             ]
         ):
             return
 
-        # Position sizing based on ATR
-        risk_amount = self.broker.get_value() * self.p.risk_pct
-        atr_stops = 2
         price = self.data.close[0]
-        stop_price = price - (self.atr[0] * atr_stops)
-        position_size = int((risk_amount / (price - stop_price)))
 
-        # Entry conditions for long positions
+        # Log current indicator values if debugging is enabled.
+        if self.p.debug:
+            self.logger.log_trade(
+                f"DEBUG: Price: {price:.2f}, SMA_fast: {self.sma_fast[0]:.2f}, "
+                f"SMA_slow: {self.sma_slow[0]:.2f}, RSI: {self.rsi[0]:.2f}, "
+                f"MACD: {self.macd.macd[0]:.2f}, MACD_signal: {self.macd.signal[0]:.2f}, "
+                f"Stoch %D: {self.stoch.percD[0]:.2f}, Crossover: {self.crossover[0]}"
+            )
+
+        # Position sizing based on ATR.
+        risk_amount = self.broker.get_value() * self.p.risk_pct
+        atr_multiplier = 2
+        stop_price = price - (self.atr[0] * atr_multiplier)
+        risk_per_share = price - stop_price
+        if risk_per_share <= 0:
+            return
+        position_size = int(risk_amount / risk_per_share)
+
+        # --------------------------
+        # ENTRY CONDITIONS (Long Only)
+        # --------------------------
         if not self.position:
-            trend_up = self.sma_fast[0] > self.sma_slow[0]
+            # Check trend and momentum conditions.
+            trend_up = (
+                self.sma_fast[0] > self.sma_slow[0]
+                and (self.sma_fast[0] - self.sma_slow[0]) / self.sma_slow[0] > 0.005
+            )  # relaxed spread: 0.5%
             momentum_up = self.macd.macd[0] > self.macd.signal[0]
-            rsi_oversold = self.rsi[0] < 40
+            rsi_condition = (
+                self.rsi[0] < 45
+            )  # relaxed threshold from 40 to 45 for more signals
             price_above_sma = price > self.sma_slow[0]
+            stoch_oversold = self.stoch.percD[0] < 25  # relaxed from 20 to 25
+            positive_crossover = self.crossover[0] > 0
 
+            # For testing, we require most (but not all) conditions.
             if (
                 trend_up
                 and momentum_up
-                and (rsi_oversold or price_above_sma)
-                and self.crossover > 0
+                and (rsi_condition or price_above_sma)
+                and positive_crossover
+                and stoch_oversold
             ):
-
                 self.buy_price = price
-                self.stop_price = stop_price
+                self.stop_price = stop_price  # initial stop loss based on ATR
                 self.order = self.buy(size=position_size)
-                self.tracker.add_trade("BUY", price, self.data.datetime.date(0))
-                self.tracker.add_signal("BUY", self.data.datetime.date(0), price)
-                self.logger.log_trade(
-                    f"BUY CREATE at {price:.2f}, Size: {position_size} shares (Trade #{self.tracker.trade_count})"
-                )
+                if self.p.debug:
+                    self.logger.log_trade(
+                        f"BUY CREATE at {price:.2f}, Size: {position_size} shares"
+                    )
 
-        # Exit conditions
+        # --------------------------
+        # EXIT CONDITIONS
+        # --------------------------
         else:
+            # Update trailing stop: never lower the stop.
             if self.stop_price is None:
-                self.stop_price = price - (self.atr[0] * atr_stops)
+                self.stop_price = price - (self.atr[0] * atr_multiplier)
             else:
                 self.stop_price = max(
                     self.stop_price, price * (1 - self.p.trail_percent)
                 )
 
+            # Set a profit target.
+            target_price = self.buy_price + self.p.profit_target * (
+                self.buy_price - self.stop_price
+            )
+
             trend_down = self.sma_fast[0] < self.sma_slow[0]
             momentum_down = self.macd.macd[0] < self.macd.signal[0]
             stop_hit = price < self.stop_price
+            profit_target_hit = price >= target_price
             rsi_overbought = self.rsi[0] > 70
 
-            if stop_hit or (trend_down and momentum_down) or rsi_overbought:
+            # Exit if any of the following triggers:
+            if (
+                stop_hit
+                or profit_target_hit
+                or (trend_down and momentum_down)
+                or rsi_overbought
+            ):
                 self.order = self.sell(size=self.position.size)
-                self.tracker.add_trade("SELL", price, self.data.datetime.date(0))
-                self.tracker.add_signal("SELL", self.data.datetime.date(0), price)
+                if self.p.debug:
+                    self.logger.log_trade(
+                        f"SELL CREATE at {price:.2f}, Size: {self.position.size} shares"
+                    )
+                self.stop_price = None
+
+
+class ImprovedStrategy(BaseStrategy):
+    """
+    Improved Strategy: Trade pullbacks in an established uptrend.
+
+    Entry:
+      - Confirm uptrend: Price is above a 50‑period SMA.
+      - Look for a pullback: RSI falls below a threshold (e.g. 65)
+        and Stochastic %D falls below a threshold (e.g. 60).
+      - Momentum filter: MACD line is above its signal line.
+
+    Position sizing:
+      - Use ATR (14‑period) to set a stop loss of 2×ATR.
+      - Position size is chosen so that the total risk per trade
+        (stop distance × number of shares) equals a fixed percentage
+        (e.g. 2%) of the account value.
+
+    Exit:
+      - Exit if price falls below a trailing stop (updated each bar),
+      - Or if price reaches a profit target (set at 3× the risk per share),
+      - Or if the RSI rises above an exit threshold (e.g. 75).
+    """
+
+    params = (
+        ("sma_period", 50),
+        ("atr_period", 14),
+        ("risk_pct", 0.02),
+        ("trail_percent", 0.02),  # trailing stop percent (could be tuned)
+        ("profit_target", 3.0),  # profit target: 3× risk per share
+        ("rsi_entry", 65),  # entry: RSI below 65 (instead of 50)
+        ("rsi_exit", 75),  # exit: RSI above 75 (instead of 70)
+        ("stoch_threshold", 60),  # entry: Stochastic %D below 60 (instead of 50)
+        ("debug", True),
+    )
+
+    def init_strategy(self):
+        # Trend indicator: 50‑period SMA
+        self.sma = bt.indicators.SMA(period=self.p.sma_period)
+        # Volatility indicator: ATR for risk calculation
+        self.atr = bt.indicators.ATR(period=self.p.atr_period)
+        # Momentum indicators
+        self.rsi = bt.indicators.RSI()
+        self.macd = bt.indicators.MACD()  # default (12,26,9)
+        self.stoch = bt.indicators.Stochastic()  # default parameters
+
+    def next(self):
+        # Do nothing if an order is already pending.
+        if self.order:
+            return
+
+        price = self.data.close[0]
+
+        # Ensure sufficient data is loaded.
+        if len(self.data) < self.p.sma_period:
+            return
+
+        # Determine position size based on risk.
+        risk_amount = self.broker.get_value() * self.p.risk_pct
+        stop_distance = self.atr[0] * 2.0  # stop loss: 2×ATR
+        if stop_distance <= 0:
+            return
+        risk_per_share = stop_distance
+        position_size = int(risk_amount / risk_per_share)
+        if position_size <= 0:
+            return
+
+        # ---------------------------
+        # ENTRY CONDITIONS (Long Only)
+        # ---------------------------
+        if not self.position:
+            trend_up = price > self.sma[0]
+            # "Pullback" condition: price's momentum dips.
+            oversold = (self.rsi[0] < self.p.rsi_entry) and (
+                self.stoch.percD[0] < self.p.stoch_threshold
+            )
+            macd_positive = self.macd.macd[0] > self.macd.signal[0]
+
+            if self.p.debug:
                 self.logger.log_trade(
-                    f"SELL CREATE at {price:.2f}, Size: {self.position.size} shares (Trade #{self.tracker.trade_count})"
+                    f"DEBUG ENTRY: Price: {price:.2f}, SMA: {self.sma[0]:.2f}, "
+                    f"RSI: {self.rsi[0]:.2f} (<{self.p.rsi_entry}), "
+                    f"Stoch %D: {self.stoch.percD[0]:.2f} (<{self.p.stoch_threshold}), "
+                    f"MACD: {self.macd.macd[0]:.2f} vs Signal: {self.macd.signal[0]:.2f}"
                 )
+
+            if trend_up and oversold and macd_positive:
+                self.buy_price = price
+                self.stop_price = price - stop_distance  # initial stop loss
+                self.order = self.buy(size=position_size)
+                if self.p.debug:
+                    self.logger.log_trade(
+                        f"BUY CREATE at {price:.2f}, Size: {position_size} shares"
+                    )
+
+        # ---------------------------
+        # EXIT CONDITIONS (When in Position)
+        # ---------------------------
+        else:
+            # Update trailing stop: allow it only to move higher.
+            if self.stop_price is None:
+                self.stop_price = price - stop_distance
+            else:
+                self.stop_price = max(
+                    self.stop_price, price * (1 - self.p.trail_percent)
+                )
+
+            # Define a profit target (e.g., 3× risk).
+            profit_target = self.buy_price + self.p.profit_target * stop_distance
+
+            # Exit if price falls below the trailing stop,
+            # if price reaches/exceeds the profit target,
+            # or if RSI becomes overbought.
+            exit_condition = (
+                (price < self.stop_price)
+                or (price >= profit_target)
+                or (self.rsi[0] > self.p.rsi_exit)
+            )
+
+            if self.p.debug:
+                self.logger.log_trade(
+                    f"DEBUG EXIT: Price: {price:.2f}, Stop: {self.stop_price:.2f}, "
+                    f"Target: {profit_target:.2f}, RSI: {self.rsi[0]:.2f} (>{self.p.rsi_exit})"
+                )
+
+            if exit_condition:
+                self.order = self.sell(size=self.position.size)
+                if self.p.debug:
+                    self.logger.log_trade(
+                        f"SELL CREATE at {price:.2f}, Size: {self.position.size} shares"
+                    )
                 self.stop_price = None
 
 
@@ -271,12 +470,15 @@ data_df.columns = [col.lower() for col in data_df.columns]
 # -----------------------------
 cerebro = bt.Cerebro()
 
-# Create dependencies
-logger = FileTradeLogger(debug=False)
+# Single debug flag to control all logging
+DEBUG_MODE = True  # Set this to True/False to control all debug logging
+
+# Create dependencies using the single debug flag
+logger = FileTradeLogger(filename="trading.log", debug=DEBUG_MODE)
 tracker = DefaultTradeTracker()
 
-# Add strategy with injected dependencies
-cerebro.addstrategy(EnhancedStrategy, logger=logger, tracker=tracker)
+# Add strategy with the same debug flag
+cerebro.addstrategy(ImprovedStrategy, logger=logger, tracker=tracker, debug=DEBUG_MODE)
 
 data = bt.feeds.PandasData(dataname=data_df)
 cerebro.adddata(data)

@@ -1,88 +1,1057 @@
-2025-02-09 21:35:30,950 - === New Trading Session Started ===
-2025-02-09 21:35:31,009 - BUY CREATE at 48.52, Size: 1019 shares (Trade #1)
-2025-02-09 21:35:31,009 - BUY EXECUTED - Price: 48.49, Size: 1019 shares, Cost: 49406.75, Comm: 49.41
-2025-02-09 21:35:31,010 - SELL CREATE at 48.15, Size: 1019 shares (Trade #1)
-2025-02-09 21:35:31,010 - SELL EXECUTED - Price: 47.95, Size: 1019 shares, Cost: 49406.75, Comm: 48.86
-2025-02-09 21:35:31,010 - 
+2025-02-09 22:26:50,932 - === New Trading Session Started ===
+2025-02-09 22:26:50,989 - DEBUG ENTRY: Price: 44.06, SMA: 39.59, RSI: 73.06 (<65), Stoch %D: 85.68 (<60), MACD: 1.09 vs Signal: 1.05
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 44.63, SMA: 39.73, RSI: 75.65 (<65), Stoch %D: 91.62 (<60), MACD: 1.18 vs Signal: 1.08
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.09, SMA: 39.95, RSI: 77.50 (<65), Stoch %D: 93.38 (<60), MACD: 1.27 vs Signal: 1.12
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 44.73, SMA: 40.14, RSI: 72.82 (<65), Stoch %D: 94.06 (<60), MACD: 1.30 vs Signal: 1.15
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.12, SMA: 40.33, RSI: 74.63 (<65), Stoch %D: 94.01 (<60), MACD: 1.34 vs Signal: 1.19
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 46.78, SMA: 40.55, RSI: 80.54 (<65), Stoch %D: 92.61 (<60), MACD: 1.48 vs Signal: 1.25
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.82, SMA: 40.73, RSI: 70.26 (<65), Stoch %D: 91.12 (<60), MACD: 1.51 vs Signal: 1.30
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.26, SMA: 40.90, RSI: 65.14 (<65), Stoch %D: 86.82 (<60), MACD: 1.46 vs Signal: 1.33
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 44.79, SMA: 41.07, RSI: 61.09 (<65), Stoch %D: 79.03 (<60), MACD: 1.37 vs Signal: 1.34
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.20, SMA: 41.26, RSI: 63.21 (<65), Stoch %D: 71.44 (<60), MACD: 1.32 vs Signal: 1.34
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.26, SMA: 41.43, RSI: 63.53 (<65), Stoch %D: 65.71 (<60), MACD: 1.27 vs Signal: 1.32
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.55, SMA: 41.60, RSI: 65.13 (<65), Stoch %D: 63.36 (<60), MACD: 1.23 vs Signal: 1.30
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 45.86, SMA: 41.78, RSI: 66.78 (<65), Stoch %D: 61.39 (<60), MACD: 1.22 vs Signal: 1.29
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 46.53, SMA: 41.96, RSI: 70.06 (<65), Stoch %D: 62.12 (<60), MACD: 1.25 vs Signal: 1.28
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 46.85, SMA: 42.16, RSI: 71.51 (<65), Stoch %D: 66.08 (<60), MACD: 1.28 vs Signal: 1.28
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 46.93, SMA: 42.37, RSI: 71.88 (<65), Stoch %D: 73.25 (<60), MACD: 1.30 vs Signal: 1.28
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 47.24, SMA: 42.58, RSI: 73.34 (<65), Stoch %D: 80.77 (<60), MACD: 1.32 vs Signal: 1.29
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 47.99, SMA: 42.79, RSI: 76.45 (<65), Stoch %D: 87.23 (<60), MACD: 1.39 vs Signal: 1.31
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 47.84, SMA: 43.00, RSI: 74.63 (<65), Stoch %D: 90.77 (<60), MACD: 1.41 vs Signal: 1.33
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 48.11, SMA: 43.22, RSI: 75.79 (<65), Stoch %D: 91.43 (<60), MACD: 1.43 vs Signal: 1.35
+2025-02-09 22:26:50,990 - DEBUG ENTRY: Price: 47.71, SMA: 43.39, RSI: 70.63 (<65), Stoch %D: 88.03 (<60), MACD: 1.40 vs Signal: 1.36
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 47.69, SMA: 43.55, RSI: 70.38 (<65), Stoch %D: 84.60 (<60), MACD: 1.36 vs Signal: 1.36
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 47.78, SMA: 43.71, RSI: 70.87 (<65), Stoch %D: 80.83 (<60), MACD: 1.32 vs Signal: 1.35
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 47.78, SMA: 43.85, RSI: 70.90 (<65), Stoch %D: 79.09 (<60), MACD: 1.27 vs Signal: 1.34
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.71, SMA: 43.99, RSI: 75.92 (<65), Stoch %D: 79.98 (<60), MACD: 1.30 vs Signal: 1.33
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.89, SMA: 44.13, RSI: 76.73 (<65), Stoch %D: 84.24 (<60), MACD: 1.31 vs Signal: 1.33
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.05, SMA: 44.30, RSI: 77.48 (<65), Stoch %D: 91.02 (<60), MACD: 1.33 vs Signal: 1.33
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.76, SMA: 44.48, RSI: 80.47 (<65), Stoch %D: 95.54 (<60), MACD: 1.38 vs Signal: 1.34
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.68, SMA: 44.66, RSI: 79.24 (<65), Stoch %D: 97.06 (<60), MACD: 1.39 vs Signal: 1.35
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.23, SMA: 44.82, RSI: 72.26 (<65), Stoch %D: 93.78 (<60), MACD: 1.35 vs Signal: 1.35
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.99, SMA: 44.99, RSI: 68.86 (<65), Stoch %D: 86.94 (<60), MACD: 1.29 vs Signal: 1.34
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.07, SMA: 45.15, RSI: 69.35 (<65), Stoch %D: 78.31 (<60), MACD: 1.23 vs Signal: 1.32
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.12, SMA: 45.29, RSI: 57.02 (<65), Stoch %D: 67.94 (<60), MACD: 1.10 vs Signal: 1.27
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 50.48, SMA: 45.48, RSI: 70.93 (<65), Stoch %D: 62.15 (<60), MACD: 1.17 vs Signal: 1.25
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 50.16, SMA: 45.66, RSI: 67.65 (<65), Stoch %D: 58.83 (<60), MACD: 1.18 vs Signal: 1.24
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 50.78, SMA: 45.86, RSI: 70.45 (<65), Stoch %D: 64.54 (<60), MACD: 1.23 vs Signal: 1.24
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 49.99, SMA: 46.03, RSI: 63.07 (<65), Stoch %D: 67.50 (<60), MACD: 1.19 vs Signal: 1.23
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.65, SMA: 46.16, RSI: 52.83 (<65), Stoch %D: 65.84 (<60), MACD: 1.04 vs Signal: 1.19
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.66, SMA: 46.30, RSI: 52.89 (<65), Stoch %D: 53.17 (<60), MACD: 0.91 vs Signal: 1.13
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 48.13, SMA: 46.42, RSI: 49.29 (<65), Stoch %D: 38.09 (<60), MACD: 0.76 vs Signal: 1.06
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 47.47, SMA: 46.54, RSI: 45.08 (<65), Stoch %D: 27.13 (<60), MACD: 0.57 vs Signal: 0.96
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 44.71, SMA: 46.60, RSI: 32.65 (<65), Stoch %D: 20.80 (<60), MACD: 0.20 vs Signal: 0.81
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 45.42, SMA: 46.66, RSI: 37.42 (<65), Stoch %D: 18.26 (<60), MACD: -0.03 vs Signal: 0.64
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 45.96, SMA: 46.74, RSI: 40.88 (<65), Stoch %D: 16.87 (<60), MACD: -0.17 vs Signal: 0.48
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 45.76, SMA: 46.82, RSI: 40.00 (<65), Stoch %D: 18.60 (<60), MACD: -0.30 vs Signal: 0.32
+2025-02-09 22:26:50,991 - DEBUG ENTRY: Price: 45.50, SMA: 46.90, RSI: 38.83 (<65), Stoch %D: 20.83 (<60), MACD: -0.41 vs Signal: 0.18
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 44.08, SMA: 46.95, RSI: 33.14 (<65), Stoch %D: 20.56 (<60), MACD: -0.61 vs Signal: 0.02
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 44.92, SMA: 46.99, RSI: 38.87 (<65), Stoch %D: 18.44 (<60), MACD: -0.69 vs Signal: -0.12
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 44.00, SMA: 47.01, RSI: 35.32 (<65), Stoch %D: 14.95 (<60), MACD: -0.82 vs Signal: -0.26
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 43.25, SMA: 47.00, RSI: 32.70 (<65), Stoch %D: 13.15 (<60), MACD: -0.97 vs Signal: -0.40
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 43.08, SMA: 46.98, RSI: 32.13 (<65), Stoch %D: 9.88 (<60), MACD: -1.09 vs Signal: -0.54
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 42.91, SMA: 46.95, RSI: 31.50 (<65), Stoch %D: 7.14 (<60), MACD: -1.19 vs Signal: -0.67
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 42.70, SMA: 46.90, RSI: 30.75 (<65), Stoch %D: 4.57 (<60), MACD: -1.27 vs Signal: -0.79
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 42.92, SMA: 46.86, RSI: 32.62 (<65), Stoch %D: 4.45 (<60), MACD: -1.30 vs Signal: -0.89
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 42.14, SMA: 46.80, RSI: 29.60 (<65), Stoch %D: 4.93 (<60), MACD: -1.37 vs Signal: -0.99
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 41.72, SMA: 46.70, RSI: 28.07 (<65), Stoch %D: 6.38 (<60), MACD: -1.44 vs Signal: -1.08
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 43.24, SMA: 46.65, RSI: 40.04 (<65), Stoch %D: 10.73 (<60), MACD: -1.36 vs Signal: -1.13
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 43.94, SMA: 46.62, RSI: 44.59 (<65), Stoch %D: 21.29 (<60), MACD: -1.23 vs Signal: -1.15
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 44.59, SMA: 46.62, RSI: 48.47 (<65), Stoch %D: 37.49 (<60), MACD: -1.06 vs Signal: -1.13
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 45.77, SMA: 46.63, RSI: 54.76 (<65), Stoch %D: 55.63 (<60), MACD: -0.82 vs Signal: -1.07
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.36, SMA: 46.65, RSI: 57.51 (<65), Stoch %D: 71.41 (<60), MACD: -0.57 vs Signal: -0.97
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.90, SMA: 46.68, RSI: 59.92 (<65), Stoch %D: 83.20 (<60), MACD: -0.33 vs Signal: -0.84
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.75, SMA: 46.70, RSI: 58.92 (<65), Stoch %D: 89.61 (<60), MACD: -0.15 vs Signal: -0.70
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.74, SMA: 46.70, RSI: 58.85 (<65), Stoch %D: 92.41 (<60), MACD: -0.01 vs Signal: -0.56
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.40, SMA: 46.69, RSI: 56.37 (<65), Stoch %D: 91.48 (<60), MACD: 0.08 vs Signal: -0.44
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 46.68, SMA: 46.69, RSI: 57.93 (<65), Stoch %D: 90.00 (<60), MACD: 0.16 vs Signal: -0.32
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 47.77, SMA: 46.70, RSI: 63.49 (<65), Stoch %D: 88.80 (<60), MACD: 0.32 vs Signal: -0.19
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 47.63, SMA: 46.69, RSI: 62.36 (<65), Stoch %D: 89.60 (<60), MACD: 0.42 vs Signal: -0.07
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 48.02, SMA: 46.69, RSI: 64.24 (<65), Stoch %D: 91.62 (<60), MACD: 0.53 vs Signal: 0.05
+2025-02-09 22:26:50,992 - DEBUG ENTRY: Price: 47.85, SMA: 46.69, RSI: 62.80 (<65), Stoch %D: 93.02 (<60), MACD: 0.60 vs Signal: 0.16
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 47.80, SMA: 46.69, RSI: 62.35 (<65), Stoch %D: 93.24 (<60), MACD: 0.64 vs Signal: 0.26
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 47.08, SMA: 46.68, RSI: 55.95 (<65), Stoch %D: 89.94 (<60), MACD: 0.61 vs Signal: 0.33
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.10, SMA: 46.69, RSI: 61.87 (<65), Stoch %D: 86.85 (<60), MACD: 0.66 vs Signal: 0.39
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.08, SMA: 46.69, RSI: 61.75 (<65), Stoch %D: 83.61 (<60), MACD: 0.69 vs Signal: 0.45
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 47.65, SMA: 46.67, RSI: 57.87 (<65), Stoch %D: 82.63 (<60), MACD: 0.67 vs Signal: 0.50
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.52, SMA: 46.66, RSI: 62.88 (<65), Stoch %D: 80.21 (<60), MACD: 0.71 vs Signal: 0.54
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.80, SMA: 46.66, RSI: 64.36 (<65), Stoch %D: 78.74 (<60), MACD: 0.76 vs Signal: 0.58
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.21, SMA: 46.65, RSI: 66.42 (<65), Stoch %D: 81.27 (<60), MACD: 0.83 vs Signal: 0.63
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.16, SMA: 46.64, RSI: 65.98 (<65), Stoch %D: 86.81 (<60), MACD: 0.86 vs Signal: 0.68
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.15, SMA: 46.62, RSI: 56.55 (<65), Stoch %D: 87.59 (<60), MACD: 0.80 vs Signal: 0.70
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.44, SMA: 46.60, RSI: 58.41 (<65), Stoch %D: 80.55 (<60), MACD: 0.77 vs Signal: 0.72
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.92, SMA: 46.60, RSI: 61.31 (<65), Stoch %D: 70.57 (<60), MACD: 0.77 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.57, SMA: 46.61, RSI: 58.07 (<65), Stoch %D: 66.82 (<60), MACD: 0.74 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.94, SMA: 46.58, RSI: 60.43 (<65), Stoch %D: 69.71 (<60), MACD: 0.73 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.40, SMA: 46.56, RSI: 63.18 (<65), Stoch %D: 75.37 (<60), MACD: 0.75 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.23, SMA: 46.53, RSI: 61.47 (<65), Stoch %D: 80.92 (<60), MACD: 0.75 vs Signal: 0.74
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.95, SMA: 46.51, RSI: 58.69 (<65), Stoch %D: 82.77 (<60), MACD: 0.72 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.51, SMA: 46.53, RSI: 62.37 (<65), Stoch %D: 83.35 (<60), MACD: 0.73 vs Signal: 0.73
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 48.77, SMA: 46.53, RSI: 55.33 (<65), Stoch %D: 78.73 (<60), MACD: 0.67 vs Signal: 0.72
+2025-02-09 22:26:50,993 - DEBUG ENTRY: Price: 49.88, SMA: 46.57, RSI: 62.25 (<65), Stoch %D: 78.85 (<60), MACD: 0.70 vs Signal: 0.72
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.27, SMA: 46.62, RSI: 64.33 (<65), Stoch %D: 79.30 (<60), MACD: 0.75 vs Signal: 0.72
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.23, SMA: 46.73, RSI: 63.93 (<65), Stoch %D: 88.03 (<60), MACD: 0.78 vs Signal: 0.73
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 49.84, SMA: 46.82, RSI: 60.04 (<65), Stoch %D: 91.11 (<60), MACD: 0.76 vs Signal: 0.74
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.01, SMA: 46.90, RSI: 61.15 (<65), Stoch %D: 91.77 (<60), MACD: 0.75 vs Signal: 0.74
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.48, SMA: 47.00, RSI: 64.05 (<65), Stoch %D: 86.88 (<60), MACD: 0.77 vs Signal: 0.75
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.26, SMA: 47.09, RSI: 61.75 (<65), Stoch %D: 84.21 (<60), MACD: 0.76 vs Signal: 0.75
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 51.29, SMA: 47.24, RSI: 67.67 (<65), Stoch %D: 80.69 (<60), MACD: 0.83 vs Signal: 0.77
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.18, SMA: 47.34, RSI: 57.33 (<65), Stoch %D: 71.46 (<60), MACD: 0.78 vs Signal: 0.77
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 49.11, SMA: 47.44, RSI: 49.53 (<65), Stoch %D: 54.82 (<60), MACD: 0.65 vs Signal: 0.75
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 46.54, SMA: 47.51, RSI: 36.56 (<65), Stoch %D: 34.99 (<60), MACD: 0.34 vs Signal: 0.66
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 47.42, SMA: 47.60, RSI: 42.15 (<65), Stoch %D: 19.71 (<60), MACD: 0.16 vs Signal: 0.56
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 47.91, SMA: 47.70, RSI: 45.06 (<65), Stoch %D: 13.02 (<60), MACD: 0.05 vs Signal: 0.46
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 48.97, SMA: 47.82, RSI: 50.79 (<65), Stoch %D: 16.22 (<60), MACD: 0.06 vs Signal: 0.38
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 48.57, SMA: 47.94, RSI: 48.70 (<65), Stoch %D: 23.10 (<60), MACD: 0.03 vs Signal: 0.31
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 48.45, SMA: 48.06, RSI: 48.05 (<65), Stoch %D: 29.68 (<60), MACD: -0.01 vs Signal: 0.25
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 50.50, SMA: 48.24, RSI: 58.08 (<65), Stoch %D: 34.81 (<60), MACD: 0.13 vs Signal: 0.22
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 48.99, SMA: 48.35, RSI: 50.40 (<65), Stoch %D: 38.78 (<60), MACD: 0.11 vs Signal: 0.20
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 48.75, SMA: 48.45, RSI: 49.26 (<65), Stoch %D: 42.40 (<60), MACD: 0.08 vs Signal: 0.18
+2025-02-09 22:26:50,994 - DEBUG ENTRY: Price: 49.90, SMA: 48.55, RSI: 54.48 (<65), Stoch %D: 42.61 (<60), MACD: 0.15 vs Signal: 0.17
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 50.83, SMA: 48.66, RSI: 58.22 (<65), Stoch %D: 45.09 (<60), MACD: 0.27 vs Signal: 0.19
+2025-02-09 22:26:50,995 - BUY CREATE at 50.83, Size: 771 shares
+2025-02-09 22:26:50,995 - BUY EXECUTED - Price: 50.96, Size: 771 shares, Cost: 39288.72, Comm: 39.29
+2025-02-09 22:26:50,995 - DEBUG EXIT: Price: 50.83, Stop: 49.82, Target: 58.37, RSI: 58.23 (>75)
+2025-02-09 22:26:50,995 - DEBUG EXIT: Price: 51.38, Stop: 50.36, Target: 58.17, RSI: 60.47 (>75)
+2025-02-09 22:26:50,995 - DEBUG EXIT: Price: 51.34, Stop: 50.36, Target: 58.03, RSI: 60.19 (>75)
+2025-02-09 22:26:50,995 - DEBUG EXIT: Price: 48.97, Stop: 50.36, Target: 58.70, RSI: 47.55 (>75)
+2025-02-09 22:26:50,995 - SELL CREATE at 48.97, Size: 771 shares
+2025-02-09 22:26:50,995 - SELL EXECUTED - Price: 49.75, Size: 771 shares, Cost: 39288.72, Comm: 38.35
+2025-02-09 22:26:50,995 - 
         TRADE COMPLETED:
-        Gross Profit: -542.12
-        Net Profit: -640.39
-        Commission: 98.27
+        Gross Profit: -935.27
+        Net Profit: -1012.91
+        Commission: 77.64
         
-2025-02-09 21:35:31,016 - BUY CREATE at 71.38, Size: 401 shares (Trade #2)
-2025-02-09 21:35:31,016 - BUY EXECUTED - Price: 69.54, Size: 401 shares, Cost: 27886.84, Comm: 27.89
-2025-02-09 21:35:31,017 - SELL CREATE at 74.94, Size: 401 shares (Trade #2)
-2025-02-09 21:35:31,017 - SELL EXECUTED - Price: 74.18, Size: 401 shares, Cost: 27886.84, Comm: 29.75
-2025-02-09 21:35:31,017 - 
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 49.90, SMA: 49.04, RSI: 51.83 (<65), Stoch %D: 76.63 (<60), MACD: 0.39 vs Signal: 0.36
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 49.33, SMA: 49.09, RSI: 49.21 (<65), Stoch %D: 63.62 (<60), MACD: 0.32 vs Signal: 0.35
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 49.67, SMA: 49.13, RSI: 50.78 (<65), Stoch %D: 53.41 (<60), MACD: 0.28 vs Signal: 0.34
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 50.51, SMA: 49.19, RSI: 54.62 (<65), Stoch %D: 47.01 (<60), MACD: 0.31 vs Signal: 0.33
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 50.44, SMA: 49.24, RSI: 54.27 (<65), Stoch %D: 49.80 (<60), MACD: 0.33 vs Signal: 0.33
+2025-02-09 22:26:50,995 - DEBUG ENTRY: Price: 49.71, SMA: 49.28, RSI: 50.32 (<65), Stoch %D: 52.83 (<60), MACD: 0.28 vs Signal: 0.32
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 50.55, SMA: 49.33, RSI: 54.42 (<65), Stoch %D: 55.67 (<60), MACD: 0.31 vs Signal: 0.32
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 51.54, SMA: 49.42, RSI: 58.72 (<65), Stoch %D: 58.90 (<60), MACD: 0.41 vs Signal: 0.34
+2025-02-09 22:26:50,996 - BUY CREATE at 51.54, Size: 853 shares
+2025-02-09 22:26:50,996 - BUY EXECUTED - Price: 51.72, Size: 853 shares, Cost: 44120.70, Comm: 44.12
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 51.53, Stop: 50.50, Target: 58.20, RSI: 58.69 (>75)
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 51.75, Stop: 50.72, Target: 58.28, RSI: 59.67 (>75)
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 52.36, Stop: 51.32, Target: 58.32, RSI: 62.35 (>75)
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 54.03, Stop: 52.95, Target: 58.56, RSI: 68.49 (>75)
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 53.91, Stop: 52.95, Target: 58.43, RSI: 67.63 (>75)
+2025-02-09 22:26:50,996 - DEBUG EXIT: Price: 52.86, Stop: 52.95, Target: 58.57, RSI: 60.51 (>75)
+2025-02-09 22:26:50,996 - SELL CREATE at 52.86, Size: 853 shares
+2025-02-09 22:26:50,996 - SELL EXECUTED - Price: 52.61, Size: 853 shares, Cost: 44120.70, Comm: 44.88
+2025-02-09 22:26:50,996 - 
         TRADE COMPLETED:
-        Gross Profit: 1859.22
-        Net Profit: 1801.58
-        Commission: 57.63
+        Gross Profit: 758.53
+        Net Profit: 669.53
+        Commission: 89.00
         
-2025-02-09 21:35:31,024 - BUY CREATE at 132.05, Size: 357 shares (Trade #3)
-2025-02-09 21:35:31,024 - BUY EXECUTED - Price: 132.23, Size: 357 shares, Cost: 47205.14, Comm: 47.21
-2025-02-09 21:35:31,024 - SELL CREATE at 128.74, Size: 357 shares (Trade #3)
-2025-02-09 21:35:31,025 - SELL EXECUTED - Price: 129.31, Size: 357 shares, Cost: 47205.14, Comm: 46.16
-2025-02-09 21:35:31,025 - 
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.14, SMA: 50.02, RSI: 61.66 (<65), Stoch %D: 84.94 (<60), MACD: 1.01 vs Signal: 0.76
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.33, SMA: 50.12, RSI: 62.48 (<65), Stoch %D: 76.94 (<60), MACD: 1.03 vs Signal: 0.81
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.83, SMA: 50.23, RSI: 64.59 (<65), Stoch %D: 74.43 (<60), MACD: 1.08 vs Signal: 0.86
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.39, SMA: 50.32, RSI: 61.35 (<65), Stoch %D: 75.40 (<60), MACD: 1.06 vs Signal: 0.90
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 52.61, SMA: 50.40, RSI: 55.94 (<65), Stoch %D: 76.07 (<60), MACD: 0.98 vs Signal: 0.92
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 52.85, SMA: 50.48, RSI: 57.19 (<65), Stoch %D: 72.22 (<60), MACD: 0.92 vs Signal: 0.92
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 52.60, SMA: 50.54, RSI: 55.41 (<65), Stoch %D: 64.37 (<60), MACD: 0.84 vs Signal: 0.90
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.41, SMA: 50.63, RSI: 59.74 (<65), Stoch %D: 58.58 (<60), MACD: 0.84 vs Signal: 0.89
+2025-02-09 22:26:50,996 - DEBUG ENTRY: Price: 53.14, SMA: 50.71, RSI: 57.69 (<65), Stoch %D: 55.18 (<60), MACD: 0.80 vs Signal: 0.87
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 52.88, SMA: 50.78, RSI: 55.75 (<65), Stoch %D: 55.97 (<60), MACD: 0.75 vs Signal: 0.85
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 54.12, SMA: 50.89, RSI: 62.31 (<65), Stoch %D: 57.31 (<60), MACD: 0.79 vs Signal: 0.84
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 54.27, SMA: 50.97, RSI: 63.02 (<65), Stoch %D: 60.03 (<60), MACD: 0.83 vs Signal: 0.84
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 52.91, SMA: 51.03, RSI: 53.21 (<65), Stoch %D: 58.72 (<60), MACD: 0.74 vs Signal: 0.82
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 53.36, SMA: 51.09, RSI: 55.67 (<65), Stoch %D: 53.01 (<60), MACD: 0.70 vs Signal: 0.80
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 54.86, SMA: 51.19, RSI: 62.68 (<65), Stoch %D: 48.75 (<60), MACD: 0.78 vs Signal: 0.79
+2025-02-09 22:26:50,997 - DEBUG ENTRY: Price: 54.87, SMA: 51.29, RSI: 62.73 (<65), Stoch %D: 54.97 (<60), MACD: 0.84 vs Signal: 0.80
+2025-02-09 22:26:50,997 - BUY CREATE at 54.87, Size: 891 shares
+2025-02-09 22:26:50,997 - BUY EXECUTED - Price: 54.57, Size: 891 shares, Cost: 48620.37, Comm: 48.62
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 54.23, Stop: 53.14, Target: 61.48, RSI: 58.15 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 54.86, Stop: 53.76, Target: 61.36, RSI: 61.17 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 55.60, Stop: 54.49, Target: 61.25, RSI: 64.39 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 57.08, Stop: 55.94, Target: 61.58, RSI: 69.78 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 57.00, Stop: 55.94, Target: 61.45, RSI: 69.16 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 56.86, Stop: 55.94, Target: 61.27, RSI: 68.09 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 56.63, Stop: 55.94, Target: 61.03, RSI: 66.20 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 56.85, Stop: 55.94, Target: 60.87, RSI: 67.14 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 57.13, Stop: 55.98, Target: 60.78, RSI: 68.32 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 58.12, Stop: 56.96, Target: 60.83, RSI: 72.23 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 57.99, Stop: 56.96, Target: 60.67, RSI: 70.97 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 58.76, Stop: 57.59, Target: 60.60, RSI: 73.85 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 58.86, Stop: 57.68, Target: 60.50, RSI: 74.20 (>75)
+2025-02-09 22:26:50,997 - DEBUG EXIT: Price: 59.58, Stop: 58.39, Target: 60.49, RSI: 76.67 (>75)
+2025-02-09 22:26:50,998 - SELL CREATE at 59.58, Size: 891 shares
+2025-02-09 22:26:50,998 - SELL EXECUTED - Price: 59.79, Size: 891 shares, Cost: 48620.37, Comm: 53.27
+2025-02-09 22:26:50,998 - 
         TRADE COMPLETED:
-        Gross Profit: -1041.86
-        Net Profit: -1135.23
-        Commission: 93.37
+        Gross Profit: 4650.60
+        Net Profit: 4548.71
+        Commission: 101.89
         
-2025-02-09 21:35:31,026 - BUY CREATE at 132.22, Size: 486 shares (Trade #4)
-2025-02-09 21:35:31,026 - BUY EXECUTED - Price: 132.24, Size: 486 shares, Cost: 64266.73, Comm: 64.27
-2025-02-09 21:35:31,026 - SELL CREATE at 134.35, Size: 486 shares (Trade #4)
-2025-02-09 21:35:31,026 - SELL EXECUTED - Price: 134.00, Size: 486 shares, Cost: 64266.73, Comm: 65.12
-2025-02-09 21:35:31,026 - 
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 60.18, SMA: 53.73, RSI: 78.50 (<65), Stoch %D: 96.78 (<60), MACD: 1.70 vs Signal: 1.45
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 58.79, SMA: 53.89, RSI: 65.59 (<65), Stoch %D: 95.03 (<60), MACD: 1.64 vs Signal: 1.49
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 58.78, SMA: 54.05, RSI: 65.53 (<65), Stoch %D: 88.38 (<60), MACD: 1.58 vs Signal: 1.51
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 60.11, SMA: 54.23, RSI: 70.84 (<65), Stoch %D: 81.21 (<60), MACD: 1.62 vs Signal: 1.53
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 61.82, SMA: 54.44, RSI: 75.95 (<65), Stoch %D: 79.72 (<60), MACD: 1.76 vs Signal: 1.58
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 62.22, SMA: 54.70, RSI: 76.99 (<65), Stoch %D: 86.27 (<60), MACD: 1.89 vs Signal: 1.64
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 62.13, SMA: 54.95, RSI: 76.21 (<65), Stoch %D: 93.58 (<60), MACD: 1.96 vs Signal: 1.70
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 62.16, SMA: 55.20, RSI: 76.29 (<65), Stoch %D: 97.36 (<60), MACD: 1.99 vs Signal: 1.76
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 62.88, SMA: 55.47, RSI: 78.32 (<65), Stoch %D: 96.89 (<60), MACD: 2.06 vs Signal: 1.82
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.05, SMA: 55.72, RSI: 78.79 (<65), Stoch %D: 96.56 (<60), MACD: 2.10 vs Signal: 1.87
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.55, SMA: 55.98, RSI: 80.13 (<65), Stoch %D: 96.96 (<60), MACD: 2.14 vs Signal: 1.93
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.49, SMA: 56.26, RSI: 79.50 (<65), Stoch %D: 97.70 (<60), MACD: 2.15 vs Signal: 1.97
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 64.10, SMA: 56.53, RSI: 81.17 (<65), Stoch %D: 98.12 (<60), MACD: 2.18 vs Signal: 2.01
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.66, SMA: 56.77, RSI: 76.28 (<65), Stoch %D: 97.45 (<60), MACD: 2.14 vs Signal: 2.04
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 64.41, SMA: 57.03, RSI: 78.65 (<65), Stoch %D: 97.05 (<60), MACD: 2.15 vs Signal: 2.06
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 64.74, SMA: 57.29, RSI: 79.59 (<65), Stoch %D: 96.64 (<60), MACD: 2.16 vs Signal: 2.08
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 64.54, SMA: 57.53, RSI: 77.37 (<65), Stoch %D: 97.26 (<60), MACD: 2.12 vs Signal: 2.09
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.79, SMA: 57.73, RSI: 69.40 (<65), Stoch %D: 94.81 (<60), MACD: 2.01 vs Signal: 2.07
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.50, SMA: 57.92, RSI: 66.59 (<65), Stoch %D: 87.52 (<60), MACD: 1.88 vs Signal: 2.03
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 63.45, SMA: 58.13, RSI: 66.03 (<65), Stoch %D: 75.39 (<60), MACD: 1.75 vs Signal: 1.98
+2025-02-09 22:26:50,998 - DEBUG ENTRY: Price: 64.56, SMA: 58.36, RSI: 71.24 (<65), Stoch %D: 67.36 (<60), MACD: 1.71 vs Signal: 1.92
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.06, SMA: 58.57, RSI: 66.28 (<65), Stoch %D: 65.45 (<60), MACD: 1.63 vs Signal: 1.86
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.92, SMA: 58.79, RSI: 70.11 (<65), Stoch %D: 73.10 (<60), MACD: 1.61 vs Signal: 1.81
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.77, SMA: 59.02, RSI: 68.71 (<65), Stoch %D: 79.87 (<60), MACD: 1.57 vs Signal: 1.76
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.02, SMA: 59.25, RSI: 61.77 (<65), Stoch %D: 83.27 (<60), MACD: 1.46 vs Signal: 1.70
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 62.88, SMA: 59.45, RSI: 52.99 (<65), Stoch %D: 73.66 (<60), MACD: 1.26 vs Signal: 1.61
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 63.44, SMA: 59.67, RSI: 56.25 (<65), Stoch %D: 58.36 (<60), MACD: 1.14 vs Signal: 1.52
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.37, SMA: 59.89, RSI: 61.11 (<65), Stoch %D: 48.46 (<60), MACD: 1.10 vs Signal: 1.44
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 65.61, SMA: 60.14, RSI: 66.48 (<65), Stoch %D: 54.54 (<60), MACD: 1.16 vs Signal: 1.38
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 64.69, SMA: 60.37, RSI: 59.90 (<65), Stoch %D: 68.77 (<60), MACD: 1.12 vs Signal: 1.33
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 65.07, SMA: 60.59, RSI: 61.59 (<65), Stoch %D: 80.27 (<60), MACD: 1.11 vs Signal: 1.29
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 65.63, SMA: 60.82, RSI: 63.98 (<65), Stoch %D: 83.78 (<60), MACD: 1.13 vs Signal: 1.25
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 65.79, SMA: 61.08, RSI: 64.69 (<65), Stoch %D: 86.66 (<60), MACD: 1.15 vs Signal: 1.23
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 66.69, SMA: 61.34, RSI: 68.31 (<65), Stoch %D: 90.78 (<60), MACD: 1.22 vs Signal: 1.23
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 67.83, SMA: 61.60, RSI: 72.21 (<65), Stoch %D: 94.75 (<60), MACD: 1.35 vs Signal: 1.25
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 67.96, SMA: 61.86, RSI: 72.64 (<65), Stoch %D: 96.55 (<60), MACD: 1.45 vs Signal: 1.29
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 67.80, SMA: 62.14, RSI: 71.21 (<65), Stoch %D: 95.68 (<60), MACD: 1.50 vs Signal: 1.33
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 67.87, SMA: 62.40, RSI: 71.46 (<65), Stoch %D: 94.60 (<60), MACD: 1.52 vs Signal: 1.37
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 67.73, SMA: 62.64, RSI: 70.09 (<65), Stoch %D: 92.60 (<60), MACD: 1.52 vs Signal: 1.40
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 68.83, SMA: 62.87, RSI: 74.27 (<65), Stoch %D: 92.26 (<60), MACD: 1.58 vs Signal: 1.44
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 68.90, SMA: 63.11, RSI: 74.50 (<65), Stoch %D: 92.83 (<60), MACD: 1.62 vs Signal: 1.47
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 70.27, SMA: 63.38, RSI: 78.72 (<65), Stoch %D: 95.47 (<60), MACD: 1.74 vs Signal: 1.53
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 70.24, SMA: 63.65, RSI: 78.45 (<65), Stoch %D: 95.82 (<60), MACD: 1.81 vs Signal: 1.58
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 70.66, SMA: 63.93, RSI: 79.64 (<65), Stoch %D: 95.01 (<60), MACD: 1.88 vs Signal: 1.64
+2025-02-09 22:26:50,999 - DEBUG ENTRY: Price: 71.17, SMA: 64.21, RSI: 81.03 (<65), Stoch %D: 92.77 (<60), MACD: 1.95 vs Signal: 1.71
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 72.80, SMA: 64.50, RSI: 84.61 (<65), Stoch %D: 93.52 (<60), MACD: 2.12 vs Signal: 1.79
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 72.09, SMA: 64.78, RSI: 77.73 (<65), Stoch %D: 94.71 (<60), MACD: 2.17 vs Signal: 1.86
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 72.66, SMA: 65.06, RSI: 79.21 (<65), Stoch %D: 95.76 (<60), MACD: 2.23 vs Signal: 1.94
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 72.32, SMA: 65.33, RSI: 75.98 (<65), Stoch %D: 94.14 (<60), MACD: 2.22 vs Signal: 1.99
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 73.48, SMA: 65.61, RSI: 79.10 (<65), Stoch %D: 93.38 (<60), MACD: 2.28 vs Signal: 2.05
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 75.05, SMA: 65.91, RSI: 82.41 (<65), Stoch %D: 92.96 (<60), MACD: 2.43 vs Signal: 2.13
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 75.21, SMA: 66.24, RSI: 82.73 (<65), Stoch %D: 94.20 (<60), MACD: 2.53 vs Signal: 2.21
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 76.82, SMA: 66.60, RSI: 85.43 (<65), Stoch %D: 95.28 (<60), MACD: 2.71 vs Signal: 2.31
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 75.78, SMA: 66.91, RSI: 77.05 (<65), Stoch %D: 94.98 (<60), MACD: 2.74 vs Signal: 2.40
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 75.46, SMA: 67.18, RSI: 74.59 (<65), Stoch %D: 92.85 (<60), MACD: 2.70 vs Signal: 2.46
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 76.40, SMA: 67.47, RSI: 76.90 (<65), Stoch %D: 89.45 (<60), MACD: 2.72 vs Signal: 2.51
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.25, SMA: 67.77, RSI: 78.77 (<65), Stoch %D: 88.91 (<60), MACD: 2.77 vs Signal: 2.56
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 76.73, SMA: 68.06, RSI: 74.75 (<65), Stoch %D: 90.89 (<60), MACD: 2.73 vs Signal: 2.60
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.00, SMA: 68.34, RSI: 75.45 (<65), Stoch %D: 93.50 (<60), MACD: 2.70 vs Signal: 2.62
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.37, SMA: 68.63, RSI: 76.41 (<65), Stoch %D: 94.25 (<60), MACD: 2.67 vs Signal: 2.63
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.15, SMA: 68.90, RSI: 74.52 (<65), Stoch %D: 92.90 (<60), MACD: 2.59 vs Signal: 2.62
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 74.88, SMA: 69.13, RSI: 58.63 (<65), Stoch %D: 86.53 (<60), MACD: 2.33 vs Signal: 2.56
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.00, SMA: 69.39, RSI: 65.93 (<65), Stoch %D: 78.37 (<60), MACD: 2.26 vs Signal: 2.50
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 78.61, SMA: 69.69, RSI: 70.24 (<65), Stoch %D: 71.24 (<60), MACD: 2.31 vs Signal: 2.46
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 78.50, SMA: 69.97, RSI: 69.57 (<65), Stoch %D: 73.46 (<60), MACD: 2.32 vs Signal: 2.43
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 75.02, SMA: 70.17, RSI: 52.96 (<65), Stoch %D: 71.29 (<60), MACD: 2.02 vs Signal: 2.35
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 74.81, SMA: 70.38, RSI: 52.17 (<65), Stoch %D: 62.37 (<60), MACD: 1.74 vs Signal: 2.23
+2025-02-09 22:26:51,000 - DEBUG ENTRY: Price: 77.28, SMA: 70.65, RSI: 59.92 (<65), Stoch %D: 47.30 (<60), MACD: 1.70 vs Signal: 2.12
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 77.91, SMA: 70.94, RSI: 61.63 (<65), Stoch %D: 44.80 (<60), MACD: 1.70 vs Signal: 2.04
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 78.82, SMA: 71.24, RSI: 64.02 (<65), Stoch %D: 56.09 (<60), MACD: 1.76 vs Signal: 1.98
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 77.75, SMA: 71.51, RSI: 59.34 (<65), Stoch %D: 70.20 (<60), MACD: 1.69 vs Signal: 1.93
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 78.12, SMA: 71.79, RSI: 60.42 (<65), Stoch %D: 78.59 (<60), MACD: 1.66 vs Signal: 1.87
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 77.65, SMA: 72.04, RSI: 58.30 (<65), Stoch %D: 77.71 (<60), MACD: 1.57 vs Signal: 1.81
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 79.49, SMA: 72.34, RSI: 63.66 (<65), Stoch %D: 79.04 (<60), MACD: 1.63 vs Signal: 1.77
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 78.93, SMA: 72.64, RSI: 61.07 (<65), Stoch %D: 81.38 (<60), MACD: 1.61 vs Signal: 1.74
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 78.95, SMA: 72.96, RSI: 61.13 (<65), Stoch %D: 88.08 (<60), MACD: 1.58 vs Signal: 1.71
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 77.50, SMA: 73.24, RSI: 54.55 (<65), Stoch %D: 88.18 (<60), MACD: 1.43 vs Signal: 1.65
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 78.62, SMA: 73.52, RSI: 58.30 (<65), Stoch %D: 86.36 (<60), MACD: 1.38 vs Signal: 1.60
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 77.82, SMA: 73.77, RSI: 54.80 (<65), Stoch %D: 80.27 (<60), MACD: 1.26 vs Signal: 1.53
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 76.05, SMA: 73.99, RSI: 48.01 (<65), Stoch %D: 75.15 (<60), MACD: 1.01 vs Signal: 1.43
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 72.44, SMA: 74.14, RSI: 37.71 (<65), Stoch %D: 63.63 (<60), MACD: 0.52 vs Signal: 1.24
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 69.99, SMA: 74.23, RSI: 32.59 (<65), Stoch %D: 46.53 (<60), MACD: -0.07 vs Signal: 0.98
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 71.10, SMA: 74.33, RSI: 36.77 (<65), Stoch %D: 28.77 (<60), MACD: -0.44 vs Signal: 0.70
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 66.45, SMA: 74.33, RSI: 28.73 (<65), Stoch %D: 15.45 (<60), MACD: -1.10 vs Signal: 0.34
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 66.41, SMA: 74.30, RSI: 28.68 (<65), Stoch %D: 11.86 (<60), MACD: -1.61 vs Signal: -0.05
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 72.59, SMA: 74.39, RSI: 46.64 (<65), Stoch %D: 16.38 (<60), MACD: -1.49 vs Signal: -0.34
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 70.29, SMA: 74.44, RSI: 42.35 (<65), Stoch %D: 28.46 (<60), MACD: -1.57 vs Signal: -0.58
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 73.55, SMA: 74.56, RSI: 49.43 (<65), Stoch %D: 43.12 (<60), MACD: -1.35 vs Signal: -0.74
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 71.16, SMA: 74.63, RSI: 45.07 (<65), Stoch %D: 52.06 (<60), MACD: -1.35 vs Signal: -0.86
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 70.22, SMA: 74.65, RSI: 43.44 (<65), Stoch %D: 56.10 (<60), MACD: -1.41 vs Signal: -0.97
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 64.66, SMA: 74.57, RSI: 35.33 (<65), Stoch %D: 49.65 (<60), MACD: -1.89 vs Signal: -1.15
+2025-02-09 22:26:51,001 - DEBUG ENTRY: Price: 69.32, SMA: 74.55, RSI: 44.66 (<65), Stoch %D: 42.89 (<60), MACD: -1.87 vs Signal: -1.30
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 66.91, SMA: 74.48, RSI: 41.34 (<65), Stoch %D: 33.98 (<60), MACD: -2.03 vs Signal: -1.44
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 60.31, SMA: 74.28, RSI: 33.89 (<65), Stoch %D: 29.30 (<60), MACD: -2.65 vs Signal: -1.69
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 67.53, SMA: 74.20, RSI: 45.46 (<65), Stoch %D: 26.98 (<60), MACD: -2.54 vs Signal: -1.86
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 58.84, SMA: 73.93, RSI: 37.06 (<65), Stoch %D: 23.74 (<60), MACD: -3.11 vs Signal: -2.11
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 61.43, SMA: 73.71, RSI: 40.58 (<65), Stoch %D: 24.45 (<60), MACD: -3.32 vs Signal: -2.35
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 59.93, SMA: 73.46, RSI: 39.21 (<65), Stoch %D: 19.57 (<60), MACD: -3.56 vs Signal: -2.59
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 59.47, SMA: 73.20, RSI: 38.78 (<65), Stoch %D: 18.51 (<60), MACD: -3.75 vs Signal: -2.82
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 55.69, SMA: 72.84, RSI: 35.34 (<65), Stoch %D: 12.77 (<60), MACD: -4.15 vs Signal: -3.09
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 54.51, SMA: 72.43, RSI: 34.31 (<65), Stoch %D: 11.24 (<60), MACD: -4.52 vs Signal: -3.37
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 59.98, SMA: 72.13, RSI: 42.62 (<65), Stoch %D: 11.93 (<60), MACD: -4.32 vs Signal: -3.56
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 59.65, SMA: 71.79, RSI: 42.27 (<65), Stoch %D: 19.39 (<60), MACD: -4.13 vs Signal: -3.68
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 62.79, SMA: 71.53, RSI: 46.72 (<65), Stoch %D: 32.45 (<60), MACD: -3.70 vs Signal: -3.68
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 60.19, SMA: 71.22, RSI: 43.71 (<65), Stoch %D: 43.31 (<60), MACD: -3.52 vs Signal: -3.65
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 61.91, SMA: 70.93, RSI: 46.18 (<65), Stoch %D: 51.83 (<60), MACD: -3.20 vs Signal: -3.56
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 61.78, SMA: 70.62, RSI: 46.02 (<65), Stoch %D: 54.88 (<60), MACD: -2.92 vs Signal: -3.43
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 58.53, SMA: 70.26, RSI: 42.00 (<65), Stoch %D: 56.41 (<60), MACD: -2.93 vs Signal: -3.33
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 59.50, SMA: 69.91, RSI: 43.59 (<65), Stoch %D: 56.14 (<60), MACD: -2.83 vs Signal: -3.23
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 58.65, SMA: 69.53, RSI: 42.49 (<65), Stoch %D: 55.42 (<60), MACD: -2.79 vs Signal: -3.14
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 63.77, SMA: 69.26, RSI: 50.54 (<65), Stoch %D: 61.62 (<60), MACD: -2.31 vs Signal: -2.98
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 63.03, SMA: 69.03, RSI: 49.46 (<65), Stoch %D: 69.06 (<60), MACD: -1.97 vs Signal: -2.78
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 64.64, SMA: 68.78, RSI: 51.88 (<65), Stoch %D: 80.60 (<60), MACD: -1.55 vs Signal: -2.53
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 65.11, SMA: 68.51, RSI: 52.58 (<65), Stoch %D: 85.29 (<60), MACD: -1.17 vs Signal: -2.26
+2025-02-09 22:26:51,002 - DEBUG ENTRY: Price: 66.38, SMA: 68.27, RSI: 54.54 (<65), Stoch %D: 90.55 (<60), MACD: -0.76 vs Signal: -1.96
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 69.74, SMA: 68.16, RSI: 59.30 (<65), Stoch %D: 92.97 (<60), MACD: -0.16 vs Signal: -1.60
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 69.10, SMA: 68.05, RSI: 58.06 (<65), Stoch %D: 95.82 (<60), MACD: 0.26 vs Signal: -1.23
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 69.65, SMA: 67.90, RSI: 58.86 (<65), Stoch %D: 96.28 (<60), MACD: 0.64 vs Signal: -0.85
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 68.71, SMA: 67.71, RSI: 56.85 (<65), Stoch %D: 95.02 (<60), MACD: 0.84 vs Signal: -0.51
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 67.28, SMA: 67.48, RSI: 53.86 (<65), Stoch %D: 92.27 (<60), MACD: 0.88 vs Signal: -0.24
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 65.20, SMA: 67.23, RSI: 49.74 (<65), Stoch %D: 85.76 (<60), MACD: 0.74 vs Signal: -0.04
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 67.08, SMA: 67.01, RSI: 53.22 (<65), Stoch %D: 78.72 (<60), MACD: 0.77 vs Signal: 0.12
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 66.82, SMA: 66.79, RSI: 52.67 (<65), Stoch %D: 72.78 (<60), MACD: 0.76 vs Signal: 0.25
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 68.75, SMA: 66.58, RSI: 56.24 (<65), Stoch %D: 73.59 (<60), MACD: 0.90 vs Signal: 0.38
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 68.79, SMA: 66.38, RSI: 56.33 (<65), Stoch %D: 76.55 (<60), MACD: 1.00 vs Signal: 0.50
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 67.68, SMA: 66.15, RSI: 53.63 (<65), Stoch %D: 79.05 (<60), MACD: 0.98 vs Signal: 0.60
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 69.90, SMA: 66.00, RSI: 57.96 (<65), Stoch %D: 79.40 (<60), MACD: 1.13 vs Signal: 0.71
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 71.38, SMA: 65.85, RSI: 60.59 (<65), Stoch %D: 80.70 (<60), MACD: 1.35 vs Signal: 0.83
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 70.23, SMA: 65.70, RSI: 57.57 (<65), Stoch %D: 83.68 (<60), MACD: 1.42 vs Signal: 0.95
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 71.22, SMA: 65.60, RSI: 59.45 (<65), Stoch %D: 84.95 (<60), MACD: 1.54 vs Signal: 1.07
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 72.29, SMA: 65.60, RSI: 61.43 (<65), Stoch %D: 83.78 (<60), MACD: 1.70 vs Signal: 1.19
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 73.04, SMA: 65.66, RSI: 62.80 (<65), Stoch %D: 84.43 (<60), MACD: 1.86 vs Signal: 1.33
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 73.79, SMA: 65.72, RSI: 64.19 (<65), Stoch %D: 87.69 (<60), MACD: 2.03 vs Signal: 1.47
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 75.55, SMA: 65.90, RSI: 67.24 (<65), Stoch %D: 92.76 (<60), MACD: 2.28 vs Signal: 1.63
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 76.74, SMA: 66.10, RSI: 69.16 (<65), Stoch %D: 95.59 (<60), MACD: 2.54 vs Signal: 1.81
+2025-02-09 22:26:51,003 - DEBUG ENTRY: Price: 75.86, SMA: 66.17, RSI: 66.09 (<65), Stoch %D: 95.26 (<60), MACD: 2.65 vs Signal: 1.98
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 74.94, SMA: 66.26, RSI: 62.94 (<65), Stoch %D: 90.88 (<60), MACD: 2.63 vs Signal: 2.11
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 75.41, SMA: 66.30, RSI: 63.87 (<65), Stoch %D: 84.06 (<60), MACD: 2.62 vs Signal: 2.21
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 74.96, SMA: 66.38, RSI: 62.24 (<65), Stoch %D: 77.73 (<60), MACD: 2.55 vs Signal: 2.28
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 76.73, SMA: 66.51, RSI: 65.95 (<65), Stoch %D: 76.07 (<60), MACD: 2.60 vs Signal: 2.34
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 76.28, SMA: 66.74, RSI: 64.24 (<65), Stoch %D: 77.15 (<60), MACD: 2.58 vs Signal: 2.39
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.77, SMA: 66.91, RSI: 67.29 (<65), Stoch %D: 82.36 (<60), MACD: 2.66 vs Signal: 2.44
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.19, SMA: 67.11, RSI: 64.96 (<65), Stoch %D: 86.10 (<60), MACD: 2.64 vs Signal: 2.48
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.68, SMA: 67.46, RSI: 66.05 (<65), Stoch %D: 90.56 (<60), MACD: 2.63 vs Signal: 2.51
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.16, SMA: 67.65, RSI: 63.79 (<65), Stoch %D: 88.97 (<60), MACD: 2.55 vs Signal: 2.52
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.49, SMA: 68.03, RSI: 64.62 (<65), Stoch %D: 85.65 (<60), MACD: 2.49 vs Signal: 2.51
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.53, SMA: 68.35, RSI: 64.71 (<65), Stoch %D: 79.10 (<60), MACD: 2.42 vs Signal: 2.49
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 77.45, SMA: 68.70, RSI: 64.33 (<65), Stoch %D: 75.85 (<60), MACD: 2.32 vs Signal: 2.46
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 78.40, SMA: 69.08, RSI: 66.99 (<65), Stoch %D: 75.90 (<60), MACD: 2.30 vs Signal: 2.43
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 78.77, SMA: 69.54, RSI: 67.96 (<65), Stoch %D: 80.26 (<60), MACD: 2.29 vs Signal: 2.40
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 79.20, SMA: 70.03, RSI: 69.14 (<65), Stoch %D: 86.79 (<60), MACD: 2.28 vs Signal: 2.38
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 78.52, SMA: 70.40, RSI: 65.09 (<65), Stoch %D: 91.05 (<60), MACD: 2.20 vs Signal: 2.34
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 80.75, SMA: 70.83, RSI: 71.08 (<65), Stoch %D: 93.23 (<60), MACD: 2.29 vs Signal: 2.33
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 81.23, SMA: 71.19, RSI: 72.17 (<65), Stoch %D: 93.35 (<60), MACD: 2.37 vs Signal: 2.34
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 83.80, SMA: 71.67, RSI: 77.18 (<65), Stoch %D: 95.13 (<60), MACD: 2.61 vs Signal: 2.39
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 85.95, SMA: 72.15, RSI: 80.38 (<65), Stoch %D: 96.23 (<60), MACD: 2.94 vs Signal: 2.50
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 81.83, SMA: 72.55, RSI: 62.37 (<65), Stoch %D: 92.00 (<60), MACD: 2.84 vs Signal: 2.57
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 82.53, SMA: 73.03, RSI: 63.86 (<65), Stoch %D: 82.96 (<60), MACD: 2.78 vs Signal: 2.61
+2025-02-09 22:26:51,004 - DEBUG ENTRY: Price: 83.55, SMA: 73.51, RSI: 65.96 (<65), Stoch %D: 71.67 (<60), MACD: 2.79 vs Signal: 2.65
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 85.77, SMA: 74.05, RSI: 70.03 (<65), Stoch %D: 69.61 (<60), MACD: 2.94 vs Signal: 2.71
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 85.65, SMA: 74.49, RSI: 69.55 (<65), Stoch %D: 74.42 (<60), MACD: 3.01 vs Signal: 2.77
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 85.68, SMA: 74.94, RSI: 69.61 (<65), Stoch %D: 83.93 (<60), MACD: 3.04 vs Signal: 2.82
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 85.19, SMA: 75.35, RSI: 67.41 (<65), Stoch %D: 87.91 (<60), MACD: 2.98 vs Signal: 2.85
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 87.42, SMA: 75.80, RSI: 71.79 (<65), Stoch %D: 89.65 (<60), MACD: 3.09 vs Signal: 2.90
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 89.29, SMA: 76.26, RSI: 74.84 (<65), Stoch %D: 89.12 (<60), MACD: 3.28 vs Signal: 2.98
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 87.71, SMA: 76.62, RSI: 68.14 (<65), Stoch %D: 89.08 (<60), MACD: 3.27 vs Signal: 3.03
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 88.88, SMA: 77.01, RSI: 70.26 (<65), Stoch %D: 86.43 (<60), MACD: 3.31 vs Signal: 3.09
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 86.15, SMA: 77.34, RSI: 60.15 (<65), Stoch %D: 80.08 (<60), MACD: 3.10 vs Signal: 3.09
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 88.13, SMA: 77.73, RSI: 64.19 (<65), Stoch %D: 74.31 (<60), MACD: 3.05 vs Signal: 3.08
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 88.87, SMA: 78.16, RSI: 65.58 (<65), Stoch %D: 69.98 (<60), MACD: 3.03 vs Signal: 3.07
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 88.70, SMA: 78.63, RSI: 64.96 (<65), Stoch %D: 72.40 (<60), MACD: 2.97 vs Signal: 3.05
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 88.70, SMA: 79.07, RSI: 64.96 (<65), Stoch %D: 75.65 (<60), MACD: 2.89 vs Signal: 3.02
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 91.07, SMA: 79.55, RSI: 69.66 (<65), Stoch %D: 80.57 (<60), MACD: 2.99 vs Signal: 3.01
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 90.79, SMA: 79.99, RSI: 68.48 (<65), Stoch %D: 82.99 (<60), MACD: 3.00 vs Signal: 3.01
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 92.90, SMA: 80.47, RSI: 72.26 (<65), Stoch %D: 87.03 (<60), MACD: 3.15 vs Signal: 3.04
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 93.30, SMA: 80.99, RSI: 72.92 (<65), Stoch %D: 89.70 (<60), MACD: 3.26 vs Signal: 3.08
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 93.47, SMA: 81.46, RSI: 73.20 (<65), Stoch %D: 93.48 (<60), MACD: 3.33 vs Signal: 3.13
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 93.03, SMA: 81.89, RSI: 71.10 (<65), Stoch %D: 90.94 (<60), MACD: 3.30 vs Signal: 3.17
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 94.57, SMA: 82.38, RSI: 73.97 (<65), Stoch %D: 86.30 (<60), MACD: 3.37 vs Signal: 3.21
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 95.22, SMA: 82.86, RSI: 75.10 (<65), Stoch %D: 78.69 (<60), MACD: 3.44 vs Signal: 3.25
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 94.05, SMA: 83.29, RSI: 69.29 (<65), Stoch %D: 76.10 (<60), MACD: 3.36 vs Signal: 3.27
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 93.86, SMA: 83.71, RSI: 68.36 (<65), Stoch %D: 74.86 (<60), MACD: 3.24 vs Signal: 3.27
+2025-02-09 22:26:51,005 - DEBUG ENTRY: Price: 95.84, SMA: 84.15, RSI: 72.48 (<65), Stoch %D: 75.41 (<60), MACD: 3.27 vs Signal: 3.27
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 94.52, SMA: 84.53, RSI: 66.27 (<65), Stoch %D: 74.51 (<60), MACD: 3.15 vs Signal: 3.24
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 94.78, SMA: 84.89, RSI: 66.88 (<65), Stoch %D: 74.31 (<60), MACD: 3.04 vs Signal: 3.20
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 90.47, SMA: 85.18, RSI: 50.75 (<65), Stoch %D: 65.69 (<60), MACD: 2.58 vs Signal: 3.08
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 90.25, SMA: 85.49, RSI: 50.07 (<65), Stoch %D: 53.64 (<60), MACD: 2.17 vs Signal: 2.90
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 92.38, SMA: 85.83, RSI: 56.08 (<65), Stoch %D: 39.57 (<60), MACD: 1.99 vs Signal: 2.72
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 90.87, SMA: 86.15, RSI: 51.36 (<65), Stoch %D: 36.72 (<60), MACD: 1.71 vs Signal: 2.51
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 92.61, SMA: 86.46, RSI: 55.95 (<65), Stoch %D: 40.27 (<60), MACD: 1.61 vs Signal: 2.33
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 93.73, SMA: 86.81, RSI: 58.65 (<65), Stoch %D: 47.24 (<60), MACD: 1.60 vs Signal: 2.19
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 103.54, SMA: 87.33, RSI: 73.80 (<65), Stoch %D: 57.94 (<60), MACD: 2.36 vs Signal: 2.22
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 106.15, SMA: 87.91, RSI: 76.29 (<65), Stoch %D: 69.86 (<60), MACD: 3.13 vs Signal: 2.40
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 106.86, SMA: 88.49, RSI: 76.93 (<65), Stoch %D: 83.27 (<60), MACD: 3.76 vs Signal: 2.68
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 107.25, SMA: 89.09, RSI: 77.29 (<65), Stoch %D: 89.20 (<60), MACD: 4.24 vs Signal: 2.99
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 110.99, SMA: 89.76, RSI: 80.47 (<65), Stoch %D: 92.53 (<60), MACD: 4.87 vs Signal: 3.36
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 108.46, SMA: 90.38, RSI: 73.04 (<65), Stoch %D: 92.57 (<60), MACD: 5.10 vs Signal: 3.71
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 110.04, SMA: 91.03, RSI: 74.62 (<65), Stoch %D: 93.42 (<60), MACD: 5.35 vs Signal: 4.04
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 106.77, SMA: 91.60, RSI: 65.99 (<65), Stoch %D: 91.25 (<60), MACD: 5.23 vs Signal: 4.28
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 110.32, SMA: 92.23, RSI: 70.03 (<65), Stoch %D: 90.31 (<60), MACD: 5.35 vs Signal: 4.49
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 112.27, SMA: 92.89, RSI: 72.01 (<65), Stoch %D: 89.39 (<60), MACD: 5.55 vs Signal: 4.70
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 112.17, SMA: 93.57, RSI: 71.75 (<65), Stoch %D: 91.96 (<60), MACD: 5.63 vs Signal: 4.89
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 111.88, SMA: 94.19, RSI: 70.94 (<65), Stoch %D: 93.49 (<60), MACD: 5.60 vs Signal: 5.03
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 112.81, SMA: 94.82, RSI: 72.02 (<65), Stoch %D: 95.11 (<60), MACD: 5.59 vs Signal: 5.14
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 112.95, SMA: 95.40, RSI: 72.19 (<65), Stoch %D: 94.72 (<60), MACD: 5.53 vs Signal: 5.22
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 115.46, SMA: 95.99, RSI: 75.07 (<65), Stoch %D: 95.13 (<60), MACD: 5.62 vs Signal: 5.30
+2025-02-09 22:26:51,006 - DEBUG ENTRY: Price: 121.41, SMA: 96.79, RSI: 80.28 (<65), Stoch %D: 95.24 (<60), MACD: 6.10 vs Signal: 5.46
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 122.86, SMA: 97.59, RSI: 81.31 (<65), Stoch %D: 95.13 (<60), MACD: 6.53 vs Signal: 5.67
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 121.85, SMA: 98.36, RSI: 78.26 (<65), Stoch %D: 92.31 (<60), MACD: 6.70 vs Signal: 5.88
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 123.51, SMA: 99.11, RSI: 79.62 (<65), Stoch %D: 88.61 (<60), MACD: 6.90 vs Signal: 6.08
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 122.03, SMA: 99.84, RSI: 75.13 (<65), Stoch %D: 85.03 (<60), MACD: 6.85 vs Signal: 6.24
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 121.83, SMA: 100.56, RSI: 74.52 (<65), Stoch %D: 83.57 (<60), MACD: 6.73 vs Signal: 6.34
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 125.97, SMA: 101.38, RSI: 78.44 (<65), Stoch %D: 83.27 (<60), MACD: 6.88 vs Signal: 6.44
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 130.98, SMA: 102.25, RSI: 82.04 (<65), Stoch %D: 85.30 (<60), MACD: 7.32 vs Signal: 6.62
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 128.27, SMA: 103.03, RSI: 74.76 (<65), Stoch %D: 86.66 (<60), MACD: 7.37 vs Signal: 6.77
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 118.00, SMA: 103.64, RSI: 54.90 (<65), Stoch %D: 80.93 (<60), MACD: 6.50 vs Signal: 6.71
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 118.08, SMA: 104.22, RSI: 54.99 (<65), Stoch %D: 66.72 (<60), MACD: 5.75 vs Signal: 6.52
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 110.13, SMA: 104.70, RSI: 44.42 (<65), Stoch %D: 45.81 (<60), MACD: 4.47 vs Signal: 6.11
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 114.52, SMA: 105.23, RSI: 50.13 (<65), Stoch %D: 31.19 (<60), MACD: 3.76 vs Signal: 5.64
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 110.79, SMA: 105.67, RSI: 45.82 (<65), Stoch %D: 20.18 (<60), MACD: 2.86 vs Signal: 5.08
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 109.33, SMA: 106.08, RSI: 44.22 (<65), Stoch %D: 16.55 (<60), MACD: 2.01 vs Signal: 4.47
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 112.61, SMA: 106.56, RSI: 48.57 (<65), Stoch %D: 12.98 (<60), MACD: 1.59 vs Signal: 3.89
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 112.79, SMA: 106.99, RSI: 48.80 (<65), Stoch %D: 13.61 (<60), MACD: 1.25 vs Signal: 3.36
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 109.46, SMA: 107.36, RSI: 44.72 (<65), Stoch %D: 14.29 (<60), MACD: 0.70 vs Signal: 2.83
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 107.71, SMA: 107.66, RSI: 42.70 (<65), Stoch %D: 13.96 (<60), MACD: 0.13 vs Signal: 2.29
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 104.29, SMA: 107.88, RSI: 38.99 (<65), Stoch %D: 10.56 (<60), MACD: -0.60 vs Signal: 1.71
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 107.46, SMA: 108.16, RSI: 43.85 (<65), Stoch %D: 8.49 (<60), MACD: -0.90 vs Signal: 1.19
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 109.15, SMA: 108.48, RSI: 46.31 (<65), Stoch %D: 10.09 (<60), MACD: -1.00 vs Signal: 0.75
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 104.57, SMA: 108.68, RSI: 41.06 (<65), Stoch %D: 15.10 (<60), MACD: -1.43 vs Signal: 0.32
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 105.64, SMA: 108.89, RSI: 42.70 (<65), Stoch %D: 19.26 (<60), MACD: -1.66 vs Signal: -0.08
+2025-02-09 22:26:51,007 - DEBUG ENTRY: Price: 109.60, SMA: 109.20, RSI: 48.41 (<65), Stoch %D: 24.36 (<60), MACD: -1.51 vs Signal: -0.37
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 112.22, SMA: 109.57, RSI: 51.82 (<65), Stoch %D: 33.83 (<60), MACD: -1.17 vs Signal: -0.53
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 111.37, SMA: 109.88, RSI: 50.65 (<65), Stoch %D: 47.01 (<60), MACD: -0.95 vs Signal: -0.61
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 113.05, SMA: 110.25, RSI: 52.92 (<65), Stoch %D: 60.22 (<60), MACD: -0.64 vs Signal: -0.62
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 114.01, SMA: 110.63, RSI: 54.21 (<65), Stoch %D: 69.69 (<60), MACD: -0.31 vs Signal: -0.56
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 110.33, SMA: 111.03, RSI: 48.68 (<65), Stoch %D: 74.89 (<60), MACD: -0.34 vs Signal: -0.51
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 113.72, SMA: 111.50, RSI: 53.40 (<65), Stoch %D: 78.18 (<60), MACD: -0.09 vs Signal: -0.43
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 110.46, SMA: 111.86, RSI: 48.77 (<65), Stoch %D: 77.35 (<60), MACD: -0.16 vs Signal: -0.37
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 112.34, SMA: 112.29, RSI: 51.38 (<65), Stoch %D: 78.63 (<60), MACD: -0.05 vs Signal: -0.31
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 112.23, SMA: 112.68, RSI: 51.22 (<65), Stoch %D: 77.54 (<60), MACD: 0.02 vs Signal: -0.24
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 114.18, SMA: 113.09, RSI: 54.04 (<65), Stoch %D: 81.29 (<60), MACD: 0.23 vs Signal: -0.15
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 121.44, SMA: 113.45, RSI: 62.68 (<65), Stoch %D: 84.51 (<60), MACD: 0.97 vs Signal: 0.07
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 118.21, SMA: 113.69, RSI: 57.51 (<65), Stoch %D: 88.65 (<60), MACD: 1.28 vs Signal: 0.32
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 118.30, SMA: 113.92, RSI: 57.61 (<65), Stoch %D: 88.00 (<60), MACD: 1.52 vs Signal: 0.56
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 117.83, SMA: 114.13, RSI: 56.82 (<65), Stoch %D: 82.26 (<60), MACD: 1.65 vs Signal: 0.78
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 116.18, SMA: 114.24, RSI: 54.02 (<65), Stoch %D: 73.72 (<60), MACD: 1.61 vs Signal: 0.94
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 113.22, SMA: 114.33, RSI: 49.30 (<65), Stoch %D: 61.86 (<60), MACD: 1.31 vs Signal: 1.02
+2025-02-09 22:26:51,008 - DEBUG ENTRY: Price: 114.71, SMA: 114.43, RSI: 51.59 (<65), Stoch %D: 50.82 (<60), MACD: 1.19 vs Signal: 1.05
+2025-02-09 22:26:51,008 - BUY CREATE at 114.71, Size: 260 shares
+2025-02-09 22:26:51,008 - BUY EXECUTED - Price: 113.89, Size: 260 shares, Cost: 29611.36, Comm: 29.61
+2025-02-09 22:26:51,008 - DEBUG EXIT: Price: 114.09, Stop: 111.80, Target: 137.95, RSI: 50.56 (>75)
+2025-02-09 22:26:51,008 - DEBUG EXIT: Price: 112.99, Stop: 111.80, Target: 137.73, RSI: 48.73 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 112.30, Stop: 111.80, Target: 137.03, RSI: 47.56 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 112.31, Stop: 111.80, Target: 136.98, RSI: 47.58 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 113.82, Stop: 111.80, Target: 136.53, RSI: 50.59 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 108.55, Stop: 111.80, Target: 137.27, RSI: 41.61 (>75)
+2025-02-09 22:26:51,009 - SELL CREATE at 108.55, Size: 260 shares
+2025-02-09 22:26:51,009 - SELL EXECUTED - Price: 109.69, Size: 260 shares, Cost: 29611.36, Comm: 28.52
+2025-02-09 22:26:51,009 - 
         TRADE COMPLETED:
-        Gross Profit: 858.15
-        Net Profit: 728.76
-        Commission: 129.39
+        Gross Profit: -1091.36
+        Net Profit: -1149.49
+        Commission: 58.13
         
-2025-02-09 21:35:31,029 - BUY CREATE at 148.31, Size: 388 shares (Trade #5)
-2025-02-09 21:35:31,029 - BUY EXECUTED - Price: 149.44, Size: 388 shares, Cost: 57983.51, Comm: 57.98
-2025-02-09 21:35:31,029 - SELL CREATE at 145.54, Size: 388 shares (Trade #5)
-2025-02-09 21:35:31,030 - SELL EXECUTED - Price: 146.56, Size: 388 shares, Cost: 57983.51, Comm: 56.86
-2025-02-09 21:35:31,030 - 
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 112.57, SMA: 114.57, RSI: 49.04 (<65), Stoch %D: 19.56 (<60), MACD: -0.15 vs Signal: 0.40
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 106.27, SMA: 114.39, RSI: 40.36 (<65), Stoch %D: 16.05 (<60), MACD: -0.68 vs Signal: 0.19
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 106.18, SMA: 114.09, RSI: 40.26 (<65), Stoch %D: 15.76 (<60), MACD: -1.09 vs Signal: -0.07
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 107.81, SMA: 113.79, RSI: 43.26 (<65), Stoch %D: 13.28 (<60), MACD: -1.27 vs Signal: -0.31
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 112.21, SMA: 113.59, RSI: 50.50 (<65), Stoch %D: 18.62 (<60), MACD: -1.05 vs Signal: -0.46
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 116.19, SMA: 113.45, RSI: 55.97 (<65), Stoch %D: 31.92 (<60), MACD: -0.54 vs Signal: -0.47
+2025-02-09 22:26:51,009 - DEBUG ENTRY: Price: 116.06, SMA: 113.33, RSI: 55.75 (<65), Stoch %D: 54.09 (<60), MACD: -0.15 vs Signal: -0.41
+2025-02-09 22:26:51,009 - BUY CREATE at 116.06, Size: 256 shares
+2025-02-09 22:26:51,009 - BUY EXECUTED - Price: 117.83, Size: 256 shares, Cost: 30164.87, Comm: 30.16
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 113.74, Stop: 111.47, Target: 140.92, RSI: 51.89 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 113.40, Stop: 111.47, Target: 140.60, RSI: 51.33 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 116.84, Stop: 114.51, Target: 140.38, RSI: 56.46 (>75)
+2025-02-09 22:26:51,009 - DEBUG EXIT: Price: 116.57, Stop: 114.51, Target: 139.46, RSI: 55.95 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 116.62, Stop: 114.51, Target: 138.54, RSI: 56.03 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 117.64, Stop: 115.28, Target: 138.13, RSI: 57.66 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 116.75, Stop: 115.28, Target: 137.27, RSI: 55.71 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 115.42, Stop: 115.28, Target: 136.52, RSI: 52.84 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 116.01, Stop: 115.28, Target: 136.00, RSI: 53.99 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 114.74, Stop: 115.28, Target: 135.20, RSI: 51.14 (>75)
+2025-02-09 22:26:51,010 - SELL CREATE at 114.74, Size: 256 shares
+2025-02-09 22:26:51,010 - SELL EXECUTED - Price: 114.59, Size: 256 shares, Cost: 30164.87, Comm: 29.33
+2025-02-09 22:26:51,010 - 
         TRADE COMPLETED:
-        Gross Profit: -1118.52
-        Net Profit: -1233.37
-        Commission: 114.85
+        Gross Profit: -831.10
+        Net Profit: -890.60
+        Commission: 59.50
         
-2025-02-09 21:35:31,033 - BUY CREATE at 172.46, Size: 242 shares (Trade #6)
-2025-02-09 21:35:31,033 - BUY EXECUTED - Price: 169.80, Size: 242 shares, Cost: 41091.16, Comm: 41.09
-2025-02-09 21:35:31,033 - SELL CREATE at 163.29, Size: 242 shares (Trade #6)
-2025-02-09 21:35:31,033 - SELL EXECUTED - Price: 165.52, Size: 242 shares, Cost: 41091.16, Comm: 40.06
-2025-02-09 21:35:31,033 - 
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 111.33, SMA: 112.70, RSI: 44.37 (<65), Stoch %D: 67.73 (<60), MACD: 0.53 vs Signal: 0.68
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 112.62, SMA: 112.69, RSI: 47.22 (<65), Stoch %D: 54.04 (<60), MACD: 0.33 vs Signal: 0.61
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 113.46, SMA: 112.77, RSI: 49.04 (<65), Stoch %D: 39.05 (<60), MACD: 0.24 vs Signal: 0.54
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 114.01, SMA: 112.90, RSI: 50.25 (<65), Stoch %D: 33.11 (<60), MACD: 0.21 vs Signal: 0.47
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 116.41, SMA: 113.14, RSI: 55.27 (<65), Stoch %D: 38.21 (<60), MACD: 0.38 vs Signal: 0.46
+2025-02-09 22:26:51,010 - DEBUG ENTRY: Price: 120.00, SMA: 113.39, RSI: 61.51 (<65), Stoch %D: 52.80 (<60), MACD: 0.79 vs Signal: 0.52
+2025-02-09 22:26:51,010 - BUY CREATE at 120.00, Size: 322 shares
+2025-02-09 22:26:51,010 - BUY EXECUTED - Price: 119.32, Size: 322 shares, Cost: 38420.35, Comm: 38.42
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 120.35, Stop: 117.95, Target: 138.70, RSI: 62.07 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 120.22, Stop: 117.95, Target: 138.02, RSI: 61.70 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 119.54, Stop: 117.95, Target: 137.33, RSI: 59.78 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 121.01, Stop: 118.59, Target: 137.06, RSI: 62.51 (>75)
+2025-02-09 22:26:51,010 - DEBUG EXIT: Price: 121.63, Stop: 119.19, Target: 136.64, RSI: 63.62 (>75)
+2025-02-09 22:26:51,011 - DEBUG EXIT: Price: 119.08, Stop: 119.19, Target: 137.52, RSI: 56.19 (>75)
+2025-02-09 22:26:51,011 - SELL CREATE at 119.08, Size: 322 shares
+2025-02-09 22:26:51,011 - SELL EXECUTED - Price: 117.83, Size: 322 shares, Cost: 38420.35, Comm: 37.94
+2025-02-09 22:26:51,011 - 
         TRADE COMPLETED:
-        Gross Profit: -1034.68
-        Net Profit: -1115.82
-        Commission: 81.15
+        Gross Profit: -478.61
+        Net Profit: -554.97
+        Commission: 76.36
         
-2025-02-09 21:35:31,035 - BUY CREATE at 150.99, Size: 238 shares (Trade #7)
-2025-02-09 21:35:31,035 - BUY EXECUTED - Price: 152.43, Size: 238 shares, Cost: 36277.69, Comm: 36.28
-2025-02-09 21:35:31,035 - SELL CREATE at 149.57, Size: 238 shares (Trade #7)
-2025-02-09 21:35:31,036 - SELL EXECUTED - Price: 150.53, Size: 238 shares, Cost: 36277.69, Comm: 35.83
-2025-02-09 21:35:31,036 - 
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 120.51, SMA: 114.93, RSI: 59.08 (<65), Stoch %D: 86.16 (<60), MACD: 1.82 vs Signal: 1.45
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 119.70, SMA: 115.04, RSI: 56.79 (<65), Stoch %D: 80.31 (<60), MACD: 1.76 vs Signal: 1.51
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 119.08, SMA: 115.22, RSI: 55.04 (<65), Stoch %D: 76.41 (<60), MACD: 1.64 vs Signal: 1.54
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 125.05, SMA: 115.44, RSI: 65.96 (<65), Stoch %D: 76.24 (<60), MACD: 2.01 vs Signal: 1.63
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 124.98, SMA: 115.73, RSI: 65.76 (<65), Stoch %D: 80.91 (<60), MACD: 2.27 vs Signal: 1.76
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 125.85, SMA: 116.00, RSI: 67.11 (<65), Stoch %D: 88.28 (<60), MACD: 2.51 vs Signal: 1.91
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 123.86, SMA: 116.24, RSI: 61.17 (<65), Stoch %D: 90.04 (<60), MACD: 2.52 vs Signal: 2.03
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 125.39, SMA: 116.46, RSI: 63.82 (<65), Stoch %D: 88.29 (<60), MACD: 2.61 vs Signal: 2.15
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 128.96, SMA: 116.61, RSI: 69.11 (<65), Stoch %D: 82.63 (<60), MACD: 2.95 vs Signal: 2.31
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 128.06, SMA: 116.81, RSI: 66.47 (<65), Stoch %D: 81.05 (<60), MACD: 3.10 vs Signal: 2.47
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 129.05, SMA: 117.02, RSI: 67.92 (<65), Stoch %D: 80.24 (<60), MACD: 3.26 vs Signal: 2.63
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 133.66, SMA: 117.34, RSI: 73.65 (<65), Stoch %D: 82.18 (<60), MACD: 3.72 vs Signal: 2.84
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 131.88, SMA: 117.65, RSI: 68.56 (<65), Stoch %D: 83.77 (<60), MACD: 3.90 vs Signal: 3.06
+2025-02-09 22:26:51,011 - DEBUG ENTRY: Price: 130.76, SMA: 118.00, RSI: 65.49 (<65), Stoch %D: 84.55 (<60), MACD: 3.90 vs Signal: 3.22
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 129.75, SMA: 118.31, RSI: 62.77 (<65), Stoch %D: 80.49 (<60), MACD: 3.78 vs Signal: 3.34
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 126.54, SMA: 118.55, RSI: 54.96 (<65), Stoch %D: 72.37 (<60), MACD: 3.39 vs Signal: 3.35
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 128.11, SMA: 118.86, RSI: 57.72 (<65), Stoch %D: 62.75 (<60), MACD: 3.16 vs Signal: 3.31
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 123.80, SMA: 119.09, RSI: 48.83 (<65), Stoch %D: 51.32 (<60), MACD: 2.61 vs Signal: 3.17
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 128.02, SMA: 119.40, RSI: 55.98 (<65), Stoch %D: 43.94 (<60), MACD: 2.48 vs Signal: 3.03
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 129.13, SMA: 119.71, RSI: 57.65 (<65), Stoch %D: 39.92 (<60), MACD: 2.44 vs Signal: 2.91
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 126.12, SMA: 120.06, RSI: 51.90 (<65), Stoch %D: 42.74 (<60), MACD: 2.14 vs Signal: 2.76
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 125.95, SMA: 120.33, RSI: 51.57 (<65), Stoch %D: 41.97 (<60), MACD: 1.87 vs Signal: 2.58
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 127.99, SMA: 120.76, RSI: 55.09 (<65), Stoch %D: 38.26 (<60), MACD: 1.80 vs Signal: 2.42
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 126.06, SMA: 121.16, RSI: 51.29 (<65), Stoch %D: 31.08 (<60), MACD: 1.57 vs Signal: 2.25
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 124.32, SMA: 121.49, RSI: 48.09 (<65), Stoch %D: 25.66 (<60), MACD: 1.23 vs Signal: 2.05
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 125.00, SMA: 121.74, RSI: 49.42 (<65), Stoch %D: 19.70 (<60), MACD: 1.01 vs Signal: 1.84
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 129.11, SMA: 122.00, RSI: 56.66 (<65), Stoch %D: 19.74 (<60), MACD: 1.15 vs Signal: 1.70
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 133.84, SMA: 122.36, RSI: 63.19 (<65), Stoch %D: 29.36 (<60), MACD: 1.62 vs Signal: 1.69
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 135.99, SMA: 122.80, RSI: 65.72 (<65), Stoch %D: 50.88 (<60), MACD: 2.15 vs Signal: 1.78
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 139.76, SMA: 123.33, RSI: 69.66 (<65), Stoch %D: 71.43 (<60), MACD: 2.83 vs Signal: 1.99
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 139.99, SMA: 123.79, RSI: 69.89 (<65), Stoch %D: 85.09 (<60), MACD: 3.36 vs Signal: 2.26
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 138.91, SMA: 124.24, RSI: 67.35 (<65), Stoch %D: 88.37 (<60), MACD: 3.65 vs Signal: 2.54
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 134.05, SMA: 124.59, RSI: 57.23 (<65), Stoch %D: 84.77 (<60), MACD: 3.44 vs Signal: 2.72
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 129.04, SMA: 124.82, RSI: 49.03 (<65), Stoch %D: 73.12 (<60), MACD: 2.84 vs Signal: 2.74
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 131.17, SMA: 125.11, RSI: 52.17 (<65), Stoch %D: 57.85 (<60), MACD: 2.51 vs Signal: 2.70
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 132.00, SMA: 125.44, RSI: 53.37 (<65), Stoch %D: 44.86 (<60), MACD: 2.29 vs Signal: 2.61
+2025-02-09 22:26:51,012 - DEBUG ENTRY: Price: 130.97, SMA: 125.74, RSI: 51.64 (<65), Stoch %D: 39.90 (<60), MACD: 2.00 vs Signal: 2.49
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 134.35, SMA: 126.13, RSI: 56.62 (<65), Stoch %D: 41.73 (<60), MACD: 2.03 vs Signal: 2.40
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 133.93, SMA: 126.58, RSI: 55.85 (<65), Stoch %D: 46.08 (<60), MACD: 1.99 vs Signal: 2.32
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 134.08, SMA: 127.01, RSI: 56.08 (<65), Stoch %D: 50.72 (<60), MACD: 1.95 vs Signal: 2.25
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 133.20, SMA: 127.40, RSI: 54.29 (<65), Stoch %D: 51.48 (<60), MACD: 1.83 vs Signal: 2.16
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 132.59, SMA: 127.78, RSI: 53.03 (<65), Stoch %D: 48.92 (<60), MACD: 1.66 vs Signal: 2.06
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 132.33, SMA: 128.09, RSI: 52.49 (<65), Stoch %D: 42.95 (<60), MACD: 1.49 vs Signal: 1.95
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 132.57, SMA: 128.35, RSI: 52.97 (<65), Stoch %D: 38.65 (<60), MACD: 1.36 vs Signal: 1.83
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 130.44, SMA: 128.55, RSI: 48.18 (<65), Stoch %D: 34.96 (<60), MACD: 1.07 vs Signal: 1.68
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 128.13, SMA: 128.71, RSI: 43.60 (<65), Stoch %D: 30.60 (<60), MACD: 0.65 vs Signal: 1.48
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 127.03, SMA: 128.86, RSI: 41.56 (<65), Stoch %D: 24.72 (<60), MACD: 0.23 vs Signal: 1.23
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 127.18, SMA: 128.98, RSI: 41.97 (<65), Stoch %D: 20.45 (<60), MACD: -0.10 vs Signal: 0.96
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 123.39, SMA: 129.01, RSI: 35.42 (<65), Stoch %D: 17.89 (<60), MACD: -0.65 vs Signal: 0.64
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 123.26, SMA: 129.10, RSI: 35.21 (<65), Stoch %D: 18.93 (<60), MACD: -1.09 vs Signal: 0.29
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 122.76, SMA: 129.14, RSI: 34.39 (<65), Stoch %D: 21.23 (<60), MACD: -1.46 vs Signal: -0.06
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 118.49, SMA: 129.12, RSI: 28.35 (<65), Stoch %D: 25.53 (<60), MACD: -2.08 vs Signal: -0.46
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 118.75, SMA: 129.11, RSI: 29.18 (<65), Stoch %D: 25.38 (<60), MACD: -2.51 vs Signal: -0.87
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 125.15, SMA: 129.11, RSI: 45.59 (<65), Stoch %D: 25.27 (<60), MACD: -2.32 vs Signal: -1.16
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 122.53, SMA: 129.06, RSI: 41.37 (<65), Stoch %D: 26.58 (<60), MACD: -2.34 vs Signal: -1.40
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 119.54, SMA: 128.94, RSI: 37.13 (<65), Stoch %D: 31.14 (<60), MACD: -2.58 vs Signal: -1.63
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 117.65, SMA: 128.81, RSI: 34.71 (<65), Stoch %D: 30.04 (<60), MACD: -2.88 vs Signal: -1.88
+2025-02-09 22:26:51,013 - DEBUG ENTRY: Price: 118.91, SMA: 128.68, RSI: 37.63 (<65), Stoch %D: 24.71 (<60), MACD: -2.99 vs Signal: -2.11
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 113.95, SMA: 128.38, RSI: 31.65 (<65), Stoch %D: 16.59 (<60), MACD: -3.43 vs Signal: -2.37
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.59, SMA: 128.20, RSI: 41.08 (<65), Stoch %D: 15.37 (<60), MACD: -3.37 vs Signal: -2.57
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 117.50, SMA: 127.96, RSI: 39.70 (<65), Stoch %D: 16.42 (<60), MACD: -3.37 vs Signal: -2.73
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 119.44, SMA: 127.68, RSI: 43.37 (<65), Stoch %D: 24.25 (<60), MACD: -3.18 vs Signal: -2.82
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.53, SMA: 127.41, RSI: 42.07 (<65), Stoch %D: 29.99 (<60), MACD: -3.07 vs Signal: -2.87
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 121.43, SMA: 127.23, RSI: 47.45 (<65), Stoch %D: 39.18 (<60), MACD: -2.71 vs Signal: -2.84
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 122.97, SMA: 127.09, RSI: 50.11 (<65), Stoch %D: 47.32 (<60), MACD: -2.28 vs Signal: -2.73
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 122.18, SMA: 127.00, RSI: 48.75 (<65), Stoch %D: 58.24 (<60), MACD: -1.97 vs Signal: -2.58
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.04, SMA: 126.80, RSI: 42.28 (<65), Stoch %D: 62.07 (<60), MACD: -2.05 vs Signal: -2.47
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 117.51, SMA: 126.68, RSI: 41.52 (<65), Stoch %D: 57.35 (<60), MACD: -2.12 vs Signal: -2.40
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 120.84, SMA: 126.53, RSI: 47.85 (<65), Stoch %D: 48.97 (<60), MACD: -1.89 vs Signal: -2.30
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 120.01, SMA: 126.35, RSI: 46.50 (<65), Stoch %D: 46.22 (<60), MACD: -1.75 vs Signal: -2.19
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 117.61, SMA: 126.18, RSI: 42.74 (<65), Stoch %D: 48.98 (<60), MACD: -1.82 vs Signal: -2.11
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.10, SMA: 126.02, RSI: 43.74 (<65), Stoch %D: 49.27 (<60), MACD: -1.81 vs Signal: -2.05
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.70, SMA: 125.84, RSI: 45.02 (<65), Stoch %D: 43.80 (<60), MACD: -1.73 vs Signal: -1.99
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 118.88, SMA: 125.69, RSI: 45.41 (<65), Stoch %D: 37.17 (<60), MACD: -1.64 vs Signal: -1.92
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 117.42, SMA: 125.55, RSI: 42.72 (<65), Stoch %D: 30.32 (<60), MACD: -1.66 vs Signal: -1.87
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 119.62, SMA: 125.45, RSI: 47.76 (<65), Stoch %D: 27.86 (<60), MACD: -1.49 vs Signal: -1.79
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 120.46, SMA: 125.27, RSI: 49.56 (<65), Stoch %D: 28.20 (<60), MACD: -1.27 vs Signal: -1.69
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 123.30, SMA: 125.06, RSI: 55.24 (<65), Stoch %D: 39.55 (<60), MACD: -0.85 vs Signal: -1.52
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 123.60, SMA: 124.82, RSI: 55.82 (<65), Stoch %D: 55.22 (<60), MACD: -0.49 vs Signal: -1.31
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 125.25, SMA: 124.53, RSI: 58.90 (<65), Stoch %D: 74.28 (<60), MACD: -0.08 vs Signal: -1.07
+2025-02-09 22:26:51,014 - DEBUG ENTRY: Price: 127.66, SMA: 124.28, RSI: 62.96 (<65), Stoch %D: 87.10 (<60), MACD: 0.44 vs Signal: -0.76
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 130.25, SMA: 124.11, RSI: 66.76 (<65), Stoch %D: 95.61 (<60), MACD: 1.05 vs Signal: -0.40
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 128.53, SMA: 124.00, RSI: 62.18 (<65), Stoch %D: 97.16 (<60), MACD: 1.38 vs Signal: -0.04
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.65, SMA: 124.05, RSI: 66.64 (<65), Stoch %D: 96.84 (<60), MACD: 1.87 vs Signal: 0.34
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 129.30, SMA: 124.01, RSI: 60.83 (<65), Stoch %D: 93.31 (<60), MACD: 2.05 vs Signal: 0.68
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.72, SMA: 124.00, RSI: 64.28 (<65), Stoch %D: 92.23 (<60), MACD: 2.35 vs Signal: 1.02
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.39, SMA: 124.01, RSI: 63.45 (<65), Stoch %D: 90.87 (<60), MACD: 2.54 vs Signal: 1.32
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 132.05, SMA: 123.97, RSI: 64.44 (<65), Stoch %D: 93.14 (<60), MACD: 2.71 vs Signal: 1.60
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 130.36, SMA: 123.90, RSI: 60.00 (<65), Stoch %D: 92.82 (<60), MACD: 2.68 vs Signal: 1.82
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 130.74, SMA: 123.83, RSI: 60.66 (<65), Stoch %D: 91.77 (<60), MACD: 2.65 vs Signal: 1.98
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 129.21, SMA: 123.75, RSI: 56.64 (<65), Stoch %D: 86.31 (<60), MACD: 2.48 vs Signal: 2.08
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.54, SMA: 123.73, RSI: 60.90 (<65), Stoch %D: 82.95 (<60), MACD: 2.51 vs Signal: 2.17
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.93, SMA: 123.72, RSI: 61.58 (<65), Stoch %D: 81.61 (<60), MACD: 2.53 vs Signal: 2.24
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 131.61, SMA: 123.70, RSI: 60.64 (<65), Stoch %D: 84.45 (<60), MACD: 2.49 vs Signal: 2.29
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 130.82, SMA: 123.71, RSI: 58.28 (<65), Stoch %D: 84.42 (<60), MACD: 2.37 vs Signal: 2.30
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 130.72, SMA: 123.76, RSI: 57.99 (<65), Stoch %D: 78.21 (<60), MACD: 2.24 vs Signal: 2.29
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 128.74, SMA: 123.79, RSI: 52.16 (<65), Stoch %D: 62.02 (<60), MACD: 1.95 vs Signal: 2.22
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 129.80, SMA: 123.85, RSI: 54.78 (<65), Stoch %D: 43.29 (<60), MACD: 1.79 vs Signal: 2.14
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 125.21, SMA: 123.88, RSI: 43.63 (<65), Stoch %D: 26.21 (<60), MACD: 1.28 vs Signal: 1.96
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 125.45, SMA: 123.93, RSI: 44.28 (<65), Stoch %D: 18.49 (<60), MACD: 0.88 vs Signal: 1.75
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 127.06, SMA: 124.01, RSI: 48.48 (<65), Stoch %D: 16.12 (<60), MACD: 0.69 vs Signal: 1.53
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 127.73, SMA: 124.20, RSI: 50.19 (<65), Stoch %D: 20.20 (<60), MACD: 0.58 vs Signal: 1.34
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 124.44, SMA: 124.31, RSI: 42.76 (<65), Stoch %D: 22.39 (<60), MACD: 0.23 vs Signal: 1.12
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 123.52, SMA: 124.28, RSI: 40.94 (<65), Stoch %D: 23.27 (<60), MACD: -0.12 vs Signal: 0.87
+2025-02-09 22:26:51,015 - DEBUG ENTRY: Price: 120.43, SMA: 124.24, RSI: 35.49 (<65), Stoch %D: 17.78 (<60), MACD: -0.64 vs Signal: 0.57
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.59, SMA: 124.30, RSI: 41.38 (<65), Stoch %D: 15.09 (<60), MACD: -0.87 vs Signal: 0.28
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 125.03, SMA: 124.45, RSI: 47.22 (<65), Stoch %D: 14.64 (<60), MACD: -0.85 vs Signal: 0.06
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 123.87, SMA: 124.54, RSI: 44.93 (<65), Stoch %D: 20.47 (<60), MACD: -0.91 vs Signal: -0.14
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.48, SMA: 124.72, RSI: 42.26 (<65), Stoch %D: 24.53 (<60), MACD: -1.06 vs Signal: -0.32
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.32, SMA: 124.79, RSI: 41.96 (<65), Stoch %D: 25.48 (<60), MACD: -1.18 vs Signal: -0.49
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.89, SMA: 124.94, RSI: 48.45 (<65), Stoch %D: 25.55 (<60), MACD: -1.05 vs Signal: -0.60
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 123.04, SMA: 125.01, RSI: 44.60 (<65), Stoch %D: 27.66 (<60), MACD: -1.09 vs Signal: -0.70
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.68, SMA: 125.13, RSI: 48.52 (<65), Stoch %D: 35.03 (<60), MACD: -0.97 vs Signal: -0.75
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.49, SMA: 125.19, RSI: 48.08 (<65), Stoch %D: 41.49 (<60), MACD: -0.89 vs Signal: -0.78
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.44, SMA: 125.22, RSI: 47.96 (<65), Stoch %D: 47.77 (<60), MACD: -0.81 vs Signal: -0.79
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.90, SMA: 125.24, RSI: 44.32 (<65), Stoch %D: 49.05 (<60), MACD: -0.87 vs Signal: -0.80
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.24, SMA: 125.32, RSI: 42.83 (<65), Stoch %D: 48.02 (<60), MACD: -0.96 vs Signal: -0.83
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 121.92, SMA: 125.41, RSI: 42.08 (<65), Stoch %D: 43.29 (<60), MACD: -1.04 vs Signal: -0.88
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 122.68, SMA: 125.45, RSI: 44.56 (<65), Stoch %D: 39.78 (<60), MACD: -1.03 vs Signal: -0.91
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 121.19, SMA: 125.47, RSI: 40.89 (<65), Stoch %D: 34.74 (<60), MACD: -1.13 vs Signal: -0.95
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 123.50, SMA: 125.59, RSI: 48.02 (<65), Stoch %D: 34.12 (<60), MACD: -1.02 vs Signal: -0.96
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 123.51, SMA: 125.70, RSI: 48.04 (<65), Stoch %D: 35.34 (<60), MACD: -0.91 vs Signal: -0.95
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.33, SMA: 125.81, RSI: 50.52 (<65), Stoch %D: 45.81 (<60), MACD: -0.75 vs Signal: -0.91
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.71, SMA: 125.93, RSI: 51.67 (<65), Stoch %D: 56.01 (<60), MACD: -0.59 vs Signal: -0.85
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 123.71, SMA: 126.05, RSI: 48.49 (<65), Stoch %D: 64.52 (<60), MACD: -0.54 vs Signal: -0.79
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 124.93, SMA: 126.16, RSI: 52.33 (<65), Stoch %D: 67.82 (<60), MACD: -0.39 vs Signal: -0.71
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 128.00, SMA: 126.31, RSI: 60.35 (<65), Stoch %D: 71.63 (<60), MACD: -0.03 vs Signal: -0.57
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 127.17, SMA: 126.39, RSI: 57.55 (<65), Stoch %D: 78.88 (<60), MACD: 0.19 vs Signal: -0.42
+2025-02-09 22:26:51,016 - DEBUG ENTRY: Price: 127.67, SMA: 126.47, RSI: 58.80 (<65), Stoch %D: 86.29 (<60), MACD: 0.40 vs Signal: -0.25
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 129.28, SMA: 126.55, RSI: 62.61 (<65), Stoch %D: 90.21 (<60), MACD: 0.69 vs Signal: -0.06
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 127.98, SMA: 126.55, RSI: 57.93 (<65), Stoch %D: 89.62 (<60), MACD: 0.81 vs Signal: 0.11
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 129.78, SMA: 126.54, RSI: 62.15 (<65), Stoch %D: 88.54 (<60), MACD: 1.03 vs Signal: 0.29
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 131.43, SMA: 126.60, RSI: 65.54 (<65), Stoch %D: 89.06 (<60), MACD: 1.32 vs Signal: 0.50
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 131.16, SMA: 126.59, RSI: 64.51 (<65), Stoch %D: 92.43 (<60), MACD: 1.52 vs Signal: 0.70
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 130.87, SMA: 126.62, RSI: 63.39 (<65), Stoch %D: 93.93 (<60), MACD: 1.63 vs Signal: 0.89
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 130.58, SMA: 126.60, RSI: 62.18 (<65), Stoch %D: 92.79 (<60), MACD: 1.68 vs Signal: 1.05
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 132.22, SMA: 126.62, RSI: 66.05 (<65), Stoch %D: 89.93 (<60), MACD: 1.82 vs Signal: 1.20
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 133.74, SMA: 126.65, RSI: 69.19 (<65), Stoch %D: 89.40 (<60), MACD: 2.04 vs Signal: 1.37
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 134.35, SMA: 126.73, RSI: 70.39 (<65), Stoch %D: 92.24 (<60), MACD: 2.24 vs Signal: 1.54
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 134.66, SMA: 126.81, RSI: 70.99 (<65), Stoch %D: 95.38 (<60), MACD: 2.39 vs Signal: 1.71
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 137.30, SMA: 126.97, RSI: 75.60 (<65), Stoch %D: 97.44 (<60), MACD: 2.69 vs Signal: 1.91
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 139.32, SMA: 127.13, RSI: 78.43 (<65), Stoch %D: 97.56 (<60), MACD: 3.06 vs Signal: 2.14
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 141.82, SMA: 127.33, RSI: 81.32 (<65), Stoch %D: 97.21 (<60), MACD: 3.51 vs Signal: 2.41
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 140.52, SMA: 127.50, RSI: 75.63 (<65), Stoch %D: 95.59 (<60), MACD: 3.72 vs Signal: 2.67
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 142.35, SMA: 127.73, RSI: 77.97 (<65), Stoch %D: 94.87 (<60), MACD: 3.99 vs Signal: 2.94
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 141.75, SMA: 127.96, RSI: 75.43 (<65), Stoch %D: 93.08 (<60), MACD: 4.11 vs Signal: 3.17
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 142.87, SMA: 128.24, RSI: 76.94 (<65), Stoch %D: 92.21 (<60), MACD: 4.24 vs Signal: 3.38
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 146.31, SMA: 128.57, RSI: 80.84 (<65), Stoch %D: 90.93 (<60), MACD: 4.57 vs Signal: 3.62
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 145.66, SMA: 128.98, RSI: 78.12 (<65), Stoch %D: 91.20 (<60), MACD: 4.73 vs Signal: 3.84
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 143.61, SMA: 129.34, RSI: 70.19 (<65), Stoch %D: 90.65 (<60), MACD: 4.63 vs Signal: 4.00
+2025-02-09 22:26:51,017 - DEBUG ENTRY: Price: 139.74, SMA: 129.59, RSI: 58.20 (<65), Stoch %D: 84.94 (<60), MACD: 4.20 vs Signal: 4.04
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.37, SMA: 129.91, RSI: 64.36 (<65), Stoch %D: 76.80 (<60), MACD: 4.10 vs Signal: 4.05
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 142.63, SMA: 130.27, RSI: 62.35 (<65), Stoch %D: 68.52 (<60), MACD: 3.91 vs Signal: 4.02
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 144.01, SMA: 130.68, RSI: 64.57 (<65), Stoch %D: 67.78 (<60), MACD: 3.83 vs Signal: 3.99
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 145.73, SMA: 131.19, RSI: 67.19 (<65), Stoch %D: 70.45 (<60), MACD: 3.87 vs Signal: 3.96
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 146.16, SMA: 131.66, RSI: 67.82 (<65), Stoch %D: 76.68 (<60), MACD: 3.88 vs Signal: 3.94
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.98, SMA: 132.04, RSI: 61.31 (<65), Stoch %D: 79.52 (<60), MACD: 3.67 vs Signal: 3.89
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 142.22, SMA: 132.40, RSI: 56.60 (<65), Stoch %D: 75.88 (<60), MACD: 3.33 vs Signal: 3.78
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 142.87, SMA: 132.81, RSI: 57.89 (<65), Stoch %D: 65.24 (<60), MACD: 3.07 vs Signal: 3.64
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.09, SMA: 133.23, RSI: 58.33 (<65), Stoch %D: 53.86 (<60), MACD: 2.86 vs Signal: 3.48
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 142.75, SMA: 133.58, RSI: 57.32 (<65), Stoch %D: 48.29 (<60), MACD: 2.63 vs Signal: 3.31
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 144.56, SMA: 134.01, RSI: 61.21 (<65), Stoch %D: 49.63 (<60), MACD: 2.56 vs Signal: 3.16
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 144.15, SMA: 134.40, RSI: 59.90 (<65), Stoch %D: 54.25 (<60), MACD: 2.45 vs Signal: 3.02
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 144.26, SMA: 134.80, RSI: 60.15 (<65), Stoch %D: 60.35 (<60), MACD: 2.34 vs Signal: 2.88
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.58, SMA: 135.18, RSI: 57.72 (<65), Stoch %D: 62.38 (<60), MACD: 2.17 vs Signal: 2.74
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.53, SMA: 135.59, RSI: 57.54 (<65), Stoch %D: 61.37 (<60), MACD: 2.01 vs Signal: 2.60
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.04, SMA: 136.01, RSI: 55.71 (<65), Stoch %D: 55.81 (<60), MACD: 1.83 vs Signal: 2.44
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.30, SMA: 136.44, RSI: 56.50 (<65), Stoch %D: 51.60 (<60), MACD: 1.68 vs Signal: 2.29
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 146.28, SMA: 136.91, RSI: 64.44 (<65), Stoch %D: 53.10 (<60), MACD: 1.79 vs Signal: 2.19
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 146.48, SMA: 137.42, RSI: 64.92 (<65), Stoch %D: 62.53 (<60), MACD: 1.86 vs Signal: 2.12
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 148.47, SMA: 137.92, RSI: 69.21 (<65), Stoch %D: 78.02 (<60), MACD: 2.06 vs Signal: 2.11
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 147.55, SMA: 138.40, RSI: 65.26 (<65), Stoch %D: 88.20 (<60), MACD: 2.12 vs Signal: 2.11
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 143.79, SMA: 138.79, RSI: 52.06 (<65), Stoch %D: 85.74 (<60), MACD: 1.84 vs Signal: 2.06
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 144.13, SMA: 139.17, RSI: 52.97 (<65), Stoch %D: 70.02 (<60), MACD: 1.63 vs Signal: 1.97
+2025-02-09 22:26:51,018 - DEBUG ENTRY: Price: 145.59, SMA: 139.61, RSI: 56.83 (<65), Stoch %D: 52.07 (<60), MACD: 1.56 vs Signal: 1.89
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 147.08, SMA: 140.05, RSI: 60.41 (<65), Stoch %D: 45.72 (<60), MACD: 1.61 vs Signal: 1.83
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 146.99, SMA: 140.43, RSI: 60.09 (<65), Stoch %D: 51.51 (<60), MACD: 1.62 vs Signal: 1.79
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 145.76, SMA: 140.81, RSI: 55.68 (<65), Stoch %D: 60.83 (<60), MACD: 1.51 vs Signal: 1.74
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 144.95, SMA: 141.15, RSI: 52.96 (<65), Stoch %D: 62.26 (<60), MACD: 1.35 vs Signal: 1.66
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 145.99, SMA: 141.49, RSI: 55.96 (<65), Stoch %D: 57.58 (<60), MACD: 1.29 vs Signal: 1.58
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 150.43, SMA: 141.94, RSI: 65.93 (<65), Stoch %D: 57.33 (<60), MACD: 1.58 vs Signal: 1.58
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 149.17, SMA: 142.32, RSI: 61.64 (<65), Stoch %D: 64.78 (<60), MACD: 1.69 vs Signal: 1.60
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 149.83, SMA: 142.69, RSI: 63.01 (<65), Stoch %D: 75.97 (<60), MACD: 1.80 vs Signal: 1.64
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 150.95, SMA: 143.09, RSI: 65.24 (<65), Stoch %D: 81.52 (<60), MACD: 1.97 vs Signal: 1.71
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 151.59, SMA: 143.50, RSI: 66.48 (<65), Stoch %D: 84.04 (<60), MACD: 2.12 vs Signal: 1.79
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 153.94, SMA: 143.97, RSI: 70.64 (<65), Stoch %D: 86.54 (<60), MACD: 2.41 vs Signal: 1.91
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 152.39, SMA: 144.37, RSI: 64.91 (<65), Stoch %D: 89.53 (<60), MACD: 2.48 vs Signal: 2.03
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 151.37, SMA: 144.72, RSI: 61.38 (<65), Stoch %D: 88.53 (<60), MACD: 2.43 vs Signal: 2.11
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 146.36, SMA: 144.96, RSI: 47.68 (<65), Stoch %D: 77.07 (<60), MACD: 1.96 vs Signal: 2.08
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 146.93, SMA: 145.21, RSI: 49.07 (<65), Stoch %D: 59.74 (<60), MACD: 1.61 vs Signal: 1.98
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 145.52, SMA: 145.37, RSI: 45.83 (<65), Stoch %D: 38.71 (<60), MACD: 1.21 vs Signal: 1.83
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 146.41, SMA: 145.52, RSI: 48.18 (<65), Stoch %D: 26.44 (<60), MACD: 0.96 vs Signal: 1.66
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 146.18, SMA: 145.60, RSI: 47.59 (<65), Stoch %D: 20.09 (<60), MACD: 0.73 vs Signal: 1.47
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 143.50, SMA: 145.66, RSI: 41.43 (<65), Stoch %D: 19.02 (<60), MACD: 0.32 vs Signal: 1.24
+2025-02-09 22:26:51,019 - DEBUG ENTRY: Price: 140.43, SMA: 145.62, RSI: 35.74 (<65), Stoch %D: 15.95 (<60), MACD: -0.24 vs Signal: 0.94
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.91, SMA: 145.61, RSI: 37.20 (<65), Stoch %D: 12.34 (<60), MACD: -0.64 vs Signal: 0.63
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 143.29, SMA: 145.62, RSI: 43.97 (<65), Stoch %D: 12.71 (<60), MACD: -0.76 vs Signal: 0.35
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 144.25, SMA: 145.57, RSI: 46.48 (<65), Stoch %D: 17.34 (<60), MACD: -0.76 vs Signal: 0.13
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 144.34, SMA: 145.55, RSI: 46.72 (<65), Stoch %D: 25.36 (<60), MACD: -0.75 vs Signal: -0.05
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 142.82, SMA: 145.53, RSI: 43.18 (<65), Stoch %D: 30.20 (<60), MACD: -0.86 vs Signal: -0.21
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 139.42, SMA: 145.53, RSI: 36.52 (<65), Stoch %D: 28.94 (<60), MACD: -1.20 vs Signal: -0.41
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.32, SMA: 145.47, RSI: 39.21 (<65), Stoch %D: 22.56 (<60), MACD: -1.38 vs Signal: -0.60
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 139.02, SMA: 145.39, RSI: 36.79 (<65), Stoch %D: 13.83 (<60), MACD: -1.62 vs Signal: -0.81
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.15, SMA: 145.32, RSI: 40.22 (<65), Stoch %D: 11.30 (<60), MACD: -1.69 vs Signal: -0.98
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 136.70, SMA: 145.14, RSI: 34.13 (<65), Stoch %D: 11.12 (<60), MACD: -2.00 vs Signal: -1.19
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 138.63, SMA: 144.98, RSI: 39.65 (<65), Stoch %D: 16.27 (<60), MACD: -2.07 vs Signal: -1.36
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 139.51, SMA: 144.90, RSI: 42.02 (<65), Stoch %D: 19.25 (<60), MACD: -2.03 vs Signal: -1.50
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.78, SMA: 144.87, RSI: 45.37 (<65), Stoch %D: 27.79 (<60), MACD: -1.87 vs Signal: -1.57
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.39, SMA: 144.82, RSI: 44.53 (<65), Stoch %D: 36.27 (<60), MACD: -1.76 vs Signal: -1.61
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 140.30, SMA: 144.76, RSI: 44.33 (<65), Stoch %D: 45.66 (<60), MACD: -1.66 vs Signal: -1.62
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 139.03, SMA: 144.69, RSI: 41.39 (<65), Stoch %D: 47.71 (<60), MACD: -1.66 vs Signal: -1.63
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 138.44, SMA: 144.56, RSI: 40.07 (<65), Stoch %D: 44.71 (<60), MACD: -1.69 vs Signal: -1.64
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 141.24, SMA: 144.51, RSI: 48.48 (<65), Stoch %D: 42.61 (<60), MACD: -1.48 vs Signal: -1.61
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 142.30, SMA: 144.47, RSI: 51.26 (<65), Stoch %D: 49.75 (<60), MACD: -1.20 vs Signal: -1.53
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 143.98, SMA: 144.47, RSI: 55.38 (<65), Stoch %D: 66.84 (<60), MACD: -0.84 vs Signal: -1.39
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 146.15, SMA: 144.53, RSI: 60.08 (<65), Stoch %D: 84.25 (<60), MACD: -0.38 vs Signal: -1.19
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 146.64, SMA: 144.60, RSI: 61.08 (<65), Stoch %D: 94.18 (<60), MACD: 0.03 vs Signal: -0.94
+2025-02-09 22:26:51,020 - DEBUG ENTRY: Price: 146.86, SMA: 144.67, RSI: 61.53 (<65), Stoch %D: 96.68 (<60), MACD: 0.37 vs Signal: -0.68
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 146.08, SMA: 144.67, RSI: 58.87 (<65), Stoch %D: 95.44 (<60), MACD: 0.57 vs Signal: -0.43
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 146.03, SMA: 144.66, RSI: 58.69 (<65), Stoch %D: 93.60 (<60), MACD: 0.71 vs Signal: -0.20
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 146.70, SMA: 144.62, RSI: 60.40 (<65), Stoch %D: 90.45 (<60), MACD: 0.87 vs Signal: 0.01
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 146.24, SMA: 144.60, RSI: 58.60 (<65), Stoch %D: 87.79 (<60), MACD: 0.95 vs Signal: 0.20
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 149.89, SMA: 144.72, RSI: 66.99 (<65), Stoch %D: 87.07 (<60), MACD: 1.29 vs Signal: 0.42
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 147.17, SMA: 144.78, RSI: 57.62 (<65), Stoch %D: 86.32 (<60), MACD: 1.32 vs Signal: 0.60
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 146.35, SMA: 144.79, RSI: 55.11 (<65), Stoch %D: 84.61 (<60), MACD: 1.27 vs Signal: 0.73
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 147.39, SMA: 144.80, RSI: 57.62 (<65), Stoch %D: 79.41 (<60), MACD: 1.30 vs Signal: 0.85
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.83, SMA: 144.84, RSI: 60.90 (<65), Stoch %D: 76.25 (<60), MACD: 1.42 vs Signal: 0.96
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.31, SMA: 144.89, RSI: 59.12 (<65), Stoch %D: 75.44 (<60), MACD: 1.46 vs Signal: 1.06
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.84, SMA: 144.97, RSI: 60.39 (<65), Stoch %D: 77.40 (<60), MACD: 1.51 vs Signal: 1.15
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.02, SMA: 145.01, RSI: 57.41 (<65), Stoch %D: 76.30 (<60), MACD: 1.47 vs Signal: 1.22
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.38, SMA: 144.96, RSI: 58.38 (<65), Stoch %D: 73.23 (<60), MACD: 1.45 vs Signal: 1.26
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 145.54, SMA: 144.89, RSI: 48.96 (<65), Stoch %D: 64.37 (<60), MACD: 1.20 vs Signal: 1.25
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 145.49, SMA: 144.81, RSI: 48.81 (<65), Stoch %D: 53.55 (<60), MACD: 0.98 vs Signal: 1.19
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 147.57, SMA: 144.74, RSI: 54.98 (<65), Stoch %D: 42.44 (<60), MACD: 0.96 vs Signal: 1.15
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 147.58, SMA: 144.66, RSI: 55.00 (<65), Stoch %D: 40.28 (<60), MACD: 0.94 vs Signal: 1.11
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 148.57, SMA: 144.55, RSI: 57.78 (<65), Stoch %D: 47.51 (<60), MACD: 0.98 vs Signal: 1.08
+2025-02-09 22:26:51,021 - DEBUG ENTRY: Price: 151.02, SMA: 144.52, RSI: 63.78 (<65), Stoch %D: 59.04 (<60), MACD: 1.21 vs Signal: 1.11
+2025-02-09 22:26:51,021 - BUY CREATE at 151.02, Size: 405 shares
+2025-02-09 22:26:51,021 - BUY EXECUTED - Price: 151.23, Size: 405 shares, Cost: 61249.24, Comm: 61.25
+2025-02-09 22:26:51,022 - DEBUG EXIT: Price: 155.33, Stop: 152.22, Target: 167.34, RSI: 71.46 (>75)
+2025-02-09 22:26:51,022 - DEBUG EXIT: Price: 157.96, Stop: 154.80, Target: 168.07, RSI: 74.96 (>75)
+2025-02-09 22:26:51,022 - DEBUG EXIT: Price: 158.42, Stop: 155.26, Target: 169.02, RSI: 75.53 (>75)
+2025-02-09 22:26:51,022 - SELL CREATE at 158.42, Size: 405 shares
+2025-02-09 22:26:51,022 - SELL EXECUTED - Price: 158.52, Size: 405 shares, Cost: 61249.24, Comm: 64.20
+2025-02-09 22:26:51,022 - 
         TRADE COMPLETED:
-        Gross Profit: -450.83
-        Net Profit: -522.94
-        Commission: 72.10
+        Gross Profit: 2952.68
+        Net Profit: 2827.23
+        Commission: 125.45
         
-2025-02-09 21:35:31,038 - BUY CREATE at 146.47, Size: 196 shares (Trade #8)
-2025-02-09 21:35:31,038 - BUY EXECUTED - Price: 146.59, Size: 196 shares, Cost: 28731.34, Comm: 28.73
-2025-02-09 21:35:31,039 - SELL CREATE at 142.72, Size: 196 shares (Trade #8)
-2025-02-09 21:35:31,039 - SELL EXECUTED - Price: 142.79, Size: 196 shares, Cost: 28731.34, Comm: 27.99
-2025-02-09 21:35:31,039 - 
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 158.81, SMA: 145.33, RSI: 76.02 (<65), Stoch %D: 87.02 (<60), MACD: 3.14 vs Signal: 1.99
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 159.33, SMA: 145.59, RSI: 76.69 (<65), Stoch %D: 82.35 (<60), MACD: 3.43 vs Signal: 2.28
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 154.28, SMA: 145.75, RSI: 59.27 (<65), Stoch %D: 76.05 (<60), MACD: 3.22 vs Signal: 2.47
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 157.66, SMA: 146.03, RSI: 65.00 (<65), Stoch %D: 70.86 (<60), MACD: 3.28 vs Signal: 2.63
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 162.64, SMA: 146.48, RSI: 71.39 (<65), Stoch %D: 69.63 (<60), MACD: 3.70 vs Signal: 2.84
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 162.11, SMA: 146.90, RSI: 69.95 (<65), Stoch %D: 73.69 (<60), MACD: 3.94 vs Signal: 3.06
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 161.12, SMA: 147.26, RSI: 67.16 (<65), Stoch %D: 78.62 (<60), MACD: 4.00 vs Signal: 3.25
+2025-02-09 22:26:51,022 - DEBUG ENTRY: Price: 159.23, SMA: 147.56, RSI: 62.11 (<65), Stoch %D: 77.25 (<60), MACD: 3.85 vs Signal: 3.37
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 162.66, SMA: 147.92, RSI: 66.96 (<65), Stoch %D: 73.21 (<60), MACD: 3.97 vs Signal: 3.49
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 168.42, SMA: 148.44, RSI: 73.19 (<65), Stoch %D: 71.99 (<60), MACD: 4.47 vs Signal: 3.69
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 172.26, SMA: 149.09, RSI: 76.38 (<65), Stoch %D: 79.07 (<60), MACD: 5.12 vs Signal: 3.97
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 171.75, SMA: 149.72, RSI: 75.10 (<65), Stoch %D: 87.54 (<60), MACD: 5.53 vs Signal: 4.28
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 176.56, SMA: 150.47, RSI: 78.72 (<65), Stoch %D: 93.18 (<60), MACD: 6.17 vs Signal: 4.66
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 172.91, SMA: 151.13, RSI: 70.36 (<65), Stoch %D: 92.42 (<60), MACD: 6.31 vs Signal: 4.99
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 171.52, SMA: 151.82, RSI: 67.43 (<65), Stoch %D: 88.06 (<60), MACD: 6.24 vs Signal: 5.24
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 176.41, SMA: 152.58, RSI: 71.88 (<65), Stoch %D: 82.42 (<60), MACD: 6.51 vs Signal: 5.50
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 169.48, SMA: 153.18, RSI: 59.49 (<65), Stoch %D: 77.37 (<60), MACD: 6.08 vs Signal: 5.61
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 168.38, SMA: 153.73, RSI: 57.78 (<65), Stoch %D: 72.82 (<60), MACD: 5.60 vs Signal: 5.61
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 167.01, SMA: 154.26, RSI: 55.65 (<65), Stoch %D: 64.98 (<60), MACD: 5.04 vs Signal: 5.50
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 170.20, SMA: 154.86, RSI: 59.41 (<65), Stoch %D: 59.23 (<60), MACD: 4.81 vs Signal: 5.36
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 172.81, SMA: 155.54, RSI: 62.23 (<65), Stoch %D: 56.93 (<60), MACD: 4.77 vs Signal: 5.24
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 173.44, SMA: 156.24, RSI: 62.90 (<65), Stoch %D: 61.07 (<60), MACD: 4.74 vs Signal: 5.14
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 177.42, SMA: 156.96, RSI: 66.91 (<65), Stoch %D: 67.70 (<60), MACD: 4.98 vs Signal: 5.11
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 176.40, SMA: 157.64, RSI: 64.97 (<65), Stoch %D: 73.59 (<60), MACD: 5.03 vs Signal: 5.09
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 176.49, SMA: 158.29, RSI: 65.06 (<65), Stoch %D: 79.02 (<60), MACD: 5.02 vs Signal: 5.08
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 175.33, SMA: 158.88, RSI: 62.68 (<65), Stoch %D: 80.04 (<60), MACD: 4.86 vs Signal: 5.04
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 174.71, SMA: 159.44, RSI: 61.38 (<65), Stoch %D: 78.68 (<60), MACD: 4.63 vs Signal: 4.96
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 179.08, SMA: 160.08, RSI: 66.61 (<65), Stoch %D: 77.22 (<60), MACD: 4.75 vs Signal: 4.92
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 176.80, SMA: 160.70, RSI: 61.91 (<65), Stoch %D: 78.02 (<60), MACD: 4.61 vs Signal: 4.85
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 172.10, SMA: 161.22, RSI: 53.51 (<65), Stoch %D: 77.83 (<60), MACD: 4.07 vs Signal: 4.70
+2025-02-09 22:26:51,023 - DEBUG ENTRY: Price: 169.23, SMA: 161.67, RSI: 49.12 (<65), Stoch %D: 68.95 (<60), MACD: 3.37 vs Signal: 4.43
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 169.40, SMA: 162.13, RSI: 49.38 (<65), Stoch %D: 54.02 (<60), MACD: 2.79 vs Signal: 4.10
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 169.41, SMA: 162.52, RSI: 49.41 (<65), Stoch %D: 39.06 (<60), MACD: 2.31 vs Signal: 3.74
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 172.26, SMA: 163.02, RSI: 54.04 (<65), Stoch %D: 33.26 (<60), MACD: 2.14 vs Signal: 3.42
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 172.70, SMA: 163.55, RSI: 54.74 (<65), Stoch %D: 35.03 (<60), MACD: 2.01 vs Signal: 3.14
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 169.41, SMA: 163.99, RSI: 48.83 (<65), Stoch %D: 39.12 (<60), MACD: 1.63 vs Signal: 2.84
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 170.28, SMA: 164.42, RSI: 50.35 (<65), Stoch %D: 39.77 (<60), MACD: 1.38 vs Signal: 2.55
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 167.06, SMA: 164.80, RSI: 45.01 (<65), Stoch %D: 33.94 (<60), MACD: 0.91 vs Signal: 2.22
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 163.55, SMA: 165.09, RSI: 40.01 (<65), Stoch %D: 25.29 (<60), MACD: 0.25 vs Signal: 1.83
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 161.86, SMA: 165.37, RSI: 37.83 (<65), Stoch %D: 14.65 (<60), MACD: -0.40 vs Signal: 1.38
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 159.79, SMA: 165.60, RSI: 35.30 (<65), Stoch %D: 7.16 (<60), MACD: -1.07 vs Signal: 0.89
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 159.02, SMA: 165.86, RSI: 34.37 (<65), Stoch %D: 5.03 (<60), MACD: -1.65 vs Signal: 0.38
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 157.20, SMA: 166.10, RSI: 32.24 (<65), Stoch %D: 8.42 (<60), MACD: -2.23 vs Signal: -0.14
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 157.12, SMA: 166.29, RSI: 32.14 (<65), Stoch %D: 15.38 (<60), MACD: -2.66 vs Signal: -0.64
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 156.65, SMA: 166.47, RSI: 31.56 (<65), Stoch %D: 19.32 (<60), MACD: -3.01 vs Signal: -1.12
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 167.58, SMA: 166.85, RSI: 53.05 (<65), Stoch %D: 26.75 (<60), MACD: -2.37 vs Signal: -1.37
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 171.96, SMA: 167.27, RSI: 58.65 (<65), Stoch %D: 39.23 (<60), MACD: -1.50 vs Signal: -1.39
+2025-02-09 22:26:51,024 - DEBUG ENTRY: Price: 171.80, SMA: 167.60, RSI: 58.36 (<65), Stoch %D: 59.80 (<60), MACD: -0.81 vs Signal: -1.28
+2025-02-09 22:26:51,024 - BUY CREATE at 171.80, Size: 213 shares
+2025-02-09 22:26:51,024 - BUY EXECUTED - Price: 171.93, Size: 213 shares, Cost: 36621.86, Comm: 36.62
+2025-02-09 22:26:51,024 - DEBUG EXIT: Price: 173.01, Stop: 169.55, Target: 200.15, RSI: 59.89 (>75)
+2025-02-09 22:26:51,024 - DEBUG EXIT: Price: 170.11, Stop: 169.55, Target: 199.86, RSI: 54.73 (>75)
+2025-02-09 22:26:51,024 - DEBUG EXIT: Price: 169.83, Stop: 169.55, Target: 199.30, RSI: 54.23 (>75)
+2025-02-09 22:26:51,025 - DEBUG EXIT: Price: 169.11, Stop: 169.55, Target: 198.60, RSI: 52.92 (>75)
+2025-02-09 22:26:51,025 - SELL CREATE at 169.11, Size: 213 shares
+2025-02-09 22:26:51,025 - SELL EXECUTED - Price: 169.18, Size: 213 shares, Cost: 36621.86, Comm: 36.03
+2025-02-09 22:26:51,025 - 
         TRADE COMPLETED:
-        Gross Profit: -744.81
-        Net Profit: -801.53
-        Commission: 56.72
+        Gross Profit: -587.04
+        Net Profit: -659.70
+        Commission: 72.66
         
-2025-02-09 21:35:31,039 - 
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 172.23, SMA: 168.91, RSI: 57.68 (<65), Stoch %D: 85.43 (<60), MACD: 0.71 vs Signal: -0.18
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 173.66, SMA: 169.23, RSI: 59.69 (<65), Stoch %D: 86.37 (<60), MACD: 1.06 vs Signal: 0.07
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 169.56, SMA: 169.37, RSI: 52.06 (<65), Stoch %D: 89.15 (<60), MACD: 1.00 vs Signal: 0.26
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 166.13, SMA: 169.45, RSI: 46.69 (<65), Stoch %D: 86.93 (<60), MACD: 0.67 vs Signal: 0.34
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 166.37, SMA: 169.55, RSI: 47.09 (<65), Stoch %D: 78.69 (<60), MACD: 0.42 vs Signal: 0.35
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 170.22, SMA: 169.77, RSI: 53.32 (<65), Stoch %D: 70.42 (<60), MACD: 0.52 vs Signal: 0.39
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 169.99, SMA: 169.92, RSI: 52.91 (<65), Stoch %D: 67.28 (<60), MACD: 0.58 vs Signal: 0.43
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 166.37, SMA: 169.88, RSI: 46.94 (<65), Stoch %D: 64.47 (<60), MACD: 0.33 vs Signal: 0.41
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 164.81, SMA: 169.73, RSI: 44.61 (<65), Stoch %D: 54.08 (<60), MACD: 0.01 vs Signal: 0.33
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 161.88, SMA: 169.53, RSI: 40.51 (<65), Stoch %D: 36.23 (<60), MACD: -0.48 vs Signal: 0.17
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 157.69, SMA: 169.16, RSI: 35.51 (<65), Stoch %D: 20.05 (<60), MACD: -1.19 vs Signal: -0.11
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 160.32, SMA: 168.90, RSI: 40.48 (<65), Stoch %D: 15.16 (<60), MACD: -1.52 vs Signal: -0.39
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 162.40, SMA: 168.72, RSI: 44.15 (<65), Stoch %D: 20.61 (<60), MACD: -1.60 vs Signal: -0.63
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 162.67, SMA: 168.45, RSI: 44.62 (<65), Stoch %D: 34.11 (<60), MACD: -1.62 vs Signal: -0.83
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 160.77, SMA: 168.27, RSI: 41.92 (<65), Stoch %D: 44.15 (<60), MACD: -1.77 vs Signal: -1.02
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 164.08, SMA: 168.19, RSI: 47.87 (<65), Stoch %D: 51.15 (<60), MACD: -1.60 vs Signal: -1.14
+2025-02-09 22:26:51,025 - DEBUG ENTRY: Price: 163.76, SMA: 168.12, RSI: 47.35 (<65), Stoch %D: 53.95 (<60), MACD: -1.48 vs Signal: -1.20
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 160.74, SMA: 167.93, RSI: 42.77 (<65), Stoch %D: 57.32 (<60), MACD: -1.61 vs Signal: -1.29
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 156.93, SMA: 167.61, RSI: 37.80 (<65), Stoch %D: 56.49 (<60), MACD: -1.99 vs Signal: -1.43
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 155.10, SMA: 167.25, RSI: 35.65 (<65), Stoch %D: 49.59 (<60), MACD: -2.42 vs Signal: -1.63
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 160.53, SMA: 166.91, RSI: 45.52 (<65), Stoch %D: 42.22 (<60), MACD: -2.29 vs Signal: -1.76
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 156.16, SMA: 166.50, RSI: 40.19 (<65), Stoch %D: 38.04 (<60), MACD: -2.51 vs Signal: -1.91
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 152.43, SMA: 166.02, RSI: 36.27 (<65), Stoch %D: 37.41 (<60), MACD: -2.96 vs Signal: -2.12
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 148.38, SMA: 165.48, RSI: 32.56 (<65), Stoch %D: 30.67 (<60), MACD: -3.59 vs Signal: -2.41
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 152.78, SMA: 165.05, RSI: 39.77 (<65), Stoch %D: 22.87 (<60), MACD: -3.70 vs Signal: -2.67
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 157.22, SMA: 164.61, RSI: 46.03 (<65), Stoch %D: 19.92 (<60), MACD: -3.39 vs Signal: -2.81
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 158.23, SMA: 164.24, RSI: 47.38 (<65), Stoch %D: 28.68 (<60), MACD: -3.02 vs Signal: -2.86
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 161.54, SMA: 164.03, RSI: 51.62 (<65), Stoch %D: 43.65 (<60), MACD: -2.44 vs Signal: -2.77
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 162.92, SMA: 163.90, RSI: 53.31 (<65), Stoch %D: 58.23 (<60), MACD: -1.84 vs Signal: -2.59
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 166.31, SMA: 163.84, RSI: 57.26 (<65), Stoch %D: 71.45 (<60), MACD: -1.09 vs Signal: -2.29
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 167.68, SMA: 163.80, RSI: 58.78 (<65), Stoch %D: 81.14 (<60), MACD: -0.37 vs Signal: -1.90
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 171.48, SMA: 163.79, RSI: 62.73 (<65), Stoch %D: 89.45 (<60), MACD: 0.50 vs Signal: -1.42
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 172.12, SMA: 163.78, RSI: 63.37 (<65), Stoch %D: 93.32 (<60), MACD: 1.22 vs Signal: -0.89
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 172.99, SMA: 163.85, RSI: 64.26 (<65), Stoch %D: 96.61 (<60), MACD: 1.85 vs Signal: -0.35
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 176.30, SMA: 163.97, RSI: 67.51 (<65), Stoch %D: 97.86 (<60), MACD: 2.58 vs Signal: 0.24
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 175.13, SMA: 164.13, RSI: 65.25 (<65), Stoch %D: 98.57 (<60), MACD: 3.03 vs Signal: 0.80
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 172.01, SMA: 164.30, RSI: 59.54 (<65), Stoch %D: 96.31 (<60), MACD: 3.10 vs Signal: 1.26
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 171.72, SMA: 164.50, RSI: 59.01 (<65), Stoch %D: 92.05 (<60), MACD: 3.09 vs Signal: 1.62
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 175.79, SMA: 164.82, RSI: 63.77 (<65), Stoch %D: 88.40 (<60), MACD: 3.38 vs Signal: 1.98
+2025-02-09 22:26:51,026 - DEBUG ENTRY: Price: 172.46, SMA: 165.09, RSI: 57.85 (<65), Stoch %D: 86.16 (<60), MACD: 3.30 vs Signal: 2.24
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 169.28, SMA: 165.33, RSI: 52.80 (<65), Stoch %D: 83.58 (<60), MACD: 2.95 vs Signal: 2.38
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 169.58, SMA: 165.58, RSI: 53.22 (<65), Stoch %D: 76.34 (<60), MACD: 2.66 vs Signal: 2.44
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 167.56, SMA: 165.79, RSI: 50.04 (<65), Stoch %D: 64.62 (<60), MACD: 2.24 vs Signal: 2.40
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 163.29, SMA: 165.71, RSI: 44.03 (<65), Stoch %D: 48.68 (<60), MACD: 1.55 vs Signal: 2.23
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 165.17, SMA: 165.57, RSI: 47.04 (<65), Stoch %D: 32.82 (<60), MACD: 1.14 vs Signal: 2.01
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 167.87, SMA: 165.49, RSI: 51.11 (<65), Stoch %D: 21.79 (<60), MACD: 1.02 vs Signal: 1.81
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 162.83, SMA: 165.29, RSI: 44.28 (<65), Stoch %D: 17.32 (<60), MACD: 0.51 vs Signal: 1.55
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 162.62, SMA: 165.14, RSI: 44.01 (<65), Stoch %D: 16.59 (<60), MACD: 0.10 vs Signal: 1.26
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 164.91, SMA: 165.04, RSI: 47.68 (<65), Stoch %D: 14.72 (<60), MACD: -0.05 vs Signal: 1.00
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 164.74, SMA: 164.95, RSI: 47.44 (<65), Stoch %D: 15.39 (<60), MACD: -0.18 vs Signal: 0.76
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 163.95, SMA: 164.79, RSI: 46.22 (<65), Stoch %D: 17.80 (<60), MACD: -0.34 vs Signal: 0.54
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 159.39, SMA: 164.50, RSI: 39.92 (<65), Stoch %D: 18.96 (<60), MACD: -0.83 vs Signal: 0.27
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 160.46, SMA: 164.32, RSI: 41.93 (<65), Stoch %D: 17.33 (<60), MACD: -1.11 vs Signal: -0.01
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 154.47, SMA: 164.09, RSI: 34.92 (<65), Stoch %D: 12.54 (<60), MACD: -1.80 vs Signal: -0.37
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 154.24, SMA: 163.85, RSI: 34.68 (<65), Stoch %D: 10.77 (<60), MACD: -2.34 vs Signal: -0.76
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 161.21, SMA: 163.67, RSI: 46.63 (<65), Stoch %D: 12.37 (<60), MACD: -2.18 vs Signal: -1.05
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 155.31, SMA: 163.37, RSI: 39.96 (<65), Stoch %D: 17.54 (<60), MACD: -2.50 vs Signal: -1.34
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 155.61, SMA: 163.16, RSI: 40.44 (<65), Stoch %D: 24.29 (<60), MACD: -2.70 vs Signal: -1.61
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 157.11, SMA: 163.00, RSI: 42.82 (<65), Stoch %D: 26.10 (<60), MACD: -2.70 vs Signal: -1.83
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 163.55, SMA: 163.04, RSI: 51.78 (<65), Stoch %D: 32.60 (<60), MACD: -2.16 vs Signal: -1.89
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 154.44, SMA: 162.97, RSI: 41.81 (<65), Stoch %D: 36.25 (<60), MACD: -2.44 vs Signal: -2.00
+2025-02-09 22:26:51,027 - DEBUG ENTRY: Price: 155.17, SMA: 162.87, RSI: 42.76 (<65), Stoch %D: 40.53 (<60), MACD: -2.57 vs Signal: -2.12
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 150.02, SMA: 162.62, RSI: 38.03 (<65), Stoch %D: 31.17 (<60), MACD: -3.06 vs Signal: -2.31
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 152.44, SMA: 162.42, RSI: 41.31 (<65), Stoch %D: 22.10 (<60), MACD: -3.21 vs Signal: -2.49
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 144.53, SMA: 162.09, RSI: 34.83 (<65), Stoch %D: 11.99 (<60), MACD: -3.92 vs Signal: -2.77
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 140.65, SMA: 161.62, RSI: 32.15 (<65), Stoch %D: 10.53 (<60), MACD: -4.75 vs Signal: -3.17
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 145.14, SMA: 161.25, RSI: 38.07 (<65), Stoch %D: 11.18 (<60), MACD: -4.98 vs Signal: -3.53
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 143.59, SMA: 160.91, RSI: 36.87 (<65), Stoch %D: 16.43 (<60), MACD: -5.23 vs Signal: -3.87
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 147.24, SMA: 160.71, RSI: 41.53 (<65), Stoch %D: 23.18 (<60), MACD: -5.07 vs Signal: -4.11
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 138.93, SMA: 160.39, RSI: 35.17 (<65), Stoch %D: 25.72 (<60), MACD: -5.56 vs Signal: -4.40
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 135.51, SMA: 159.89, RSI: 32.93 (<65), Stoch %D: 23.43 (<60), MACD: -6.15 vs Signal: -4.75
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 135.74, SMA: 159.48, RSI: 33.25 (<65), Stoch %D: 15.85 (<60), MACD: -6.52 vs Signal: -5.10
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 141.19, SMA: 159.26, RSI: 40.23 (<65), Stoch %D: 13.47 (<60), MACD: -6.30 vs Signal: -5.34
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 138.48, SMA: 159.06, RSI: 38.09 (<65), Stoch %D: 16.01 (<60), MACD: -6.28 vs Signal: -5.53
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 138.63, SMA: 158.77, RSI: 38.30 (<65), Stoch %D: 22.77 (<60), MACD: -6.17 vs Signal: -5.66
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 141.85, SMA: 158.47, RSI: 42.49 (<65), Stoch %D: 28.55 (<60), MACD: -5.76 vs Signal: -5.68
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 147.63, SMA: 158.26, RSI: 49.16 (<65), Stoch %D: 36.94 (<60), MACD: -4.92 vs Signal: -5.53
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 146.84, SMA: 157.96, RSI: 48.34 (<65), Stoch %D: 48.32 (<60), MACD: -4.26 vs Signal: -5.27
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 146.71, SMA: 157.64, RSI: 48.20 (<65), Stoch %D: 62.23 (<60), MACD: -3.71 vs Signal: -4.96
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 149.18, SMA: 157.29, RSI: 51.16 (<65), Stoch %D: 74.02 (<60), MACD: -3.03 vs Signal: -4.57
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 143.43, SMA: 156.81, RSI: 44.74 (<65), Stoch %D: 80.71 (<60), MACD: -2.93 vs Signal: -4.25
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 144.18, SMA: 156.26, RSI: 45.69 (<65), Stoch %D: 81.70 (<60), MACD: -2.76 vs Signal: -3.95
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 146.71, SMA: 155.76, RSI: 48.92 (<65), Stoch %D: 78.28 (<60), MACD: -2.39 vs Signal: -3.64
+2025-02-09 22:26:51,028 - DEBUG ENTRY: Price: 145.97, SMA: 155.22, RSI: 48.02 (<65), Stoch %D: 76.83 (<60), MACD: -2.13 vs Signal: -3.34
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 140.73, SMA: 154.50, RSI: 42.13 (<65), Stoch %D: 74.84 (<60), MACD: -2.32 vs Signal: -3.13
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 135.29, SMA: 153.71, RSI: 37.06 (<65), Stoch %D: 65.01 (<60), MACD: -2.88 vs Signal: -3.08
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 130.11, SMA: 152.87, RSI: 32.98 (<65), Stoch %D: 45.01 (<60), MACD: -3.70 vs Signal: -3.21
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 130.98, SMA: 152.05, RSI: 34.29 (<65), Stoch %D: 21.93 (<60), MACD: -4.23 vs Signal: -3.41
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 133.61, SMA: 151.21, RSI: 38.21 (<65), Stoch %D: 10.28 (<60), MACD: -4.38 vs Signal: -3.61
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 128.32, SMA: 150.33, RSI: 33.83 (<65), Stoch %D: 7.57 (<60), MACD: -4.88 vs Signal: -3.86
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 129.80, SMA: 149.54, RSI: 36.04 (<65), Stoch %D: 10.47 (<60), MACD: -5.09 vs Signal: -4.11
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 134.05, SMA: 148.83, RSI: 42.02 (<65), Stoch %D: 12.40 (<60), MACD: -4.86 vs Signal: -4.26
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 133.53, SMA: 148.15, RSI: 41.52 (<65), Stoch %D: 16.72 (<60), MACD: -4.67 vs Signal: -4.34
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 136.42, SMA: 147.61, RSI: 45.47 (<65), Stoch %D: 24.23 (<60), MACD: -4.24 vs Signal: -4.32
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 139.76, SMA: 147.10, RSI: 49.73 (<65), Stoch %D: 33.96 (<60), MACD: -3.58 vs Signal: -4.17
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 139.76, SMA: 146.54, RSI: 49.73 (<65), Stoch %D: 44.62 (<60), MACD: -3.02 vs Signal: -3.94
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 135.60, SMA: 145.99, RSI: 44.69 (<65), Stoch %D: 51.14 (<60), MACD: -2.89 vs Signal: -3.73
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 137.36, SMA: 145.49, RSI: 47.14 (<65), Stoch %D: 53.53 (<60), MACD: -2.61 vs Signal: -3.51
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 134.89, SMA: 144.89, RSI: 44.19 (<65), Stoch %D: 51.52 (<60), MACD: -2.55 vs Signal: -3.32
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 137.07, SMA: 144.34, RSI: 47.32 (<65), Stoch %D: 53.07 (<60), MACD: -2.31 vs Signal: -3.11
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 139.66, SMA: 143.85, RSI: 50.84 (<65), Stoch %D: 59.01 (<60), MACD: -1.89 vs Signal: -2.87
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 141.00, SMA: 143.48, RSI: 52.61 (<65), Stoch %D: 70.09 (<60), MACD: -1.42 vs Signal: -2.58
+2025-02-09 22:26:51,029 - DEBUG ENTRY: Price: 144.39, SMA: 143.16, RSI: 56.83 (<65), Stoch %D: 81.43 (<60), MACD: -0.78 vs Signal: -2.22
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 145.07, SMA: 142.97, RSI: 57.64 (<65), Stoch %D: 90.30 (<60), MACD: -0.21 vs Signal: -1.82
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 142.93, SMA: 142.75, RSI: 54.17 (<65), Stoch %D: 93.64 (<60), MACD: 0.07 vs Signal: -1.44
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 143.90, SMA: 142.40, RSI: 55.49 (<65), Stoch %D: 91.76 (<60), MACD: 0.37 vs Signal: -1.08
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 143.54, SMA: 142.16, RSI: 54.86 (<65), Stoch %D: 86.80 (<60), MACD: 0.57 vs Signal: -0.75
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 146.48, SMA: 141.98, RSI: 58.93 (<65), Stoch %D: 84.78 (<60), MACD: 0.95 vs Signal: -0.41
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 148.16, SMA: 141.80, RSI: 61.08 (<65), Stoch %D: 86.11 (<60), MACD: 1.37 vs Signal: -0.05
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 145.10, SMA: 141.43, RSI: 55.37 (<65), Stoch %D: 88.80 (<60), MACD: 1.44 vs Signal: 0.25
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 148.97, SMA: 141.32, RSI: 60.42 (<65), Stoch %D: 89.74 (<60), MACD: 1.79 vs Signal: 0.56
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 150.99, SMA: 141.24, RSI: 62.78 (<65), Stoch %D: 89.23 (<60), MACD: 2.21 vs Signal: 0.89
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 153.27, SMA: 141.31, RSI: 65.30 (<65), Stoch %D: 91.99 (<60), MACD: 2.69 vs Signal: 1.25
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 152.02, SMA: 141.30, RSI: 62.80 (<65), Stoch %D: 93.84 (<60), MACD: 2.93 vs Signal: 1.58
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 150.90, SMA: 141.42, RSI: 60.55 (<65), Stoch %D: 93.57 (<60), MACD: 3.01 vs Signal: 1.87
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 149.57, SMA: 141.60, RSI: 57.90 (<65), Stoch %D: 87.06 (<60), MACD: 2.92 vs Signal: 2.08
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 154.69, SMA: 141.79, RSI: 64.36 (<65), Stoch %D: 82.32 (<60), MACD: 3.23 vs Signal: 2.31
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 155.24, SMA: 142.03, RSI: 64.98 (<65), Stoch %D: 81.86 (<60), MACD: 3.48 vs Signal: 2.54
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 160.33, SMA: 142.29, RSI: 70.17 (<65), Stoch %D: 88.04 (<60), MACD: 4.04 vs Signal: 2.84
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 159.34, SMA: 142.70, RSI: 68.06 (<65), Stoch %D: 92.66 (<60), MACD: 4.35 vs Signal: 3.14
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 157.86, SMA: 143.14, RSI: 64.92 (<65), Stoch %D: 93.29 (<60), MACD: 4.43 vs Signal: 3.40
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 163.90, SMA: 143.71, RSI: 70.84 (<65), Stoch %D: 91.15 (<60), MACD: 4.93 vs Signal: 3.71
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 163.59, SMA: 144.16, RSI: 70.17 (<65), Stoch %D: 90.05 (<60), MACD: 5.23 vs Signal: 4.01
+2025-02-09 22:26:51,030 - DEBUG ENTRY: Price: 163.36, SMA: 144.65, RSI: 69.66 (<65), Stoch %D: 91.81 (<60), MACD: 5.39 vs Signal: 4.29
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 162.88, SMA: 145.14, RSI: 68.55 (<65), Stoch %D: 91.65 (<60), MACD: 5.42 vs Signal: 4.51
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 162.93, SMA: 145.56, RSI: 68.60 (<65), Stoch %D: 90.03 (<60), MACD: 5.38 vs Signal: 4.69
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 167.20, SMA: 145.95, RSI: 73.09 (<65), Stoch %D: 88.15 (<60), MACD: 5.63 vs Signal: 4.88
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 166.46, SMA: 146.34, RSI: 71.19 (<65), Stoch %D: 88.34 (<60), MACD: 5.71 vs Signal: 5.04
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 170.03, SMA: 146.81, RSI: 74.62 (<65), Stoch %D: 91.48 (<60), MACD: 5.98 vs Signal: 5.23
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 171.10, SMA: 147.25, RSI: 75.56 (<65), Stoch %D: 93.76 (<60), MACD: 6.22 vs Signal: 5.43
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 170.95, SMA: 147.80, RSI: 75.12 (<65), Stoch %D: 96.51 (<60), MACD: 6.32 vs Signal: 5.61
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 172.45, SMA: 148.36, RSI: 76.52 (<65), Stoch %D: 96.43 (<60), MACD: 6.44 vs Signal: 5.77
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 172.05, SMA: 148.87, RSI: 75.32 (<65), Stoch %D: 95.16 (<60), MACD: 6.44 vs Signal: 5.91
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 169.45, SMA: 149.34, RSI: 67.76 (<65), Stoch %D: 90.23 (<60), MACD: 6.15 vs Signal: 5.96
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 165.55, SMA: 149.84, RSI: 58.30 (<65), Stoch %D: 81.28 (<60), MACD: 5.55 vs Signal: 5.87
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 165.22, SMA: 150.44, RSI: 57.55 (<65), Stoch %D: 67.33 (<60), MACD: 4.98 vs Signal: 5.70
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 165.51, SMA: 151.14, RSI: 58.06 (<65), Stoch %D: 51.86 (<60), MACD: 4.51 vs Signal: 5.46
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 167.98, SMA: 151.88, RSI: 62.14 (<65), Stoch %D: 42.27 (<60), MACD: 4.28 vs Signal: 5.22
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 161.65, SMA: 152.44, RSI: 48.99 (<65), Stoch %D: 35.64 (<60), MACD: 3.55 vs Signal: 4.89
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 159.44, SMA: 153.07, RSI: 45.38 (<65), Stoch %D: 30.45 (<60), MACD: 2.76 vs Signal: 4.46
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 157.00, SMA: 153.61, RSI: 41.72 (<65), Stoch %D: 19.30 (<60), MACD: 1.92 vs Signal: 3.95
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 155.33, SMA: 154.04, RSI: 39.38 (<65), Stoch %D: 11.14 (<60), MACD: 1.10 vs Signal: 3.38
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 156.06, SMA: 154.49, RSI: 40.94 (<65), Stoch %D: 6.39 (<60), MACD: 0.50 vs Signal: 2.81
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 153.93, SMA: 154.84, RSI: 37.89 (<65), Stoch %D: 6.63 (<60), MACD: -0.14 vs Signal: 2.22
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 152.67, SMA: 155.09, RSI: 36.16 (<65), Stoch %D: 7.51 (<60), MACD: -0.74 vs Signal: 1.63
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 154.08, SMA: 155.38, RSI: 39.48 (<65), Stoch %D: 7.28 (<60), MACD: -1.09 vs Signal: 1.08
+2025-02-09 22:26:51,031 - DEBUG ENTRY: Price: 152.60, SMA: 155.72, RSI: 37.29 (<65), Stoch %D: 7.52 (<60), MACD: -1.47 vs Signal: 0.57
+2025-02-09 22:26:51,032 - DEBUG ENTRY: Price: 155.47, SMA: 156.08, RSI: 43.81 (<65), Stoch %D: 9.82 (<60), MACD: -1.52 vs Signal: 0.15
+2025-02-09 22:26:51,032 - DEBUG ENTRY: Price: 161.46, SMA: 156.62, RSI: 54.43 (<65), Stoch %D: 17.86 (<60), MACD: -1.07 vs Signal: -0.09
+2025-02-09 22:26:51,032 - DEBUG ENTRY: Price: 151.99, SMA: 156.91, RSI: 41.17 (<65), Stoch %D: 25.32 (<60), MACD: -1.45 vs Signal: -0.36
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 153.44, SMA: 157.19, RSI: 43.44 (<65), Stoch %D: 29.11 (<60), MACD: -1.63 vs Signal: -0.62
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 150.53, SMA: 157.38, RSI: 40.10 (<65), Stoch %D: 21.69 (<60), MACD: -1.97 vs Signal: -0.89
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 148.88, SMA: 157.47, RSI: 38.30 (<65), Stoch %D: 15.43 (<60), MACD: -2.35 vs Signal: -1.18
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 152.62, SMA: 157.62, RSI: 44.39 (<65), Stoch %D: 13.09 (<60), MACD: -2.33 vs Signal: -1.41
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 155.01, SMA: 157.86, RSI: 47.93 (<65), Stoch %D: 22.11 (<60), MACD: -2.09 vs Signal: -1.55
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 151.87, SMA: 158.02, RSI: 43.97 (<65), Stoch %D: 32.31 (<60), MACD: -2.13 vs Signal: -1.66
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 150.90, SMA: 158.17, RSI: 42.79 (<65), Stoch %D: 38.61 (<60), MACD: -2.22 vs Signal: -1.77
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 148.62, SMA: 158.21, RSI: 40.08 (<65), Stoch %D: 34.98 (<60), MACD: -2.44 vs Signal: -1.91
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 148.95, SMA: 158.23, RSI: 40.67 (<65), Stoch %D: 27.17 (<60), MACD: -2.56 vs Signal: -2.04
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 149.93, SMA: 158.32, RSI: 42.47 (<65), Stoch %D: 19.90 (<60), MACD: -2.55 vs Signal: -2.14
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 148.04, SMA: 158.31, RSI: 39.94 (<65), Stoch %D: 18.57 (<60), MACD: -2.66 vs Signal: -2.24
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 140.76, SMA: 158.10, RSI: 32.07 (<65), Stoch %D: 18.48 (<60), MACD: -3.30 vs Signal: -2.45
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 136.54, SMA: 157.77, RSI: 28.54 (<65), Stoch %D: 16.80 (<60), MACD: -4.10 vs Signal: -2.78
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 140.73, SMA: 157.54, RSI: 36.06 (<65), Stoch %D: 13.35 (<60), MACD: -4.34 vs Signal: -3.09
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 144.34, SMA: 157.41, RSI: 41.73 (<65), Stoch %D: 14.32 (<60), MACD: -4.19 vs Signal: -3.31
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 144.64, SMA: 157.31, RSI: 42.18 (<65), Stoch %D: 22.06 (<60), MACD: -4.01 vs Signal: -3.45
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 143.68, SMA: 157.09, RSI: 41.07 (<65), Stoch %D: 31.72 (<60), MACD: -3.89 vs Signal: -3.54
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 138.40, SMA: 156.75, RSI: 35.51 (<65), Stoch %D: 34.62 (<60), MACD: -4.18 vs Signal: -3.67
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 138.73, SMA: 156.32, RSI: 36.09 (<65), Stoch %D: 29.87 (<60), MACD: -4.33 vs Signal: -3.80
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 137.31, SMA: 155.88, RSI: 34.63 (<65), Stoch %D: 20.29 (<60), MACD: -4.51 vs Signal: -3.94
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 136.67, SMA: 155.46, RSI: 33.98 (<65), Stoch %D: 13.05 (<60), MACD: -4.66 vs Signal: -4.09
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 141.27, SMA: 155.00, RSI: 42.49 (<65), Stoch %D: 12.23 (<60), MACD: -4.35 vs Signal: -4.14
+2025-02-09 22:26:51,033 - DEBUG ENTRY: Price: 136.71, SMA: 154.47, RSI: 37.35 (<65), Stoch %D: 16.00 (<60), MACD: -4.42 vs Signal: -4.20
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 140.69, SMA: 154.01, RSI: 43.75 (<65), Stoch %D: 25.68 (<60), MACD: -4.11 vs Signal: -4.18
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 142.02, SMA: 153.60, RSI: 45.74 (<65), Stoch %D: 35.30 (<60), MACD: -3.71 vs Signal: -4.09
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 142.13, SMA: 153.18, RSI: 45.91 (<65), Stoch %D: 49.39 (<60), MACD: -3.35 vs Signal: -3.94
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 141.66, SMA: 152.67, RSI: 45.26 (<65), Stoch %D: 60.53 (<60), MACD: -3.07 vs Signal: -3.76
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 145.50, SMA: 152.25, RSI: 51.36 (<65), Stoch %D: 71.19 (<60), MACD: -2.50 vs Signal: -3.51
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 147.65, SMA: 151.80, RSI: 54.44 (<65), Stoch %D: 78.59 (<60), MACD: -1.86 vs Signal: -3.18
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 150.51, SMA: 151.39, RSI: 58.21 (<65), Stoch %D: 87.27 (<60), MACD: -1.11 vs Signal: -2.77
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 147.55, SMA: 150.92, RSI: 53.29 (<65), Stoch %D: 91.79 (<60), MACD: -0.74 vs Signal: -2.36
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 143.06, SMA: 150.34, RSI: 46.82 (<65), Stoch %D: 89.59 (<60), MACD: -0.81 vs Signal: -2.05
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 153.86, SMA: 149.97, RSI: 59.55 (<65), Stoch %D: 83.22 (<60), MACD: 0.02 vs Signal: -1.64
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 151.49, SMA: 149.61, RSI: 56.36 (<65), Stoch %D: 78.22 (<60), MACD: 0.47 vs Signal: -1.22
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 148.84, SMA: 149.28, RSI: 52.94 (<65), Stoch %D: 78.82 (<60), MACD: 0.61 vs Signal: -0.85
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 143.28, SMA: 148.84, RSI: 46.58 (<65), Stoch %D: 73.84 (<60), MACD: 0.27 vs Signal: -0.63
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 137.21, SMA: 148.27, RSI: 40.80 (<65), Stoch %D: 59.90 (<60), MACD: -0.49 vs Signal: -0.60
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 136.94, SMA: 147.65, RSI: 40.56 (<65), Stoch %D: 38.66 (<60), MACD: -1.09 vs Signal: -0.70
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 137.47, SMA: 147.17, RSI: 41.30 (<65), Stoch %D: 22.02 (<60), MACD: -1.52 vs Signal: -0.86
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 138.05, SMA: 146.74, RSI: 42.13 (<65), Stoch %D: 16.82 (<60), MACD: -1.78 vs Signal: -1.05
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 133.47, SMA: 146.27, RSI: 37.56 (<65), Stoch %D: 15.80 (<60), MACD: -2.34 vs Signal: -1.30
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 145.34, SMA: 146.07, RSI: 52.08 (<65), Stoch %D: 20.37 (<60), MACD: -1.80 vs Signal: -1.40
+2025-02-09 22:26:51,034 - DEBUG ENTRY: Price: 148.14, SMA: 145.91, RSI: 54.75 (<65), Stoch %D: 27.49 (<60), MACD: -1.13 vs Signal: -1.35
+2025-02-09 22:26:51,034 - BUY CREATE at 148.14, Size: 181 shares
+2025-02-09 22:26:51,035 - BUY EXECUTED - Price: 147.42, Size: 181 shares, Cost: 26682.97, Comm: 26.68
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 146.74, Stop: 143.80, Target: 181.12, RSI: 53.15 (>75)
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 148.48, Stop: 145.51, Target: 181.02, RSI: 54.91 (>75)
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 147.24, Stop: 145.51, Target: 179.84, RSI: 53.38 (>75)
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 149.15, Stop: 146.17, Target: 179.83, RSI: 55.45 (>75)
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 149.72, Stop: 146.72, Target: 178.73, RSI: 56.07 (>75)
+2025-02-09 22:26:51,035 - DEBUG EXIT: Price: 146.47, Stop: 146.72, Target: 178.06, RSI: 51.61 (>75)
+2025-02-09 22:26:51,035 - SELL CREATE at 146.47, Size: 181 shares
+2025-02-09 22:26:51,035 - SELL EXECUTED - Price: 146.59, Size: 181 shares, Cost: 26682.97, Comm: 26.53
+2025-02-09 22:26:51,035 - 
+        TRADE COMPLETED:
+        Gross Profit: -150.46
+        Net Profit: -203.67
+        Commission: 53.22
+        
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 148.62, SMA: 145.00, RSI: 54.20 (<65), Stoch %D: 76.44 (<60), MACD: 0.90 vs Signal: 0.11
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 149.50, SMA: 144.92, RSI: 55.26 (<65), Stoch %D: 78.36 (<60), MACD: 1.08 vs Signal: 0.30
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 146.57, SMA: 144.84, RSI: 51.04 (<65), Stoch %D: 79.42 (<60), MACD: 0.98 vs Signal: 0.44
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 142.72, SMA: 144.72, RSI: 46.06 (<65), Stoch %D: 76.57 (<60), MACD: 0.58 vs Signal: 0.47
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 139.70, SMA: 144.46, RSI: 42.55 (<65), Stoch %D: 67.28 (<60), MACD: 0.02 vs Signal: 0.38
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 146.49, SMA: 144.29, RSI: 51.50 (<65), Stoch %D: 56.78 (<60), MACD: 0.12 vs Signal: 0.33
+2025-02-09 22:26:51,035 - DEBUG ENTRY: Price: 146.77, SMA: 144.18, RSI: 51.83 (<65), Stoch %D: 50.85 (<60), MACD: 0.22 vs Signal: 0.30
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 146.27, SMA: 144.09, RSI: 51.16 (<65), Stoch %D: 53.13 (<60), MACD: 0.26 vs Signal: 0.30
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 145.10, SMA: 144.02, RSI: 49.53 (<65), Stoch %D: 55.13 (<60), MACD: 0.19 vs Signal: 0.28
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 141.42, SMA: 143.87, RSI: 44.71 (<65), Stoch %D: 51.71 (<60), MACD: -0.16 vs Signal: 0.19
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 139.47, SMA: 143.66, RSI: 42.36 (<65), Stoch %D: 40.44 (<60), MACD: -0.58 vs Signal: 0.03
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 141.17, SMA: 143.52, RSI: 45.06 (<65), Stoch %D: 27.67 (<60), MACD: -0.77 vs Signal: -0.13
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 140.68, SMA: 143.52, RSI: 44.42 (<65), Stoch %D: 19.01 (<60), MACD: -0.96 vs Signal: -0.29
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 142.99, SMA: 143.65, RSI: 48.20 (<65), Stoch %D: 19.18 (<60), MACD: -0.90 vs Signal: -0.41
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 143.96, SMA: 143.72, RSI: 49.75 (<65), Stoch %D: 25.12 (<60), MACD: -0.77 vs Signal: -0.49
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 141.72, SMA: 143.66, RSI: 46.31 (<65), Stoch %D: 32.57 (<60), MACD: -0.84 vs Signal: -0.56
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 135.08, SMA: 143.47, RSI: 37.93 (<65), Stoch %D: 32.76 (<60), MACD: -1.42 vs Signal: -0.73
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 133.11, SMA: 143.26, RSI: 35.86 (<65), Stoch %D: 25.50 (<60), MACD: -2.01 vs Signal: -0.98
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 130.99, SMA: 143.11, RSI: 33.72 (<65), Stoch %D: 14.33 (<60), MACD: -2.61 vs Signal: -1.31
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 130.92, SMA: 142.96, RSI: 33.65 (<65), Stoch %D: 7.94 (<60), MACD: -3.07 vs Signal: -1.66
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 134.04, SMA: 142.89, RSI: 39.76 (<65), Stoch %D: 8.63 (<60), MACD: -3.14 vs Signal: -1.96
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 130.85, SMA: 142.78, RSI: 36.10 (<65), Stoch %D: 12.63 (<60), MACD: -3.41 vs Signal: -2.25
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 130.49, SMA: 142.56, RSI: 35.69 (<65), Stoch %D: 15.64 (<60), MACD: -3.62 vs Signal: -2.52
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 128.68, SMA: 142.40, RSI: 33.68 (<65), Stoch %D: 13.97 (<60), MACD: -3.88 vs Signal: -2.79
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 124.73, SMA: 142.08, RSI: 29.73 (<65), Stoch %D: 10.50 (<60), MACD: -4.36 vs Signal: -3.11
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 128.26, SMA: 141.80, RSI: 36.86 (<65), Stoch %D: 7.60 (<60), MACD: -4.40 vs Signal: -3.37
+2025-02-09 22:26:51,036 - DEBUG ENTRY: Price: 128.58, SMA: 141.53, RSI: 37.47 (<65), Stoch %D: 8.14 (<60), MACD: -4.36 vs Signal: -3.56
+2025-02-09 22:26:51,036 - 
         === Strategy Summary ===
         Starting Value: $100,000.00
-        Final Value: $97,081.07
-        Total Return: -2.92%
-        Total Completed Trades: 8
+        Final Value: $103,574.12
+        Total Return: 3.57%
+        Total Completed Trades: 9
         
