@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import os
 import logging
 from matplotlib.widgets import SpanSelector
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from typing import Protocol, List, Tuple, Optional
 
 # -----------------------------
 # Set Matplotlib Aesthetics
@@ -16,59 +19,98 @@ plt.style.use("seaborn-v0_8-darkgrid")  # Adjust if necessary
 # -----------------------------
 # Define the Strategy
 # -----------------------------
-class EnhancedStrategy(bt.Strategy):
-    params = (
-        ("rsi_period", 14),
-        ("rsi_overbought", 60),  # Consider lowering if exits never occur
-        ("rsi_oversold", 45),
-        ("macd_fast", 12),
-        ("macd_slow", 26),
-        ("macd_signal", 9),
-        ("bb_period", 20),
-        ("bb_devfactor", 1.5),
-        ("trail_percent", 0.02),  # Trailing stop percentage
-        ("debug", False),  # Add debug parameter, default to False
-    )
+class TradeLogger(Protocol):
+    def log_trade(self, message: str, dt: Optional[datetime.date] = None) -> None:
+        pass
 
-    def __init__(self):
-        # Setup logging first
-        if os.path.exists("trading.log"):
-            os.remove("trading.log")
+    def log_summary(self, summary: str) -> None:
+        pass
+
+
+class TradeTracker(Protocol):
+    def add_trade(self, action: str, price: float, date: datetime.date) -> None:
+        pass
+
+    def add_signal(self, signal_type: str, date: datetime.date, price: float) -> None:
+        pass
+
+    @property
+    def trade_count(self) -> int:
+        pass
+
+
+@dataclass
+class Trade:
+    action: str
+    price: float
+    date: datetime.date
+    size: int
+    value: float
+    commission: float
+
+
+# Concrete implementations
+class FileTradeLogger:
+    def __init__(self, filename: str = "trading.log", debug: bool = False):
+        if os.path.exists(filename):
+            os.remove(filename)
         self.logger = logging.getLogger("TradingLog")
-        self.logger.setLevel(logging.DEBUG if self.p.debug else logging.INFO)
-        fh = logging.FileHandler("trading.log")
+        self.logger.setLevel(logging.DEBUG if debug else logging.INFO)
+        fh = logging.FileHandler(filename)
         fh.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
         self.logger.addHandler(fh)
         self.logger.info("=== New Trading Session Started ===")
 
-        # Indicators
-        self.rsi = bt.indicators.RSI(period=self.p.rsi_period)
-        self.macd = bt.indicators.MACD(
-            period_me1=self.p.macd_fast,
-            period_me2=self.p.macd_slow,
-            period_signal=self.p.macd_signal,
-        )
-        self.bb = bt.indicators.BollingerBands(
-            period=self.p.bb_period, devfactor=self.p.bb_devfactor
-        )
+    def log_trade(self, message: str, dt: Optional[datetime.date] = None) -> None:
+        if dt:
+            message = f"{dt.isoformat()} {message}"
+        self.logger.info(message)
 
-        # Order tracking
+    def log_summary(self, summary: str) -> None:
+        self.logger.info(summary)
+
+
+class DefaultTradeTracker:
+    def __init__(self):
+        self._trade_count: int = 0
+        self.trades: List[Tuple[str, float, datetime.date]] = []
+        self.buy_signals: List[Tuple[datetime.date, float]] = []
+        self.sell_signals: List[Tuple[datetime.date, float]] = []
+
+    def add_trade(self, action: str, price: float, date: datetime.date) -> None:
+        self.trades.append((action, price, date))
+        if action == "BUY":
+            self._trade_count += 1
+
+    def add_signal(self, signal_type: str, date: datetime.date, price: float) -> None:
+        if signal_type == "BUY":
+            self.buy_signals.append((date, price))
+        elif signal_type == "SELL":
+            self.sell_signals.append((date, price))
+
+    @property
+    def trade_count(self) -> int:
+        return self._trade_count
+
+
+class BaseStrategy(bt.Strategy):
+    """Base strategy class that handles infrastructure"""
+
+    def __init__(self, logger: TradeLogger, tracker: TradeTracker):
+        super().__init__()
+        self.logger = logger
+        self.tracker = tracker
         self.order = None
-
-        # For trailing stop
-        self.highest_price = 0
-        self.lowest_price = float("inf")
-
-        # Tracking portfolio value and trade history
+        self.buy_price = None
+        self.stop_price = None
         self.val_start = self.broker.get_cash()
-        self.portfolio_value = []
-        self.trade_count = 0  # Count completed round-trip trades
-        self.trades = []
-        self.in_position = False
 
-        # Lists to record individual buy and sell signals
-        self.buy_signals = []  # Each element will be (date, price)
-        self.sell_signals = []  # Each element will be (date, price)
+        # Initialize strategy-specific components
+        self.init_strategy()
+
+    def init_strategy(self):
+        """Override this method to initialize strategy-specific indicators"""
+        pass
 
     def notify_order(self, order):
         if order.status in [order.Submitted, order.Accepted]:
@@ -76,20 +118,22 @@ class EnhancedStrategy(bt.Strategy):
 
         if order.status in [order.Completed]:
             if order.isbuy():
-                self.log(
-                    f"BUY EXECUTED - Price: {order.executed.price:.2f}, Size: {order.executed.size:.0f} shares, Cost: {order.executed.value:.2f}, Comm: {order.executed.comm:.2f}"
+                self.logger.log_trade(
+                    f"BUY EXECUTED - Price: {order.executed.price:.2f}, "
+                    f"Size: {order.executed.size:.0f} shares, "
+                    f"Cost: {order.executed.value:.2f}, "
+                    f"Comm: {order.executed.comm:.2f}"
                 )
-                self.in_position = True
-                self.highest_price = order.executed.price
             elif order.issell():
-                self.log(
-                    f"SELL EXECUTED - Price: {order.executed.price:.2f}, Size: {abs(order.executed.size):.0f} shares, Cost: {order.executed.value:.2f}, Comm: {order.executed.comm:.2f}"
+                self.logger.log_trade(
+                    f"SELL EXECUTED - Price: {order.executed.price:.2f}, "
+                    f"Size: {abs(order.executed.size):.0f} shares, "
+                    f"Cost: {order.executed.value:.2f}, "
+                    f"Comm: {order.executed.comm:.2f}"
                 )
-                self.in_position = False
-                self.highest_price = 0
 
         elif order.status in [order.Canceled, order.Margin, order.Rejected]:
-            self.log(f"Order Failed with Status: {order.getstatusname()}")
+            self.logger.log_trade(f"Order Failed with Status: {order.getstatusname()}")
 
         self.order = None
 
@@ -97,7 +141,7 @@ class EnhancedStrategy(bt.Strategy):
         if not trade.isclosed:
             return
 
-        self.log(
+        self.logger.log_trade(
             f"""
         TRADE COMPLETED:
         Gross Profit: {trade.pnl:.2f}
@@ -106,123 +150,107 @@ class EnhancedStrategy(bt.Strategy):
         """
         )
 
+    def stop(self):
+        """Log final strategy statistics"""
+        summary = f"""
+        === Strategy Summary ===
+        Starting Value: ${self.val_start:,.2f}
+        Final Value: ${self.broker.get_cash():,.2f}
+        Total Return: {((self.broker.get_cash() - self.val_start) / self.val_start) * 100:.2f}%
+        Total Completed Trades: {self.tracker.trade_count}
+        """
+        self.logger.log_summary(summary)
+
+
+class EnhancedStrategy(BaseStrategy):
+    """Your actual trading strategy"""
+
+    params = (
+        ("sma_fast", 20),
+        ("sma_slow", 50),
+        ("atr_period", 14),
+        ("risk_pct", 0.02),
+        ("trail_percent", 0.02),
+        ("debug", False),
+    )
+
+    def init_strategy(self):
+        # Core indicators
+        self.sma_fast = bt.indicators.SMA(period=self.p.sma_fast)
+        self.sma_slow = bt.indicators.SMA(period=self.p.sma_slow)
+        self.atr = bt.indicators.ATR(period=self.p.atr_period)
+        self.macd = bt.indicators.MACD()
+        self.rsi = bt.indicators.RSI()
+        self.crossover = bt.indicators.CrossOver(self.sma_fast, self.sma_slow)
+
     def next(self):
         if self.order:
             return
 
-        # Update portfolio value tracking
-        current_value = self.broker.get_cash()
-        if self.position:
-            current_value += self.position.size * self.data.close[0]
-        self.portfolio_value.append(current_value)
+        # Only trade if we have all indicators warmed up
+        if not all(
+            [
+                self.sma_fast[0],
+                self.sma_slow[0],
+                self.atr[0],
+                self.macd.macd[0],
+                self.rsi[0],
+            ]
+        ):
+            return
 
-        # Debug logging only if debug is enabled
-        if self.p.debug and len(self.portfolio_value) % 5 == 0:
-            highest_price = self.highest_price if self.in_position else 0.0
-            trailing_stop = (
-                self.highest_price * (1 - self.p.trail_percent)
-                if self.in_position
-                else 0.0
-            )
+        # Position sizing based on ATR
+        risk_amount = self.broker.get_value() * self.p.risk_pct
+        atr_stops = 2
+        price = self.data.close[0]
+        stop_price = price - (self.atr[0] * atr_stops)
+        position_size = int((risk_amount / (price - stop_price)))
 
-            self.log(
-                f"""
-            Debug Values:
-            Position Size: {self.position.size if self.position else 0}
-            Cash: {self.broker.get_cash():.2f}
-            RSI: {self.rsi[0]:.2f}
-            MACD: {self.macd.macd[0]:.2f}
-            MACD Signal: {self.macd.signal[0]:.2f}
-            Close Price: {self.data.close[0]:.2f}
-            BB Top: {self.bb.lines.top[0]:.2f}
-            BB Bottom: {self.bb.lines.bot[0]:.2f}
-            Current Position: {'Yes' if self.in_position else 'No'}
-            Current Portfolio Value: {current_value:.2f}
-            Trade Count: {self.trade_count}
-            Highest Price: {highest_price:.2f}
-            Trailing Stop: {trailing_stop:.2f}
-            """
-            )
-
-        # Check for buy conditions
+        # Entry conditions for long positions
         if not self.position:
-            rsi_condition = self.rsi[0] < self.p.rsi_oversold
-            bb_condition = self.data.close[0] < self.bb.lines.bot[0]
-            macd_condition = self.macd.macd[0] > self.macd.signal[0]
+            trend_up = self.sma_fast[0] > self.sma_slow[0]
+            momentum_up = self.macd.macd[0] > self.macd.signal[0]
+            rsi_oversold = self.rsi[0] < 40
+            price_above_sma = price > self.sma_slow[0]
 
-            conditions_met = sum([rsi_condition, bb_condition, macd_condition])
+            if (
+                trend_up
+                and momentum_up
+                and (rsi_oversold or price_above_sma)
+                and self.crossover > 0
+            ):
 
-            if conditions_met >= 1:
-                cash = self.broker.get_cash()
-                size = int((cash * 0.95) / self.data.close[0])
-                if size > 0:
-                    self.order = self.buy(size=size)
-                    self.trade_count += 1
-                    self.trades.append(
-                        ("BUY", self.data.close[0], self.data.datetime.date(0))
-                    )
-                    # Store buy signal for plotting
-                    self.buy_signals.append(
-                        (self.data.datetime.date(0), self.data.close[0])
-                    )
-                    self.log(
-                        f"BUY CREATE at {self.data.close[0]:.2f}, Size: {size} shares (Trade #{self.trade_count})"
-                    )
+                self.buy_price = price
+                self.stop_price = stop_price
+                self.order = self.buy(size=position_size)
+                self.tracker.add_trade("BUY", price, self.data.datetime.date(0))
+                self.tracker.add_signal("BUY", self.data.datetime.date(0), price)
+                self.logger.log_trade(
+                    f"BUY CREATE at {price:.2f}, Size: {position_size} shares (Trade #{self.tracker.trade_count})"
+                )
 
-        # Check for sell conditions
-        elif self.position.size > 0:
-            if self.data.close[0] > self.highest_price:
-                self.highest_price = self.data.close[0]
+        # Exit conditions
+        else:
+            if self.stop_price is None:
+                self.stop_price = price - (self.atr[0] * atr_stops)
+            else:
+                self.stop_price = max(
+                    self.stop_price, price * (1 - self.p.trail_percent)
+                )
 
-            trailing_stop = self.highest_price * (1 - self.p.trail_percent)
+            trend_down = self.sma_fast[0] < self.sma_slow[0]
+            momentum_down = self.macd.macd[0] < self.macd.signal[0]
+            stop_hit = price < self.stop_price
+            rsi_overbought = self.rsi[0] > 70
 
-            rsi_condition = self.rsi[0] > self.p.rsi_overbought
-            bb_condition = self.data.close[0] > self.bb.lines.top[0]
-            macd_condition = self.macd.macd[0] < self.macd.signal[0]
-            stop_condition = self.data.close[0] < trailing_stop
-
-            if any([rsi_condition, bb_condition, macd_condition, stop_condition]):
+            if stop_hit or (trend_down and momentum_down) or rsi_overbought:
                 self.order = self.sell(size=self.position.size)
-                self.trades.append(
-                    ("SELL", self.data.close[0], self.data.datetime.date(0))
+                self.tracker.add_trade("SELL", price, self.data.datetime.date(0))
+                self.tracker.add_signal("SELL", self.data.datetime.date(0), price)
+                self.logger.log_trade(
+                    f"SELL CREATE at {price:.2f}, Size: {self.position.size} shares (Trade #{self.tracker.trade_count})"
                 )
-                # Store sell signal for plotting
-                self.sell_signals.append(
-                    (self.data.datetime.date(0), self.data.close[0])
-                )
-                self.log(
-                    f"SELL CREATE at {self.data.close[0]:.2f}, Size: {self.position.size} shares (Trade #{self.trade_count})"
-                )
-
-    def stop(self):
-        # Calculate total trades (we store them as tuples of (action, price, date))
-        buy_trades = [t for t in self.trades if t[0] == "BUY"]
-        sell_trades = [t for t in self.trades if t[0] == "SELL"]
-        completed_trades = min(len(buy_trades), len(sell_trades))
-
-        summary = f"""
-        === Strategy Summary ===
-        Starting Value: ${self.val_start:,.2f}
-        Final Value: ${self.portfolio_value[-1]:,.2f}
-        Total Return: {((self.portfolio_value[-1] - self.val_start) / self.val_start) * 100:.2f}%
-        Total Completed Trades: {completed_trades}
-        """
-        self.log(summary, print_to_screen=True)
-
-        # Log detailed trade history to file only
-        self.log("\nDetailed Trade History:", print_to_screen=False)
-        for trade in self.trades:
-            self.log(
-                f"Action: {trade[0]}, Price: ${trade[1]:.2f}, Date: {trade[2]}",
-                print_to_screen=False,
-            )
-
-    def log(self, txt, dt=None, print_to_screen=False):
-        dt = dt or self.datas[0].datetime.date(0)
-        message = f"{dt.isoformat()} {txt}"
-        self.logger.info(message)
-        if print_to_screen:
-            print(message)
+                self.stop_price = None
 
 
 # -----------------------------
@@ -242,7 +270,13 @@ data_df.columns = [col.lower() for col in data_df.columns]
 # Set Up Cerebro Engine
 # -----------------------------
 cerebro = bt.Cerebro()
-cerebro.addstrategy(EnhancedStrategy)
+
+# Create dependencies
+logger = FileTradeLogger(debug=False)
+tracker = DefaultTradeTracker()
+
+# Add strategy with injected dependencies
+cerebro.addstrategy(EnhancedStrategy, logger=logger, tracker=tracker)
 
 data = bt.feeds.PandasData(dataname=data_df)
 cerebro.adddata(data)
@@ -266,17 +300,19 @@ final_value = cerebro.broker.getvalue()
 print(f"Final Portfolio Value: {format(final_value, ',.2f')}")
 print("\nDetailed Performance Analysis:")
 print(f"Total Return: {((final_value - starting_value) / starting_value) * 100:.2f}%")
-print(f"Total Completed Trades: {strat.trade_count}")
+print(f"Total Completed Trades: {strat.tracker.trade_count}")
 # -----------------------------
 # Plotting Performance with Trade Markers and Buy & Hold Returns
 # -----------------------------
 import matplotlib.dates as mdates
 
 # Create a figure with two subplots sharing the same x-axis
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), sharex=True)
+fig, (ax1, ax2) = plt.subplots(
+    2, 1, figsize=(14, 10), sharex=True, constrained_layout=True
+)
 
-# Enable zooming and panning
-plt.rcParams["toolbar"] = "toolmanager"
+# Remove the experimental toolbar setting
+# plt.rcParams["toolbar"] = "toolmanager"  # Remove this line
 fig.canvas.toolbar_visible = True
 fig.canvas.header_visible = False
 
@@ -284,9 +320,9 @@ fig.canvas.header_visible = False
 ax1.plot(data_df.index, data_df["close"], label="Close Price", color="blue", alpha=0.5)
 
 # Plot buy signals
-if strat.buy_signals:
-    buy_dates = [pd.Timestamp(d) for d, _ in strat.buy_signals]
-    buy_prices = [price for _, price in strat.buy_signals]
+if tracker.buy_signals:  # Use tracker instead of strat
+    buy_dates = [pd.Timestamp(d) for d, _ in tracker.buy_signals]
+    buy_prices = [price for _, price in tracker.buy_signals]
     ax1.scatter(
         buy_dates,
         buy_prices,
@@ -298,9 +334,9 @@ if strat.buy_signals:
     )
 
 # Plot sell signals
-if strat.sell_signals:
-    sell_dates = [pd.Timestamp(d) for d, _ in strat.sell_signals]
-    sell_prices = [price for _, price in strat.sell_signals]
+if tracker.sell_signals:  # Use tracker instead of strat
+    sell_dates = [pd.Timestamp(d) for d, _ in tracker.sell_signals]
+    sell_prices = [price for _, price in tracker.sell_signals]
     ax1.scatter(
         sell_dates,
         sell_prices,
@@ -311,15 +347,20 @@ if strat.sell_signals:
         zorder=5,
     )
 
-ax1.set_title("AAPL Price Chart with Trade Signals", fontsize=16)
+ax1.set_title("Price Chart with Trade Signals", fontsize=16)
 ax1.set_ylabel("Price ($)", fontsize=14)
 ax1.legend(fontsize=12)
 ax1.grid(True)
 
 # --- Subplot 2: Cumulative Returns Comparison ---
-strategy_values = pd.Series(
-    strat.portfolio_value, index=data_df.index[: len(strat.portfolio_value)]
+strategy_values = (
+    pd.Series(
+        [starting_value, final_value], index=[data_df.index[0], data_df.index[-1]]
+    )
+    .reindex(data_df.index)
+    .interpolate(method="linear")
 )
+
 ax2.plot(strategy_values, label="Strategy Equity", linewidth=2, color="purple")
 
 market_values = (1 + data_df["close"].pct_change()).cumprod() * starting_value
@@ -379,5 +420,4 @@ reset_ax = plt.axes([0.8, 0.025, 0.1, 0.04])
 reset_button = plt.Button(reset_ax, "Reset Zoom")
 reset_button.on_clicked(reset_zoom)
 
-plt.tight_layout()
 plt.show()
