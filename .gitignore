@@ -9,3 +9,9 @@ wheels/
 # Virtual environments
 .venv
 logs/
+*.log
+*.csv
+*.json
+*.pickle
+*.pkl
+*.pickle

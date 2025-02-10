@@ -14,10 +14,12 @@ def main():
 
     # Create configuration
     config = BacktestConfig(
-        symbol="AAPL",
-        start_date=datetime.now() - timedelta(days=365),
+        symbols=["AAPL", "MSFT", "GOOGL", "AMZN"],
+        start_date=datetime.now() - timedelta(days=365 * 4),
         end_date=datetime.now(),
         starting_cash=100000,
+        position_size_per_trade=0.1,  # 10% per trade
+        max_positions=5,
         debug_mode=True,
         strategy_class=EnhancedStrategy,
     )
@@ -33,7 +35,11 @@ def main():
 
     # Analyze and display results
     results = BacktestResults(
-        config.starting_cash, final_value, tracker, backtest.data_df
+        config.starting_cash,
+        final_value,
+        tracker,
+        backtest.data_dfs,
+        backtest.benchmark_df,
     )
     results.print_summary()
     results.plot_results()

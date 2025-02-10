@@ -9,6 +9,7 @@ dependencies = [
     "matplotlib>=3.10.0",
     "numpy>=2.2.2",
     "pandas>=2.2.3",
+    "pyqt5>=5.15.11",
     "seaborn>=0.13.2",
     "yfinance>=0.2.52",
 ]
