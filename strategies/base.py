@@ -1,5 +1,14 @@
 import backtrader as bt
-from typing import Optional, List
+import logging
+from typing import Optional, Dict, Any
+from datetime import datetime
+
+from loggers import TradeLogger
+from trackers import TradeTracker
+from portfolio import PortfolioManager
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 class BaseStrategy(bt.Strategy):
@@ -13,77 +22,199 @@ class BaseStrategy(bt.Strategy):
     )
 
     def __init__(self):
-        super().__init__()
-        self.orders = {}
-        self.portfolio_manager = self.p.portfolio_manager
-        self.logger = self.p.logger
-        self.tracker = self.p.tracker
+        try:
+            # Get components from params
+            self.logger = self.params.logger
+            self.tracker = self.params.tracker
+            self.portfolio_manager = self.params.portfolio_manager
 
-        # Store indicators per symbol
-        self.indicators = {}
-        for data in self.datas[:-1]:  # Exclude benchmark data
-            symbol = data._name
-            self.indicators[symbol] = {
-                "sma": bt.indicators.SimpleMovingAverage(data.close, period=20),
-                "rsi": bt.indicators.RelativeStrengthIndex(data),
-                "macd": bt.indicators.MACD(data),
-                "stoch": bt.indicators.StochasticSlow(data),
-            }
+            # Validate required attributes
+            if not hasattr(self, "logger") or not isinstance(self.logger, TradeLogger):
+                raise ValueError("Strategy requires a valid logger")
+            if not hasattr(self, "tracker") or not isinstance(
+                self.tracker, TradeTracker
+            ):
+                raise ValueError("Strategy requires a valid tracker")
+            if not hasattr(self, "portfolio_manager") or not isinstance(
+                self.portfolio_manager, PortfolioManager
+            ):
+                raise ValueError("Strategy requires a valid portfolio manager")
+
+            # Initialize strategy components
+            self.orders: Dict[str, Any] = {}  # Track open orders
+            self.current_positions = {}  # Track current positions
+
+            # Store initial portfolio value
+            self.starting_portfolio_value = self.broker.getvalue()
+
+            if self.p.debug:
+                self.logger.info(
+                    f"Strategy initialized with portfolio value: ${self.starting_portfolio_value:,.2f}"
+                )
+
+        except Exception as e:
+            logger.error(f"Error initializing strategy: {e}")
+            raise
 
     def notify_order(self, order):
-        if order.status in [order.Submitted, order.Accepted]:
-            return
+        """Handle order notifications"""
+        try:
+            if order.status in [order.Submitted, order.Accepted]:
+                return
 
-        if order.status in [order.Completed]:
-            data = order.data
-            symbol = data._name
-            portfolio_value = self.broker.getvalue()  # Get current portfolio value
+            if order.status in [order.Completed]:
+                data = order.data
+                symbol = data._name
+                portfolio_value = self.broker.getvalue()
 
-            if order.isbuy():
-                self.logger.log_trade(
-                    f"BUY EXECUTED - Price: {order.executed.price:.2f}, "
-                    f"Size: {order.executed.size:.0f} shares, "
-                    f"Cost: {order.executed.value:.2f}, "
-                    f"Comm: {order.executed.comm:.2f}"
-                )
-                self.tracker.add_trade(
-                    "BUY",
-                    order.executed.price,
-                    data.datetime.date(0),
-                    order.executed.size,
-                    portfolio_value,
-                )
-                self.tracker.add_signal(
-                    "BUY", data.datetime.date(0), order.executed.price, data._name
-                )
-                self.portfolio_manager.add_position(
-                    symbol, order.executed.size, order.executed.price
-                )
-            elif order.issell():
-                self.logger.log_trade(
-                    f"SELL EXECUTED - Price: {order.executed.price:.2f}, "
-                    f"Size: {order.executed.size:.0f} shares, "
-                    f"Cost: {order.executed.value:.2f}, "
-                    f"Comm: {order.executed.comm:.2f}"
-                )
-                self.tracker.add_trade(
-                    "SELL",
-                    order.executed.price,
-                    data.datetime.date(0),
-                    abs(order.executed.size),
-                    portfolio_value,
-                )
-                self.tracker.add_signal(
-                    "SELL", data.datetime.date(0), order.executed.price, data._name
-                )
-                self.portfolio_manager.remove_position(symbol)
+                try:
+                    if order.isbuy():
+                        self._handle_buy_order(order, data, symbol, portfolio_value)
+                    elif order.issell():
+                        self._handle_sell_order(order, data, symbol, portfolio_value)
+                except Exception as e:
+                    self.logger.error(
+                        f"Error handling {order.isbuy() and 'buy' or 'sell'} order: {e}"
+                    )
 
-        elif order.status in [order.Canceled, order.Margin, order.Rejected]:
-            self.logger.log_trade(f"Order Failed with Status: {order.getstatusname()}")
+            elif order.status in [order.Canceled, order.Margin, order.Rejected]:
+                self.logger.error(f"Order failed: {order.status}")
+                self.orders[order.data._name] = None
 
-        # Clear the order from orders dict
-        symbol = order.data._name
-        self.orders[symbol] = None
+        except Exception as e:
+            self.logger.error(f"Error in notify_order: {e}")
+
+    def _handle_buy_order(self, order, data, symbol: str, portfolio_value: float):
+        """Handle buy order completion"""
+        try:
+            self.logger.log_trade(
+                f"BUY EXECUTED - Price: {order.executed.price:.2f}, "
+                f"Size: {order.executed.size:.0f} shares, "
+                f"Cost: {order.executed.value:.2f}, "
+                f"Comm: {order.executed.comm:.2f}"
+            )
+
+            self.tracker.add_trade(
+                "BUY",
+                order.executed.price,
+                data.datetime.date(0),
+                order.executed.size,
+                portfolio_value,
+                symbol,
+            )
+
+            self.tracker.add_signal(
+                "BUY", data.datetime.date(0), order.executed.price, symbol
+            )
+
+            self.portfolio_manager.add_position(
+                symbol, order.executed.size, order.executed.price
+            )
+
+            self.orders[symbol] = None
+            self.current_positions[symbol] = order.executed.size
+
+        except Exception as e:
+            self.logger.error(f"Error handling buy order completion: {e}")
+            raise
+
+    def _handle_sell_order(self, order, data, symbol: str, portfolio_value: float):
+        """Handle sell order completion"""
+        try:
+            self.logger.log_trade(
+                f"SELL EXECUTED - Price: {order.executed.price:.2f}, "
+                f"Size: {order.executed.size:.0f} shares, "
+                f"Cost: {order.executed.value:.2f}, "
+                f"Comm: {order.executed.comm:.2f}"
+            )
+
+            self.tracker.add_trade(
+                "SELL",
+                order.executed.price,
+                data.datetime.date(0),
+                abs(order.executed.size),
+                portfolio_value,
+                symbol,
+            )
+
+            self.tracker.add_signal(
+                "SELL", data.datetime.date(0), order.executed.price, symbol
+            )
+
+            self.portfolio_manager.remove_position(symbol)
+
+            self.orders[symbol] = None
+            self.current_positions.pop(symbol, None)
+
+        except Exception as e:
+            self.logger.error(f"Error handling sell order completion: {e}")
+            raise
+
+    def buy_stock(self, data, size: Optional[int] = None) -> bool:
+        """Place a buy order"""
+        try:
+            if self.orders.get(data._name):
+                return False  # Order already pending
+
+            if size is None:
+                size = self.get_position_size(data)
+                if size is None:
+                    self.logger.error(
+                        f"Could not determine position size for {data._name}"
+                    )
+                    return False
+
+            order = self.buy(data=data, size=size)
+            self.orders[data._name] = order
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error placing buy order: {e}")
+            return False
+
+    def sell_stock(self, data) -> bool:
+        """Place a sell order"""
+        try:
+            if self.orders.get(data._name):
+                return False  # Order already pending
+
+            position = self.getposition(data)
+            if not position:
+                self.logger.warning(f"No position to sell for {data._name}")
+                return False
+
+            order = self.sell(data=data, size=position.size)
+            self.orders[data._name] = order
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error placing sell order: {e}")
+            return False
+
+    def get_position_size(self, data) -> Optional[int]:
+        """Calculate position size based on portfolio value"""
+        try:
+            portfolio_value = self.broker.getvalue()
+            price = data.close[0]
+            if price <= 0:
+                raise ValueError(f"Invalid price for {data._name}: {price}")
+
+            position_value = (
+                portfolio_value * self.portfolio_manager.position_size_per_trade
+            )
+            size = int(position_value / price)
+
+            if size <= 0:
+                self.logger.warning(
+                    f"Calculated position size too small for {data._name}"
+                )
+                return None
+
+            return size
+
+        except Exception as e:
+            self.logger.error(f"Error calculating position size: {e}")
+            return None
 
     def log_debug_entry(self, price: float) -> None:
         if self.p.debug:

@@ -1,9 +1,15 @@
 import os
 import logging
-import datetime
-from typing import Protocol, Optional
+from typing import Protocol, Optional, runtime_checkable
 from dataclasses import dataclass
 from pathlib import Path
+from datetime import datetime as dt
+
+# Configure root logger
+logging.basicConfig(
+    level=logging.WARNING,  # Only show warnings and errors in terminal
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 
 @dataclass
@@ -15,97 +21,94 @@ class TradeInfo:
     size: int
     value: float
     commission: float
-    datetime: datetime.date
+    datetime: dt
 
 
+@runtime_checkable
 class TradeLogger(Protocol):
-    """Protocol defining the interface for trade loggers"""
+    """Protocol for trade logging"""
 
-    def log_trade(self, message: str, dt: Optional[datetime.date] = None) -> None:
-        """Log a trade-related message"""
-        pass
-
-    def log_summary(self, summary: str) -> None:
-        """Log a summary message"""
-        pass
-
-    def log_error(self, error: str) -> None:
-        """Log an error message"""
-        pass
-
-    def log_debug(self, message: str) -> None:
-        """Log a debug message"""
-        pass
+    def log_trade(self, message: str) -> None:
+        """Log a trade message"""
+        ...
 
 
 class FileTradeLogger:
-    """Implementation of a file-based trade logger"""
+    """File-based trade logger implementation"""
 
     def __init__(self, filename: str = "trading.log", debug: bool = False):
-        """
-        Initialize the logger with specified filename and debug mode.
+        try:
+            self.debug = debug
 
-        Parameters:
-        -----------
-        filename : str
-            Name of the log file
-        debug : bool
-            Whether to enable debug logging
-        """
-        # Create logs directory if it doesn't exist
-        log_dir = Path("logs")
-        log_dir.mkdir(exist_ok=True)
+            # Create logger with unique name
+            self.logger = logging.getLogger(f"{__name__}.{id(self)}")
+            self.logger.setLevel(logging.DEBUG if debug else logging.INFO)
 
-        # Full path to log file
-        self.log_path = log_dir / filename
+            # Prevent duplicate logging
+            self.logger.propagate = False
 
-        # Remove existing log file
-        if os.path.exists(self.log_path):
-            os.remove(self.log_path)
+            # Ensure log directory exists
+            os.makedirs(
+                os.path.dirname(filename) if os.path.dirname(filename) else ".",
+                exist_ok=True,
+            )
 
-        # Set up logger
-        self.logger = logging.getLogger("TradingLog")
-        self.logger.propagate = False
-        self.logger.setLevel(logging.DEBUG if debug else logging.INFO)
+            # File handler
+            fh = logging.FileHandler(filename)
+            fh.setFormatter(
+                logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+            )
+            self.logger.addHandler(fh)
 
-        # Create and configure file handler
-        fh = logging.FileHandler(self.log_path)
-        fh.setLevel(logging.DEBUG if debug else logging.INFO)
-        formatter = logging.Formatter("%(asctime)s - %(message)s")
-        fh.setFormatter(formatter)
+        except Exception as e:
+            print(f"Error initializing logger: {e}")
+            raise
 
-        # Add handler to logger
-        self.logger.addHandler(fh)
+    def log_trade(self, message: str) -> None:
+        """Log a trade message"""
+        try:
+            if not isinstance(message, str):
+                raise ValueError("Message must be a string")
 
-        # Log session start
-        self.logger.info("=== New Trading Session Started ===")
-        self.debug_mode = debug
+            timestamp = dt.now().strftime("%Y-%m-%d %H:%M:%S")
+            self.logger.info(f"{timestamp} - {message}")
 
-    def log_trade(self, message: str, dt: Optional[datetime.date] = None) -> None:
-        """
-        Log a trade-related message.
+            if self.debug:
+                # Only print to terminal if debug is True
+                print(f"TRADE: {message}")
 
-        Parameters:
-        -----------
-        message : str
-            The message to log
-        dt : Optional[datetime.date]
-            The date of the trade (optional)
-        """
-        if dt:
-            self.logger.info(f"{dt}: {message}")
-        else:
+        except Exception as e:
+            print(f"Error logging trade: {e}")
+
+    def error(self, message: str) -> None:
+        """Log an error message"""
+        try:
+            self.logger.error(message)
+            if self.debug:
+                print(f"ERROR: {message}")
+        except Exception as e:
+            print(f"Error logging error message: {e}")
+
+    def warning(self, message: str) -> None:
+        """Log a warning message"""
+        try:
+            self.logger.warning(message)
+            if self.debug:
+                print(f"WARNING: {message}")
+        except Exception as e:
+            print(f"Error logging warning message: {e}")
+
+    def info(self, message: str) -> None:
+        """Log an info message"""
+        try:
             self.logger.info(message)
+            if self.debug:
+                print(f"INFO: {message}")
+        except Exception as e:
+            print(f"Error logging info message: {e}")
 
     def log_summary(self, summary: str) -> None:
-        """
-        Log a summary message.
-
-        Parameters:
-        -----------
-        summary : str
-            The summary message to log
-        """
+        """Log a summary message"""
         self.logger.info("\n" + summary + "\n")
 
     def log_error(self, error: str) -> None:
@@ -128,7 +131,7 @@ class FileTradeLogger:
         message : str
             The debug message to log
         """
-        if self.debug_mode:
+        if self.debug:
             self.logger.debug(message)
 
     def log_trade_execution(self, trade_info: TradeInfo) -> None:
@@ -147,7 +150,7 @@ class FileTradeLogger:
             f"Value: {trade_info.value:.2f}, "
             f"Commission: {trade_info.commission:.2f}"
         )
-        self.log_trade(message, trade_info.datetime)
+        self.log_trade(message)
 
     def log_strategy_status(
         self, price: float, indicators: dict, conditions: dict
@@ -164,7 +167,7 @@ class FileTradeLogger:
         conditions : dict
             Dictionary of strategy conditions
         """
-        if not self.debug_mode:
+        if not self.debug:
             return
 
         indicator_str = ", ".join([f"{k}: {v:.2f}" for k, v in indicators.items()])

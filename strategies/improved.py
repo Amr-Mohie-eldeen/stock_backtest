@@ -1,8 +1,14 @@
+import backtrader as bt
+from typing import Dict
+import logging
+
 from .base import BaseStrategy
+
+logger = logging.getLogger(__name__)
 
 
 class ImprovedStrategy(BaseStrategy):
-    """Improved strategy for trading pullbacks"""
+    """Improved trading strategy with additional logic"""
 
     params = (
         ("debug", False),
@@ -16,68 +22,80 @@ class ImprovedStrategy(BaseStrategy):
 
     def __init__(self):
         super().__init__()
-        self.orders = {}
-        self.buy_prices = {}
-        self.stop_prices = {}
+        try:
+            self.orders = {}
+            self.buy_prices = {}
+            self.stop_prices = {}
+
+            # Initialize indicators dictionary for each symbol
+            self.indicators: Dict[str, Dict] = {}
+
+            for data in self.datas:
+                symbol = data._name
+                self.indicators[symbol] = {
+                    "sma": bt.indicators.SimpleMovingAverage(data.close, period=30),
+                    "ema": bt.indicators.ExponentialMovingAverage(
+                        data.close, period=20
+                    ),
+                    "rsi": bt.indicators.RelativeStrengthIndex(data.close, period=14),
+                }
+
+                if self.p.debug:
+                    self.logger.info(f"Initialized indicators for {symbol}")
+
+        except Exception as e:
+            logger.error(f"Error initializing ImprovedStrategy: {e}")
+            raise
 
     def next(self):
-        # Skip the last data feed (benchmark)
-        for data in self.datas[:-1]:
-            symbol = data._name
-            if symbol in self.orders and self.orders[symbol]:
-                continue
+        """Implement improved trading logic"""
+        try:
+            for data in self.datas:
+                symbol = data._name
+                position = self.getposition(data)
 
-            price = data.close[0]
+                if not self.orders.get(symbol) and not position:
+                    self._check_buy_signals(data, symbol)
+                elif position:
+                    self._check_sell_signals(data, symbol)
+
+        except Exception as e:
+            logger.error(f"Error in next(): {e}")
+
+    def _check_buy_signals(self, data, symbol: str):
+        """Check buy signals"""
+        try:
             indicators = self.indicators[symbol]
 
-            # Log entry conditions for debugging
-            self.log_debug_entry(price)
+            # Buy conditions
+            price_above_sma = data.close[0] > indicators["sma"][0]
+            rsi_oversold = indicators["rsi"][0] < 30
 
-            if not self.getposition(data):
-                # Entry conditions
-                trend_up = price > indicators["sma"][0]
-                oversold = indicators["rsi"][0] < 30
-                macd_positive = (
-                    indicators["macd"].lines.macd[0]
-                    > indicators["macd"].lines.signal[0]
-                )
-
-                if (
-                    trend_up
-                    and oversold
-                    and macd_positive
-                    and self.portfolio_manager.can_open_position(self.broker.getcash())
-                ):
-                    # Calculate position size using portfolio manager
-                    position_size = self.portfolio_manager.calculate_position_size(
-                        self.broker.getcash(), price
+            if price_above_sma and rsi_oversold:
+                self.buy_stock(data)
+                if self.p.debug:
+                    self.logger.info(
+                        f"Buy signal for {symbol}: Price={data.close[0]:.2f}"
                     )
 
-                    self.buy_prices[symbol] = price
-                    self.stop_prices[symbol] = price * (1 - self.p.stop_loss)
-                    self.orders[symbol] = self.buy(data=data, size=position_size)
+        except Exception as e:
+            logger.error(f"Error checking buy signals for {symbol}: {e}")
 
-                    if self.p.debug:
-                        self.logger.log_trade(
-                            f"{symbol} BUY CREATE at {price:.2f}, Size: {position_size} shares"
-                        )
+    def _check_sell_signals(self, data, symbol: str):
+        """Check sell signals"""
+        try:
+            indicators = self.indicators[symbol]
 
-            else:
-                # Exit conditions
-                target_price = self.buy_prices[symbol] * (1 + self.p.take_profit)
-                exit_condition = (
-                    price >= target_price
-                    or price <= self.stop_prices[symbol]
-                    or indicators["rsi"][0] > 70
-                    or indicators["macd"].lines.macd[0]
-                    < indicators["macd"].lines.signal[0]
-                )
+            # Sell conditions
+            price_below_ema = data.close[0] < indicators["ema"][0]
+            rsi_overbought = indicators["rsi"][0] > 70
 
-                if exit_condition:
-                    position = self.getposition(data)
-                    self.orders[symbol] = self.sell(data=data, size=position.size)
-                    if self.p.debug:
-                        self.logger.log_trade(
-                            f"{symbol} SELL CREATE at {price:.2f}, Size: {position.size} shares"
-                        )
-                    self.stop_prices[symbol] = None
+            if price_below_ema and rsi_overbought:
+                self.sell_stock(data)
+                if self.p.debug:
+                    self.logger.info(
+                        f"Sell signal for {symbol}: Price={data.close[0]:.2f}"
+                    )
+
+        except Exception as e:
+            logger.error(f"Error checking sell signals for {symbol}: {e}")
